@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Falha no MCP deixa agentes de IA de Google e outras empresas repassarem ordens maliciosas — The Morning Newspaper · 6 out 2026</title>
+<meta name="description" content="Pesquisador mostrou como um agente comprometido espalha instruções a outros dentro da mesma rede; Google e Rapid7 já corrigiram."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../styles.css?v=20261006061208"/>
+<style>html{-webkit-text-size-adjust:100%}body{margin:0;background:#F7F1E4;color:#261F23;overflow-x:hidden;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}.materia-wrap{max-width:760px;margin:0 auto;padding:16px 18px 48px}img{max-width:100%;height:auto}.materia-source-url,.materia-source-link{overflow-wrap:anywhere;word-break:break-word}</style>
+</head>
+<body class="materia-page">
+<div class="page materia-wrap">
+
+  <header class="materia-masthead">
+    <a class="materia-back" href="../../index.html" data-back>← Voltar à edição</a>
+    <a class="materia-brand" href="../../index.html">The Morning Newspaper <span>do Conrado</span></a>
+    <span class="materia-ed">Nº 016</span>
+  </header>
+
+  <article class="materia">
+  <div class="materia-tag">Tecnologia · Segurança</div>
+  <h1 class="materia-title">Falha no MCP deixa agentes de IA de Google e outras empresas repassarem ordens maliciosas</h1>
+  <p class="materia-dek">Pesquisador mostrou como um agente comprometido espalha instruções a outros dentro da mesma rede; Google e Rapid7 já corrigiram.</p>
+  <div class="materia-meta"><span>Terça-feira, 6 de outubro de 2026</span><span>Resumo da redação · com base em Ars Technica</span></div>
+  <figure class="materia-figure"><img src="../../img/2026-10-06/card-tech-1.jpg" alt="Ilustração de agentes de IA conectados"/></figure>
+    <div class="materia-body">
+      <p>A adoção de agentes de IA em empresas está abrindo uma nova porta para ataques, mostra reportagem do Ars Technica. Nos últimos cinco meses, o Google e outras quatro organizações reconheceram vulnerabilidades em que um agente dentro da rede é usado para repassar instruções maliciosas a outros agentes internos — que obedecem porque confiam no colega.</p>
+      <p>O pesquisador independente Syed Anas Mohiuddin testou agentes de organizações como Google, JP Morgan Chase, Weaviate, Rapid7, a diretoria digital do governo francês e o governo federal dos EUA. Seus ataques exploram brechas de confiança no MCP (Model Context Protocol), padrão usado para conectar apps e agentes. Como os servidores MCP guardam credenciais e os agentes confiam uns nos outros, um comando que seria barrado pelo modelo acaba executado, muitas vezes levando o servidor a fazer requisições não autorizadas.</p>
+      <p>A falha no Google teve gravidade 8 de 10 e estava numa caixa de ferramentas MCP para bancos de dados que não validava redirecionamentos nem endereços de destino; a correção passou a usar listas de faixas de IP permitidas. A da Rapid7, de gravidade 2,7, foi corrigida no mês passado. Mohiuddin chama a técnica de “protocol pivoting”; outros especialistas a veem como uma variação da injeção indireta de prompt.</p>
+      <p>A lição, segundo Douglas McKee, da Rapid7, é tratar qualquer coisa que um modelo de linguagem passa para uma ferramenta como se fosse texto vindo de um estranho na internet — e voltar ao princípio de “confiança zero” entre os componentes.</p>
+    </div>
+  </article>
+
+  <footer class="materia-footer">
+    <div class="materia-source">
+      <div class="materia-source-label">Fonte</div>
+      <div class="materia-source-name">Ars Technica</div>
+      <a class="materia-source-link" href="https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/" target="_blank" rel="noopener">Leia a matéria original em Ars Technica ↗</a>
+      <div class="materia-source-url">https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/</div>
+    </div>
+    <a class="materia-back materia-back-bottom" href="../../index.html" data-back>← Voltar à edição de 6 out 2026</a>
+  </footer>
+</div>
+<script>
+[].forEach.call(document.querySelectorAll('[data-back]'), function (a) {
+  a.addEventListener('click', function (e) {
+    var r = document.referrer;
+    if (r && r.indexOf(location.origin) === 0 && /\/(index\.html)?(#.*)?$/.test(r.replace(location.origin, '')) && history.length > 1) {
+      e.preventDefault(); history.back();
+    }
+  });
+});
+</script>
+</body>
+</html>
