@@ -7,7 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261006061208"/>
+<link rel="stylesheet" href="styles.css?v=20261006125622"/>
+<meta name="edition-version" content="20261006125622"/>
 </head>
 <body>
 <div class="page">
@@ -25,8 +26,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-06T12:54-03:00">12:54</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
+    <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
+    <a class="pill" href="#clima" data-filter="clima" role="button" aria-pressed="false">Clima</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -38,6 +43,7 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Terça-feira, 6 de outubro de 2026</span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-06T12:54-03:00">12:54</time></span>
     <span>Nº 016</span>
   </div>
   </header>
@@ -51,6 +57,67 @@
       <div class="tags">IA · Segurança · OpenAI · Agentes</div>
     </div>
   </article>
+
+  <section class="clima has-panel" id="clima" data-topic="clima" aria-labelledby="clima-title">
+    <div class="clima-head">
+      <h2 class="clima-title" id="clima-title">Clima em Castro</h2>
+      <span class="clima-when">Castro-PR · resumo de 06/10, 12h08</span>
+    </div>
+    <div class="clima-body">
+      <div class="clima-text">
+        <p class="clima-h">Tempo em Castro — terça-feira, 6 de outubro</p>
+        <p><strong>Hoje</strong> (terça-feira, 6), Castro tem previsão de chuva com trovoadas, com média de 21,2 mm (as fontes variam de 2,1 a 40,6 mm) e 96% de chance de chuva. Os termômetros devem ficar entre 14°C e 18°C, e as rajadas podem chegar a 47 km/h.</p>
+        <p><strong>Alerta:</strong> o Inmet mantém aviso de <em>tempestade</em> (perigo potencial) para o município até as 23h59 de 06/10, com risco de chuva entre 20 e 30 mm/h ou até 50 mm/dia, ventos intensos (40-60 km/h), e queda de granizo.</p>
+        <p><strong>No restante da semana</strong>, o tempo esquenta: a máxima sobe para 24°C na quarta (7) e chega a 28°C na sexta (9). Há risco de pancadas com trovoadas na quarta (7), na sexta (9) e no domingo (11).</p>
+        <p>A chuva volta a ganhar volume na segunda (12), com média de 27,3 mm e rajadas de até 54 km/h.</p>
+        <p><em>Consenso de 13 fontes (Climatempo, Inmet, MET Norway, Simepar, wttr.in e 8 modelos via Open-Meteo); concordância entre as fontes hoje: alta.</em></p>
+      </div>
+      <a class="clima-panel" href="img/2026-10-06/clima-castro.jpg" target="_blank" rel="noopener" aria-label="Abrir o painel do clima em tamanho real">
+        <img src="img/2026-10-06/clima-castro.jpg" alt="Painel visual da previsão do tempo para Castro-PR"/>
+        <span class="clima-zoom">Ver painel completo ↗</span>
+      </a>
+    </div>
+    <div class="clima-credit">Fonte: Clima Hoje</div>
+  </section>
+
+  <!-- agora:start -->
+  <div class="agora has-ultimas" id="agora">
+    <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
+      <div class="live-head">
+        <h2 class="live-title" id="principais-title">Principais do dia</h2>
+        <span class="live-when">até as 12:54</span>
+      </div>
+      <ol class="pr-list">
+        <li><a href="materias/2026-10-06/ultimas-8.html"><span class="pr-h">Flávio diz que pediu apoio a Republicanos e Podemos e promete ir a debates com Lula</span><span class="pr-meta">O Globo · 12:22</span></a></li>
+        <li><a href="materias/2026-10-06/ultimas-7.html"><span class="pr-h">Ibovespa devolve parte do salto pós-1º turno, mas segue acima dos 200 mil pontos</span><span class="pr-meta">InfoMoney · 12:22</span></a></li>
+        <li><a href="materias/2026-10-06/capa-1.html"><span class="pr-h">OpenAI adia lançamento do GPT-6.1 Astra por não atingir seus padrões de segurança</span><span class="pr-meta">g1 (BBC)</span></a></li>
+        <li><a href="materias/2026-10-06/mundo-1.html"><span class="pr-h">Arábia Saudita e governo do Iêmen lançam ofensiva contra os houthis com 100 aviões</span><span class="pr-meta">O Globo (AFP)</span></a></li>
+        <li><a href="materias/2026-10-06/brasil-3.html"><span class="pr-h">Senado começa nesta terça a discutir a PEC que acaba com a escala 6x1</span><span class="pr-meta">g1</span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 12:54</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-06/ultimas-8.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-06T12:22-03:00">12:22</time> · <span class="ult-src">O Globo</span> · <span class="ult-tag">Eleições</span></div><h3 class="ult-h">Flávio diz que pediu apoio a Republicanos e Podemos e promete ir a debates com Lula</h3><p class="ult-dek">Candidato do PL afirma que União Brasil e PP também discutem adesão; à tarde, recebe em Goiânia o apoio de Caiado e de Daniel Vilela.</p></div><img class="ult-thumb" src="img/2026-10-06/ultimas-8.jpg" alt="Flávio Bolsonaro fala à imprensa ao lado de aliados" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-06/ultimas-7.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-06T12:22-03:00">12:22</time> · <span class="ult-src">InfoMoney</span> · <span class="ult-tag">Mercados</span></div><h3 class="ult-h">Ibovespa devolve parte do salto pós-1º turno, mas segue acima dos 200 mil pontos</h3><p class="ult-dek">Índice chegou a 209,5 mil pontos na máxima e virou para queda com Petrobras, Vale e Banco do Brasil; analistas falam em ajuste após a alta de 7,7%.</p></div><img class="ult-thumb" src="img/2026-10-06/ultimas-7.jpg" alt="Painel de cotações em vermelho com gráfico de queda" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-06/ultimas-6.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-06T12:01-03:00">12:01</time> · <span class="ult-src">Canaltech</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Google testa Gemini que liga para parentes e amigos para dar recados</h3><p class="ult-dek">Função “Gemini Calling”, achada no código de um app, faria a IA falar ao telefone em nome do usuário; não há data nem previsão para o Brasil.</p></div><img class="ult-thumb" src="img/2026-10-06/ultimas-6.jpg" alt="Mão segurando um celular Google Pixel" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-06/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-06T11:18-03:00">11:18</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">França tem o maior dia de protestos estudantis da onda contra escolas precárias</h3><p class="ult-dek">Sindicato estudantil fala em 450 mil manifestantes no país, 100 mil em Paris; polícia usou gás lacrimogêneo contra bloqueios de escolas.</p></div><img class="ult-thumb" src="img/2026-10-06/ultimas-5.jpg" alt="Policiais de choque em rua de Toulouse durante os protestos estudantis" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-06/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-06T10:49-03:00">10:49</time> · <span class="ult-src">Agência Brasil</span> · <span class="ult-tag">Saúde</span></div><h3 class="ult-h">Anvisa aprova axatilimabe para a forma crônica da doença do enxerto contra o hospedeiro</h3><p class="ult-dek">Anticorpo monoclonal Niktimvo é indicado após falha de ao menos duas terapias e teve resposta global de 73,8% em estudo.</p></div><img class="ult-thumb" src="img/2026-10-06/ultimas-4.jpg" alt="Fachada da sede da Anvisa, em Brasília" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-06/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-06T08:45-03:00">08:45</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Saúde</span></div><h3 class="ult-h">Rússia diz não ter detectado peste entre os contatos da pesquisadora morta na Sibéria</h3><p class="ult-dek">Agência sanitária afirma que exames não acharam microrganismos ligados ao laboratório; hospital segue em quarentena e a causa da morte não foi confirmada.</p></div><img class="ult-thumb" src="img/2026-10-06/ultimas-3.jpg" alt="Imagem de microscópio da bactéria Yersinia pestis, causadora da peste" loading="lazy"/></a></li>
+      </ol>
+      <details class="ult-more">
+        <summary>Ver mais 2 atualizações anteriores</summary>
+        <ol class="ult-list">
+          <li class="ult-item has-thumb"><a href="materias/2026-10-06/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-06T08:00-03:00">08:00</time> · <span class="ult-src">Canaltech</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Agente Muse, da Meta, monta perfis de amigos e familiares dos usuários, aponta pesquisador</h3><p class="ult-dek">Instruções internas preveem uma “página para cada pessoa” da vida do usuário, com aniversários e grau de proximidade; a Meta não comentou.</p></div><img class="ult-thumb" src="img/2026-10-06/ultimas-2.jpg" alt="Tela de celular com o aplicativo do agente Muse, da Meta" loading="lazy"/></a></li>
+          <li class="ult-item has-thumb"><a href="materias/2026-10-06/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-06T07:50-03:00">07:50</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">EUA e China negociam visitas mútuas a instalações nucleares, segundo a CNN</h3><p class="ult-dek">Conversas ainda são preliminares e ocorrem dias após a visita de Xi Jinping à Casa Branca, em meio ao temor de nova corrida armamentista.</p></div><img class="ult-thumb" src="img/2026-10-06/ultimas-1.jpg" alt="Xi Jinping e Donald Trump em cerimônia na Casa Branca (foto Reuters)" loading="lazy"/></a></li>
+        </ol>
+      </details>
+    </section>
+  </div>
+  <!-- agora:end -->
 
   <section class="section" id="ia" data-topic="ia">
     <div class="section-title">IA</div>
@@ -266,6 +333,52 @@
   var initial = current();
   apply(initial, false);
   if (initial !== 'tudo' && top) { requestAnimationFrame(function () { top.scrollIntoView({ block: 'start' }); }); }
+})();
+</script>
+<script id="live-refresh">
+(function () {
+  var meta = document.querySelector('meta[name="edition-version"]');
+  if (!meta || !window.fetch) return;
+  var current = meta.getAttribute('content'), touched = false, shown = false, last = 0;
+  var EVERY = 5 * 60 * 1000;
+  ['touchstart', 'pointerdown', 'keydown', 'wheel'].forEach(function (ev) {
+    window.addEventListener(ev, function () { touched = true; }, { passive: true, once: true });
+  });
+  function go(v) {
+    try { sessionStorage.setItem('live-reloaded', v); } catch (e) {}
+    location.replace(location.pathname + '?v=' + encodeURIComponent(v) + location.hash);
+  }
+  function banner(v) {
+    if (shown) return;
+    shown = true;
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'live-banner';
+    b.setAttribute('aria-live', 'polite');
+    b.innerHTML = '<span class="live-dot" aria-hidden="true"></span>Novas notícias — toque para atualizar';
+    b.addEventListener('click', function () { go(v); });
+    document.body.appendChild(b);
+    requestAnimationFrame(function () { requestAnimationFrame(function () { b.classList.add('is-on'); }); });
+  }
+  function check() {
+    if (document.visibilityState === 'hidden') return;
+    last = Date.now();
+    fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.version || d.version === current) return;
+        var again = false;
+        try { again = sessionStorage.getItem('live-reloaded') === d.version; } catch (e) {}
+        if (!touched && !again && (window.pageYOffset || 0) < 80) go(d.version); else banner(d.version);
+      })
+      .catch(function () {});
+  }
+  setInterval(check, EVERY);
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && Date.now() - last > 60000) check();
+  });
+  window.addEventListener('online', check);
+  setTimeout(check, 20000);
 })();
 </script>
 </body>
