@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261007061136"/>
-<meta name="edition-version" content="20261007061136"/>
+<link rel="stylesheet" href="styles.css?v=20261007081235"/>
+<meta name="edition-version" content="20261007081235"/>
 </head>
 <body>
 <div class="page">
@@ -26,10 +26,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-07T06:11-03:00">06:11</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-07T08:12-03:00">08:12</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -41,7 +42,7 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quarta-feira, 7 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-07T06:11-03:00">06:11</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-07T08:12-03:00">08:12</time></span>
     <span>Nº 017</span>
   </div>
   </header>
@@ -57,18 +58,32 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Principais do dia</h2>
-        <span class="live-when">até as 06:11</span>
+        <span class="live-when">até as 08:12</span>
       </div>
       <ol class="pr-list">
-        <li><a href="materias/2026-10-07/capa-1.html"><span class="pr-h">OpenAI publica 722 manuscritos matemáticos produzidos por um modelo interno ainda não lançado</span><span class="pr-meta">Exame</span></a></li>
+        <li><a href="materias/2026-10-07/ultimas-6.html"><span class="pr-h">Chefe do FMI vê economia mundial pressionada por energia cara, dívida pública recorde e boom da IA</span><span class="pr-meta">Folha de S.Paulo (Reuters) · 08:04</span></a></li>
         <li><a href="materias/2026-10-07/brasil-1.html"><span class="pr-h">Dólar fecha abaixo de R$ 5 pela primeira vez desde maio; Ibovespa ajusta, mas segue acima de 205 mil pontos</span><span class="pr-meta">Agência Brasil</span></a></li>
         <li><a href="materias/2026-10-07/mundo-1.html"><span class="pr-h">Rússia lança 130 drones e 48 mísseis contra a Ucrânia; Zelensky fala em 11 mortos</span><span class="pr-meta">g1</span></a></li>
-        <li><a href="materias/2026-10-07/brasil-2.html"><span class="pr-h">Lula ouve ala jovem e endurece o tom; Flávio consolida apoios do centro para o 2º turno</span><span class="pr-meta">R7</span></a></li>
-        <li><a href="materias/2026-10-07/ia-1.html"><span class="pr-h">Cursor passa a deixar você acompanhar e responder seus agentes locais pelo iPhone</span><span class="pr-meta">Cursor (changelog)</span></a></li>
+        <li><a href="materias/2026-10-07/ultimas-3.html"><span class="pr-h">Nobel de Química 2026 premia Henri Kagan e Kenso Soai por explicar como a química “escolhe” entre moléculas espelhadas</span><span class="pr-meta">Folha de S.Paulo · 06:51</span></a></li>
+        <li><a href="materias/2026-10-07/capa-1.html"><span class="pr-h">OpenAI publica 722 manuscritos matemáticos produzidos por um modelo interno ainda não lançado</span><span class="pr-meta">Exame</span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:12</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item"><a href="materias/2026-10-07/ultimas-6.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-07T08:04-03:00">08:04</time> · <span class="ult-src">Folha de S.Paulo (Reuters)</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">Chefe do FMI vê economia mundial pressionada por energia cara, dívida pública recorde e boom da IA</h3><p class="ult-dek">Kristalina Georgieva pediu que governos se protejam com medidas fiscais e monetárias; as novas projeções do Fundo saem na próxima semana, em Bancoc.</p></div></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-07/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-07T07:57-03:00">07:57</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Ataque a faca em escola de ensino médio na Polônia deixa sete feridos; estudante de 19 anos é preso</h3><p class="ult-dek">O ataque ocorreu em Ostroleka, a cerca de 130 km de Varsóvia; entre os feridos há alunos e um professor, dois deles em estado grave, segundo a imprensa local.</p></div><img class="ult-thumb" src="img/2026-10-07/ultimas-5.jpg" alt="Policiais detêm suspeito de ataque em escola em Ostroleka, na Polônia" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-07/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-07T07:25-03:00">07:25</time> · <span class="ult-src">InfoMoney</span> · <span class="ult-tag">Mercados</span></div><h3 class="ult-h">Estrangeiros colocaram R$ 10 bilhões na Bolsa só no pregão seguinte ao 1º turno</h3><p class="ult-dek">A entrada de segunda-feira superou todo o mês de setembro e levou o saldo estrangeiro de outubro a R$ 12,61 bilhões.</p></div><img class="ult-thumb" src="img/2026-10-07/ultimas-4.jpg" alt="Espaço da B3, a bolsa de valores brasileira" loading="lazy"/></a></li>
+        <li class="ult-item"><a href="materias/2026-10-07/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-07T06:51-03:00">06:51</time> · <span class="ult-src">Folha de S.Paulo</span> · <span class="ult-tag">Ciência</span></div><h3 class="ult-h">Nobel de Química 2026 premia Henri Kagan e Kenso Soai por explicar como a química “escolhe” entre moléculas espelhadas</h3><p class="ult-dek">O francês e o japonês foram reconhecidos pela descoberta de efeitos não lineares e da autocatálise na síntese orgânica assimétrica, com impacto em medicamentos e na origem da vida.</p></div></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-07/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-07T06:41-03:00">06:41</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Rubio diz que o Irã “perdeu o controle” do Estreito de Ormuz e que o fluxo de petróleo quase voltou ao normal</h3><p class="ult-dek">Em Atenas, o secretário de Estado dos EUA afirmou que as sanções estão afetando duramente a economia iraniana e anunciou cooperação antiterrorismo com a Grécia.</p></div><img class="ult-thumb" src="img/2026-10-07/ultimas-2.jpg" alt="Marco Rubio em entrevista coletiva em Atenas" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-07/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-07T06:30-03:00">06:30</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Saúde</span></div><h3 class="ult-h">OMS pede explicações à Rússia sobre segundo caso de pneumonia de causa desconhecida em laboratório na Sibéria</h3><p class="ult-dek">O pedido vem após a morte de uma pesquisadora de 28 anos de um instituto antipeste em Irkutsk; autoridades russas dizem não ter encontrado peste entre os contatos dela.</p></div><img class="ult-thumb" src="img/2026-10-07/ultimas-1.jpg" alt="Sede da Organização Mundial da Saúde" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
