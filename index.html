@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261009061845"/>
-<meta name="edition-version" content="20261009061845"/>
+<link rel="stylesheet" href="styles.css?v=20261009081723"/>
+<meta name="edition-version" content="20261009081723"/>
 </head>
 <body>
 <div class="page">
@@ -26,10 +26,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-09T06:18-03:00">06:18</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-09T08:17-03:00">08:17</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -41,7 +42,7 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sexta-feira, 9 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-09T06:18-03:00">06:18</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-09T08:17-03:00">08:17</time></span>
     <span>Nº 019</span>
   </div>
   </header>
@@ -57,18 +58,30 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Principais do dia</h2>
-        <span class="live-when">até as 06:18</span>
+        <span class="live-when">até as 08:17</span>
       </div>
       <ol class="pr-list">
-        <li><a href="materias/2026-10-09/capa-1.html"><span class="pr-h">Gol passa a fazer check-in e emitir cartão de embarque dentro do ChatGPT; serviço chega a todos em 19 de outubro</span><span class="pr-meta">g1</span></a></li>
-        <li><a href="materias/2026-10-09/brasil-1.html"><span class="pr-h">Horário eleitoral do 2º turno começa nesta sexta, com tempo igual para Flávio Bolsonaro e Lula</span><span class="pr-meta">g1</span></a></li>
+        <li><a href="materias/2026-10-09/ultimas-3.html"><span class="pr-h">AtlasIntel/Bloomberg: Flávio Bolsonaro tem 52,8% dos votos válidos no 2º turno; Lula, 47,2%</span><span class="pr-meta">CNN Brasil · 07:30</span></a></li>
         <li><a href="materias/2026-10-09/mundo-1.html"><span class="pr-h">Nobel da Paz 2026 vai para a sul-africana Navi Pillay, jurista que enfrentou o apartheid e comandou os direitos humanos na ONU</span><span class="pr-meta">g1</span></a></li>
-        <li><a href="materias/2026-10-09/brasil-2.html"><span class="pr-h">Órgão da ONU prevê PIB do Brasil desacelerando para 1,8% em 2026 e 1,5% em 2027</span><span class="pr-meta">Folha de S.Paulo</span></a></li>
-        <li><a href="materias/2026-10-09/ia-1.html"><span class="pr-h">OAB-SP processa startup de IA jurídica Enter e diz que agentes invadem atividade exclusiva de advogados</span><span class="pr-meta">Folha de S.Paulo</span></a></li>
+        <li><a href="materias/2026-10-09/brasil-1.html"><span class="pr-h">Horário eleitoral do 2º turno começa nesta sexta, com tempo igual para Flávio Bolsonaro e Lula</span><span class="pr-meta">g1</span></a></li>
+        <li><a href="materias/2026-10-09/ultimas-4.html"><span class="pr-h">TSE manda Lula, Janja e aliados retirarem publicações contra Flávio Bolsonaro</span><span class="pr-meta">g1 · 07:36</span></a></li>
+        <li><a href="materias/2026-10-09/ultimas-1.html"><span class="pr-h">Futuros de Nova York sobem com projeção de receita da OpenAI, e petróleo cai após Trump dizer que não atacará o Irã antes das eleições</span><span class="pr-meta">InfoMoney · 06:23</span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:17</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-09/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-09T07:36-03:00">07:36</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Eleições</span></div><h3 class="ult-h">TSE manda Lula, Janja e aliados retirarem publicações contra Flávio Bolsonaro</h3><p class="ult-dek">Em decisões liminares, os ministros Nunes Marques e André Mendonça viram falta de base mínima em afirmações sobre programas sociais, jornada de trabalho e crime organizado.</p></div><img class="ult-thumb" src="img/2026-10-09/ultimas-4.jpg?v=6083d7e7" alt="Os ministros Kassio Nunes Marques e André Mendonça em sessão no TSE" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-09/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-09T07:30-03:00">07:30</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Eleições</span></div><h3 class="ult-h">AtlasIntel/Bloomberg: Flávio Bolsonaro tem 52,8% dos votos válidos no 2º turno; Lula, 47,2%</h3><p class="ult-dek">O instituto ouviu 5.026 eleitores entre 3 e 8 de outubro; a margem de erro é de 1 ponto percentual, para mais ou para menos.</p></div><img class="ult-thumb" src="img/2026-10-09/ultimas-3.jpg?v=ff085721" alt="Montagem com retratos de Flávio Bolsonaro e Lula lado a lado" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-09/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-09T06:46-03:00">06:46</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Saúde</span></div><h3 class="ult-h">Anvisa suspende venda e manda recolher o suplemento Peptistrong por falta de avaliação de segurança</h3><p class="ult-dek">O ingrediente principal, uma proteína de fava hidrolisada, não passou pela avaliação sanitária exigida para uso em alimentos; a medida vale para todos os lotes.</p></div><img class="ult-thumb" src="img/2026-10-09/ultimas-2.jpg?v=445cbf99" alt="Fachada da sede da Anvisa, em Brasília" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-09/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-09T06:23-03:00">06:23</time> · <span class="ult-src">InfoMoney</span> · <span class="ult-tag">Mercados</span></div><h3 class="ult-h">Futuros de Nova York sobem com projeção de receita da OpenAI, e petróleo cai após Trump dizer que não atacará o Irã antes das eleições</h3><p class="ult-dek">Nasdaq futuro subia cerca de 0,8% e o Brent recuava para perto de US$ 103; a Europa avançava perto de 1% na manhã desta sexta.</p></div><img class="ult-thumb" src="img/2026-10-09/ultimas-1.jpg?v=deeabc4d" alt="Fachada e placa de Wall Street, em Nova York" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
