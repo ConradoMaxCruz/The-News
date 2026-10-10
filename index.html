@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261010061328"/>
-<meta name="edition-version" content="20261010061328"/>
+<link rel="stylesheet" href="styles.css?v=20261010081123"/>
+<meta name="edition-version" content="20261010081123"/>
 </head>
 <body>
 <div class="page">
@@ -26,10 +26,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-10T06:13-03:00">06:13</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-10T08:11-03:00">08:11</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -41,7 +42,7 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sábado, 10 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-10T06:13-03:00">06:13</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-10T08:11-03:00">08:11</time></span>
     <span>Nº 020</span>
   </div>
   </header>
@@ -57,18 +58,29 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Principais do dia</h2>
-        <span class="live-when">até as 06:13</span>
+        <span class="live-when">até as 08:11</span>
       </div>
       <ol class="pr-list">
         <li><a href="materias/2026-10-10/capa-1.html"><span class="pr-h">Google limita o Gemini gratuito ao modelo Flash-Lite; Flash e Pro passam a exigir assinatura</span><span class="pr-meta">Canaltech</span></a></li>
-        <li><a href="materias/2026-10-10/brasil-1.html"><span class="pr-h">Ibovespa fecha a semana em recorde, com alta de mais de 8%, e mercado passa a cobrar juro menor e ajuste fiscal para seguir subindo</span><span class="pr-meta">CNN Brasil</span></a></li>
-        <li><a href="materias/2026-10-10/mundo-1.html"><span class="pr-h">Furacão Isaías chega à Flórida, deixa mais de 500 mil sem luz e leva DeSantis a decretar emergência</span><span class="pr-meta">g1</span></a></li>
         <li><a href="materias/2026-10-10/brasil-2.html"><span class="pr-h">PF diz que compra do Banco Master pelo BRB começou a ser tratada em reunião na Suíça com Ibaneis, Vorcaro e o então presidente do banco</span><span class="pr-meta">g1</span></a></li>
-        <li><a href="materias/2026-10-10/ia-1.html"><span class="pr-h">Agentes de programação aumentam a produção de código, mas não a de software entregue, aponta estudo de Harvard</span><span class="pr-meta">Ars Technica</span></a></li>
+        <li><a href="materias/2026-10-10/ultimas-2.html"><span class="pr-h">Bombardeio russo em Zaporizhzhia deixa 12 mortos, entre eles três crianças, um dia após Trump anunciar acordo de diesel com Putin</span><span class="pr-meta">g1 · 06:41</span></a></li>
+        <li><a href="materias/2026-10-10/mundo-1.html"><span class="pr-h">Furacão Isaías chega à Flórida, deixa mais de 500 mil sem luz e leva DeSantis a decretar emergência</span><span class="pr-meta">g1</span></a></li>
+        <li><a href="materias/2026-10-10/brasil-3.html"><span class="pr-h">Abstenção no 1º turno chega a 21,08%, a maior em eleição presidencial desde 1998</span><span class="pr-meta">g1</span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:11</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-10/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-10T07:00-03:00">07:00</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Índia aposta em data centers para entrar na corrida da IA, mas moradores de Mumbai protestam contra obra da Amazon</h3><p class="ult-dek">O governo Modi quer que o país hospede dados do mundo todo, com bilhões de Amazon, Google e Microsoft; vizinhos de um projeto perto de Mumbai temem falta de água, de energia e barulho.</p></div><img class="ult-thumb" src="img/2026-10-10/ultimas-3.jpg?v=f3f45b5c" alt="O primeiro-ministro da Índia, Narendra Modi, sentado a uma mesa com um arranjo de flores à frente" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-10/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-10T06:41-03:00">06:41</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Bombardeio russo em Zaporizhzhia deixa 12 mortos, entre eles três crianças, um dia após Trump anunciar acordo de diesel com Putin</h3><p class="ult-dek">Zelensky diz que bombas planadoras atingiram prédios residenciais e que 13 regiões foram alvo durante a noite; ele ligou o ataque ao alívio das sanções ao diesel russo anunciado pelos EUA.</p></div><img class="ult-thumb" src="img/2026-10-10/ultimas-2.jpg?v=e218535f" alt="Equipes de resgate com lanternas fazem buscas nos escombros de um prédio residencial em Zaporizhzhia, à noite" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-10/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-10T06:00-03:00">06:00</time> · <span class="ult-src">Folha de S.Paulo</span> · <span class="ult-tag">Saúde</span></div><h3 class="ult-h">Saúde mental é a maior preocupação de saúde para 58% dos brasileiros, acima da média de 32 países, mostra pesquisa Ipsos</h3><p class="ult-dek">O índice subiu de 52% para 58% em um ano e chega a 68% entre as mulheres; estresse, abuso de drogas e obesidade completam o topo da lista.</p></div><img class="ult-thumb" src="img/2026-10-10/ultimas-1.jpg?v=e6303b3c" alt="Homem de óculos esfrega os olhos, cansado, sentado diante de um notebook" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
