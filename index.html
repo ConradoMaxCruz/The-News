@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261013060651"/>
-<meta name="edition-version" content="20261013060651"/>
+<link rel="stylesheet" href="styles.css?v=20261013081751"/>
+<meta name="edition-version" content="20261013081751"/>
 </head>
 <body>
 <div class="page">
@@ -26,10 +26,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-13T06:06-03:00">06:06</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-13T08:17-03:00">08:17</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -41,7 +42,7 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Terça-feira, 13 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-13T06:06-03:00">06:06</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-13T08:17-03:00">08:17</time></span>
     <span>Nº 023</span>
   </div>
   </header>
@@ -57,18 +58,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Principais do dia</h2>
-        <span class="live-when">até as 06:06</span>
+        <span class="live-when">até as 08:17</span>
       </div>
       <ol class="pr-list">
         <li><a href="materias/2026-10-13/capa-1.html"><span class="pr-h">FMI eleva a previsão de crescimento mundial para 3,1% graças à onda de investimento em IA, mas avisa que os ganhos estão cada vez mais concentrados</span><span class="pr-meta">g1 / Folha de S.Paulo / CNN Brasil (Reuters) / Exame</span></a></li>
+        <li><a href="materias/2026-10-13/ultimas-1.html"><span class="pr-h">Ucrânia suspende por dois dias os ataques a refinarias e à infraestrutura de energia da Rússia para testar a trégua proposta por Trump</span><span class="pr-meta">g1 / Reuters · 06:45</span></a></li>
         <li><a href="materias/2026-10-13/brasil-1.html"><span class="pr-h">Senado começa a votar o fim da escala 6×1 nesta semana, e a oposição muda de estratégia e decide apoiar a PEC</span><span class="pr-meta">g1 / CNN Brasil</span></a></li>
-        <li><a href="materias/2026-10-13/mundo-1.html"><span class="pr-h">Drones atingem dois navios no Mar Negro perto da Bulgária e afundam um deles; premiê diz que o resultado favorece a Rússia</span><span class="pr-meta">g1 / CNN Brasil (Reuters)</span></a></li>
+        <li><a href="materias/2026-10-13/ultimas-5.html"><span class="pr-h">Pesquisa Gerp mostra Flávio Bolsonaro com 55% dos votos válidos no segundo turno, contra 45% de Lula</span><span class="pr-meta">CNN Brasil · 08:01</span></a></li>
         <li><a href="materias/2026-10-13/brasil-2.html"><span class="pr-h">PF entrega hoje a Fachin o material do caso Master que cita ministros do STF; ao menos seis dos dez são mencionados</span><span class="pr-meta">CNN Brasil</span></a></li>
-        <li><a href="materias/2026-10-13/ia-1.html"><span class="pr-h">Cursor, Grok e X Premium passam a caber numa só assinatura: a “X Subscription” vai de US$ 8 a US$ 200 por mês</span><span class="pr-meta">Engadget / fórum oficial do Cursor / docs da xAI</span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:17</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-13/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-13T08:01-03:00">08:01</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Pesquisa Gerp mostra Flávio Bolsonaro com 55% dos votos válidos no segundo turno, contra 45% de Lula</h3><p class="ult-dek">O levantamento ouviu 2.400 eleitores por telefone nos dias 8, 9 e 12 de outubro; a margem de erro é de 2 pontos. A votação é em 25 de outubro.</p></div><img class="ult-thumb" src="img/2026-10-13/ultimas-5.jpg?v=5ebb22ee" alt="Flávio Bolsonaro e Lula, lado a lado, em montagem de fotos" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-13/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-13T08:01-03:00">08:01</time> · <span class="ult-src">InfoMoney</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">Bolsa da Coreia do Sul despenca 5,5% e chega a suspender o pregão, com venda pesada de ações de chips de memória</h3><p class="ult-dek">Samsung caiu 7,4% e SK Hynix 10,1% depois que a chinesa CXMT apresentou uma nova arquitetura de DRAM; Tóquio e Taiwan também recuaram.</p></div><img class="ult-thumb" src="img/2026-10-13/ultimas-4.jpg?v=21bc80ea" alt="Sala de operações do Hana Bank em Seul, com painel de cotações (imagem de arquivo)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-13/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-13T07:57-03:00">07:57</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Governo publica decreto que agiliza o bloqueio de celulares dentro de presídios, em parceria com estados e Anatel</h3><p class="ult-dek">O programa prevê o bloqueio de aparelhos identificados um a um e o corte de sinal em áreas ao redor das unidades; quase 10 mil celulares foram apreendidos em presídios em três anos.</p></div><img class="ult-thumb" src="img/2026-10-13/ultimas-3.jpg?v=3577adfc" alt="Pessoa digitando no teclado de um celular (imagem de arquivo)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-13/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-13T07:52-03:00">07:52</time> · <span class="ult-src">g1 / Reuters</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Character.AI pede recuperação judicial nos EUA e aceita vender parte dos ativos à Disney por US$ 20 milhões</h3><p class="ult-dek">A plataforma de personagens com IA diz que segue no ar durante o leilão, previsto para terminar entre o fim de novembro e o começo de dezembro.</p></div><img class="ult-thumb" src="img/2026-10-13/ultimas-2.jpg?v=d67df7bc" alt="Telas do aplicativo Character.AI com galeria de personagens e uma conversa" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-13/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-13T06:45-03:00">06:45</time> · <span class="ult-src">g1 / Reuters</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Ucrânia suspende por dois dias os ataques a refinarias e à infraestrutura de energia da Rússia para testar a trégua proposta por Trump</h3><p class="ult-dek">Moscou diz que também não atingiu alvos de energia ucranianos na última noite e que há negociações em andamento, sem dizer com quem.</p></div><img class="ult-thumb" src="img/2026-10-13/ultimas-1.jpg?v=130737b2" alt="O presidente ucraniano Volodymyr Zelensky, de terno escuro, em setembro de 2026" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
