@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261015061328"/>
+<link rel="stylesheet" href="styles.css?v=20261015082036"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261015061328"/>
+<meta name="edition-version" content="20261015082036"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-15T06:13-03:00">06:13</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-15T08:20-03:00">08:20</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,7 +47,7 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quinta-feira, 15 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-15T06:13-03:00">06:13</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-15T08:20-03:00">08:20</time></span>
     <span>Nº 025</span>
   </div>
   </header>
@@ -62,18 +63,30 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Principais do dia</h2>
-        <span class="live-when">até as 06:13</span>
+        <span class="live-when">até as 08:20</span>
       </div>
       <ol class="pr-list">
-        <li><a href="materias/2026-10-15/capa-1.html"><span class="pr-h">Receita da Anthropic salta 45% e chega a US$ 16,8 bilhões no trimestre; empresa diz a investidores que teve lucro ajustado antes do IPO</span><span class="pr-meta">O Globo (Bloomberg) / BBC</span></a></li>
         <li><a href="materias/2026-10-15/brasil-1.html"><span class="pr-h">Senado aprova por 75 votos a 1 o fim da escala 6×1; jornada cairá para 40 horas com dois dias de folga por semana</span><span class="pr-meta">g1 / Agência Brasil / BBC News Brasil</span></a></li>
-        <li><a href="materias/2026-10-15/mundo-1.html"><span class="pr-h">Bolsas da Ásia despencam com temor sobre juros e IA; Kospi cai mais de 8% e aciona circuit breaker</span><span class="pr-meta">Folha de S.Paulo (AFP) / Yonhap</span></a></li>
-        <li><a href="materias/2026-10-15/brasil-2.html"><span class="pr-h">Plenário do Senado deve votar nesta quinta a PEC da Segurança Pública, que cria o SUSP na Constituição</span><span class="pr-meta">g1 / GloboNews</span></a></li>
-        <li><a href="materias/2026-10-15/ia-1.html"><span class="pr-h">FMI: IA pode afetar 40% dos empregos no mundo e dificultar a entrada dos jovens no mercado de trabalho</span><span class="pr-meta">g1 (Reuters)</span></a></li>
+        <li><a href="materias/2026-10-15/ultimas-4.html"><span class="pr-h">PF prende o deputado estadual eleito Márcio Canella e o ex-chefe da Polícia Civil do Rio em investigação sobre lavagem de dinheiro com postos de combustíveis</span><span class="pr-meta">InfoMoney · 08:12</span></a></li>
+        <li><a href="materias/2026-10-15/capa-1.html"><span class="pr-h">Receita da Anthropic salta 45% e chega a US$ 16,8 bilhões no trimestre; empresa diz a investidores que teve lucro ajustado antes do IPO</span><span class="pr-meta">O Globo (Bloomberg) / BBC</span></a></li>
+        <li><a href="materias/2026-10-15/ultimas-1.html"><span class="pr-h">Zelensky anuncia que a Ucrânia vai retomar os ataques a refinarias russas e diz se sentir traído por Trump</span><span class="pr-meta">CNN Brasil (Financial Times) · 06:06</span></a></li>
+        <li><a href="materias/2026-10-15/ultimas-3.html"><span class="pr-h">TSMC tem lucro recorde: receita sobe 51% no trimestre puxada pela demanda por chips de IA</span><span class="pr-meta">InfoMoney (Dow Jones Newswires) · 08:01</span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:20</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-15/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-15T08:12-03:00">08:12</time> · <span class="ult-src">InfoMoney</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">PF prende o deputado estadual eleito Márcio Canella e o ex-chefe da Polícia Civil do Rio em investigação sobre lavagem de dinheiro com postos de combustíveis</h3><p class="ult-dek">As prisões, determinadas por Alexandre de Moraes na oitava fase da Operação Unha e Carne, miram um grupo que teria movimentado R$ 7,6 bilhões em seis anos por meio de uma rede de postos na região metropolitana do Rio.</p></div><img class="ult-thumb" src="img/2026-10-15/ultimas-4.jpg?v=485d79f3" alt="Márcio Canella, de terno azul, em evento político diante de um painel com sua foto" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-15/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-15T08:01-03:00">08:01</time> · <span class="ult-src">InfoMoney (Dow Jones Newswires)</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">TSMC tem lucro recorde: receita sobe 51% no trimestre puxada pela demanda por chips de IA</h3><p class="ult-dek">A maior fabricante de chips sob encomenda do mundo lucrou cerca de US$ 23,7 bilhões, alta de 69%, e o resultado reduz o temor de que o ciclo de investimentos em infraestrutura de IA esteja no limite.</p></div><img class="ult-thumb" src="img/2026-10-15/ultimas-3.jpg?v=f3824822" alt="Logotipo vermelho da TSMC na fachada cinza de um prédio da empresa" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-15/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-15T06:14-03:00">06:14</time> · <span class="ult-src">Folha de S.Paulo (AFP)</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Desabamento do teto de uma escola em Peshawar, no Paquistão, mata ao menos 32 alunos e um professor</h3><p class="ult-dek">A maioria das vítimas tinha menos de 13 anos; pelo menos 45 pessoas ficaram feridas no centro de ensino privado, no noroeste do país.</p></div><img class="ult-thumb" src="img/2026-10-15/ultimas-2.jpg?v=a66941d3" alt="Moradores reunidos numa rua estreita de Peshawar diante da escola, com uma ambulância ao fundo" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-15/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-15T06:06-03:00">06:06</time> · <span class="ult-src">CNN Brasil (Financial Times)</span> · <span class="ult-tag">Ucrânia</span></div><h3 class="ult-h">Zelensky anuncia que a Ucrânia vai retomar os ataques a refinarias russas e diz se sentir traído por Trump</h3><p class="ult-dek">Em entrevista ao Financial Times, o presidente ucraniano disse que a pausa acabou e criticou a redução do compartilhamento de inteligência dos EUA e as restrições ao Starlink; ao apresentador Piers Morgan, afirmou que foi traído.</p></div><img class="ult-thumb" src="img/2026-10-15/ultimas-1.jpg?v=55299681" alt="Volodymyr Zelensky sentado diante de um notebook em seu gabinete" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
