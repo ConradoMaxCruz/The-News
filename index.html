@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261016061639"/>
+<link rel="stylesheet" href="styles.css?v=20261016081443"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261016061639"/>
+<meta name="edition-version" content="20261016081443"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-16T06:16-03:00">06:16</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-16T08:14-03:00">08:14</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,7 +47,7 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sexta-feira, 16 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-16T06:16-03:00">06:16</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-16T08:14-03:00">08:14</time></span>
     <span>Nº 026</span>
   </div>
   </header>
@@ -62,18 +63,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Principais do dia</h2>
-        <span class="live-when">até as 06:16</span>
+        <span class="live-when">até as 08:14</span>
       </div>
       <ol class="pr-list">
-        <li><a href="materias/2026-10-16/capa-1.html"><span class="pr-h">Meta lança o Muse Spark Open, modelo de IA de pesos abertos que compete com rivais chineses e roda em Mac Studio com a Apple</span><span class="pr-meta">O Globo (AFP)</span></a></li>
         <li><a href="materias/2026-10-16/brasil-1.html"><span class="pr-h">Congresso promulga hoje o fim da escala 6×1 e abre contagem para jornada de 40 horas</span><span class="pr-meta">O Globo</span></a></li>
-        <li><a href="materias/2026-10-16/mundo-1.html"><span class="pr-h">Ordem para limitar satélites Starshield usados pela Ucrânia partiu da Casa Branca, diz Reuters</span><span class="pr-meta">g1 (Reuters)</span></a></li>
-        <li><a href="materias/2026-10-16/brasil-2.html"><span class="pr-h">PEC da Segurança sai da pauta do Senado após disputa sobre maioridade penal</span><span class="pr-meta">CNN Brasil</span></a></li>
-        <li><a href="materias/2026-10-16/ia-1.html"><span class="pr-h">TSE manda Meta tratar Lula e Flávio com isonomia após IA barrar imagens do petista</span><span class="pr-meta">Agência Brasil</span></a></li>
+        <li><a href="materias/2026-10-16/ultimas-2.html"><span class="pr-h">PoderData/AYA: Flávio e Lula empatam com 50% dos votos válidos a nove dias do 2º turno</span><span class="pr-meta">CNN Brasil · 07:31</span></a></li>
+        <li><a href="materias/2026-10-16/capa-1.html"><span class="pr-h">Meta lança o Muse Spark Open, modelo de IA de pesos abertos que compete com rivais chineses e roda em Mac Studio com a Apple</span><span class="pr-meta">O Globo (AFP)</span></a></li>
+        <li><a href="materias/2026-10-16/ultimas-3.html"><span class="pr-h">Adolescente mata três crianças e uma professora em escola primária no Oregon, nos EUA</span><span class="pr-meta">g1 (BBC) · 07:36</span></a></li>
+        <li><a href="materias/2026-10-16/ultimas-5.html"><span class="pr-h">IA é a mudança mais importante para a economia que já vi, diz Kevin Warsh, presidente do Fed</span><span class="pr-meta">Folha de S.Paulo (AFP) · 08:06</span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:14</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-16/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-16T08:06-03:00">08:06</time> · <span class="ult-src">Folha de S.Paulo (AFP)</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">IA é a mudança mais importante para a economia que já vi, diz Kevin Warsh, presidente do Fed</h3><p class="ult-dek">Nas reuniões do FMI e do Banco Mundial em Bancoc, Warsh disse que o efeito da inteligência artificial será positivo no longo prazo, mas que o caminho até lá deve ser “acidentado”, com pressão sobre a inflação no curto prazo.</p></div><img class="ult-thumb" src="img/2026-10-16/ultimas-5.jpg?v=cbb2b198" alt="Kevin Warsh, presidente do Fed, gesticula ao falar em evento do FMI e do Banco Mundial, diante de um painel azul" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-16/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-16T07:45-03:00">07:45</time> · <span class="ult-src">Folha de S.Paulo (Reuters)</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">Justiça Federal do Rio torna réus 12 ex-executivos da Americanas acusados pela fraude na varejista</h3><p class="ult-dek">A 6ª Vara Federal Criminal do Rio aceitou agora a denúncia do Ministério Público Federal, apresentada em 2025. A empresa diz que foi vítima de uma fraude cometida pelos antigos dirigentes.</p></div><img class="ult-thumb" src="img/2026-10-16/ultimas-4.jpg?v=c6258c5c" alt="Fachada de uma loja Americanas em São Paulo, com o letreiro vermelho e as prateleiras ao fundo" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-16/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-16T07:36-03:00">07:36</time> · <span class="ult-src">g1 (BBC)</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Adolescente mata três crianças e uma professora em escola primária no Oregon, nos EUA</h3><p class="ult-dek">O atirador, de 16 anos, invadiu a escola Silver Rail, em Bend, e foi morto por um morador que o seguiu até lá; a polícia chegou três minutos depois. As escolas da cidade fecharam nesta sexta.</p></div><img class="ult-thumb" src="img/2026-10-16/ultimas-3.jpg?v=db53593c" alt="Policiais do xerife junto a um carro escuro em frente à escola primária Silver Rail, em Bend, no Oregon" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-16/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-16T07:31-03:00">07:31</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Eleições</span></div><h3 class="ult-h">PoderData/AYA: Flávio e Lula empatam com 50% dos votos válidos a nove dias do 2º turno</h3><p class="ult-dek">É a terceira rodada do instituto desde o primeiro turno, e a distância entre os dois vem caindo: era de 53% a 47% e depois de 51% a 49%. A margem de erro é de 1,8 ponto.</p></div><img class="ult-thumb" src="img/2026-10-16/ultimas-2.jpg?v=029d28aa" alt="Montagem com fotos de Flávio Bolsonaro e de Lula lado a lado" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-16/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-16T06:00-03:00">06:00</time> · <span class="ult-src">Folha de S.Paulo</span> · <span class="ult-tag">Ciência</span></div><h3 class="ult-h">Furo de lança no ombro indica que neandertal foi morto em ataque há 75 mil anos, no Iraque</h3><p class="ult-dek">Um buraco circular de 1,5 cm na escápula de um indivíduo da caverna de Shanidar sugere um golpe de lança de madeira dado de frente; seria um dos casos mais antigos de violência letal entre humanos arcaicos.</p></div><img class="ult-thumb" src="img/2026-10-16/ultimas-1.jpg?v=3852a927" alt="Mãos seguram a escápula fossilizada de um neandertal, com um pequeno furo circular no osso" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
