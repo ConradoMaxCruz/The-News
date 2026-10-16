@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261016081443"/>
+<link rel="stylesheet" href="styles.css?v=20261016090332"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261016081443"/>
+<meta name="edition-version" content="20261016090332"/>
 </head>
 <body>
 <div class="page">
@@ -52,6 +52,26 @@
   </div>
   </header>
 
+  <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-10-16/ultimas-5.html"><time>08:06</time><span>IA é a mudança mais importante para a economia que já vi, diz Kevin Warsh, presidente do Fed</span></a></li><li><a href="materias/2026-10-16/ultimas-4.html"><time>07:45</time><span>Justiça Federal do Rio torna réus 12 ex-executivos da Americanas acusados pela fraude na varejista</span></a></li><li><a href="materias/2026-10-16/ultimas-3.html"><time>07:36</time><span>Adolescente mata três crianças e uma professora em escola primária no Oregon, nos EUA</span></a></li><li><a href="materias/2026-10-16/ultimas-2.html"><time>07:31</time><span>PoderData/AYA: Flávio e Lula empatam com 50% dos votos válidos a nove dias do 2º turno</span></a></li><li><a href="materias/2026-10-16/ultimas-1.html"><time>06:00</time><span>Furo de lança no ombro indica que neandertal foi morto em ataque há 75 mil anos, no Iraque</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-16/ultimas-5.html"><time>08:06</time><span>IA é a mudança mais importante para a economia que já vi, diz Kevin Warsh, presidente do Fed</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-16/ultimas-4.html"><time>07:45</time><span>Justiça Federal do Rio torna réus 12 ex-executivos da Americanas acusados pela fraude na varejista</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-16/ultimas-3.html"><time>07:36</time><span>Adolescente mata três crianças e uma professora em escola primária no Oregon, nos EUA</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-16/ultimas-2.html"><time>07:31</time><span>PoderData/AYA: Flávio e Lula empatam com 50% dos votos válidos a nove dias do 2º turno</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-16/ultimas-1.html"><time>06:00</time><span>Furo de lança no ombro indica que neandertal foi morto em ataque há 75 mil anos, no Iraque</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:14</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
+    <div class="portal-bar">
+      <form class="search" role="search" onsubmit="return false">
+        <label class="sr-only" for="busca">Buscar notícias</label>
+        <input id="busca" type="search" placeholder="Buscar notícias…" autocomplete="off"/>
+        <span class="search-status" id="busca-status" aria-live="polite"></span>
+      </form>
+      <aside class="fx" aria-label="Câmbio e cripto">
+        <div class="fx-head">Câmbio &amp; Cripto <span class="fx-when" id="fx-when"></span></div>
+        <ul class="fx-list"><li class="fx-item" data-fx="USD"><span class="fx-name">Dólar</span><span class="fx-val">—</span><span class="fx-chg"></span></li><li class="fx-item" data-fx="EUR"><span class="fx-name">Euro</span><span class="fx-val">—</span><span class="fx-chg"></span></li><li class="fx-item" data-fx="GBP"><span class="fx-name">Libra</span><span class="fx-val">—</span><span class="fx-chg"></span></li><li class="fx-item" data-fx="BTC"><span class="fx-name">Bitcoin</span><span class="fx-val">—</span><span class="fx-chg"></span></li></ul>
+        <div class="fx-src">Fonte: <a href="https://docs.awesomeapi.com.br/api-de-moedas" target="_blank" rel="noopener">AwesomeAPI</a></div>
+      </aside>
+    </div>
+  <!-- portal:end -->
+
   <div class="capa-label" id="conteudo" data-topic="ia">Capa · Inteligência artificial</div>
   <article class="capa" data-topic="ia">
     <img class="capa-photo" src="img/2026-10-16/capa.jpg?v=349d3036" alt="Placa com o logotipo da Meta iluminado durante o evento Meta Connect, na Califórnia"/>
@@ -66,15 +86,15 @@
   <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
-        <h2 class="live-title" id="principais-title">Principais do dia</h2>
+        <h2 class="live-title" id="principais-title">Destaques do dia</h2>
         <span class="live-when">até as 08:14</span>
       </div>
-      <ol class="pr-list">
-        <li><a href="materias/2026-10-16/brasil-1.html"><span class="pr-h">Congresso promulga hoje o fim da escala 6×1 e abre contagem para jornada de 40 horas</span><span class="pr-meta">O Globo</span></a></li>
-        <li><a href="materias/2026-10-16/ultimas-2.html"><span class="pr-h">PoderData/AYA: Flávio e Lula empatam com 50% dos votos válidos a nove dias do 2º turno</span><span class="pr-meta">CNN Brasil · 07:31</span></a></li>
-        <li><a href="materias/2026-10-16/capa-1.html"><span class="pr-h">Meta lança o Muse Spark Open, modelo de IA de pesos abertos que compete com rivais chineses e roda em Mac Studio com a Apple</span><span class="pr-meta">O Globo (AFP)</span></a></li>
-        <li><a href="materias/2026-10-16/ultimas-3.html"><span class="pr-h">Adolescente mata três crianças e uma professora em escola primária no Oregon, nos EUA</span><span class="pr-meta">g1 (BBC) · 07:36</span></a></li>
-        <li><a href="materias/2026-10-16/ultimas-5.html"><span class="pr-h">IA é a mudança mais importante para a economia que já vi, diz Kevin Warsh, presidente do Fed</span><span class="pr-meta">Folha de S.Paulo (AFP) · 08:06</span></a></li>
+      <ol class="pr-list dq-grid">
+        <li class="dq-item"><a href="materias/2026-10-16/brasil-1.html"><img class="dq-thumb" src="img/2026-10-16/card-brasil-1.jpg?v=41d9f76d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Trabalho</span><span class="pr-h">Congresso promulga hoje o fim da escala 6×1 e abre contagem para jornada de 40 horas</span><span class="pr-meta">O Globo</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-16/ultimas-2.html"><img class="dq-thumb" src="img/2026-10-16/ultimas-2.jpg?v=029d28aa" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições</span><span class="pr-h">PoderData/AYA: Flávio e Lula empatam com 50% dos votos válidos a nove dias do 2º turno</span><span class="pr-meta">CNN Brasil · 07:31</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-16/capa-1.html"><img class="dq-thumb" src="img/2026-10-16/capa.jpg?v=349d3036" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA e mercado</span><span class="pr-h">Meta lança o Muse Spark Open, modelo de IA de pesos abertos que compete com rivais chineses e roda em Mac Studio com a Apple</span><span class="pr-meta">O Globo (AFP)</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-16/ultimas-3.html"><img class="dq-thumb" src="img/2026-10-16/ultimas-3.jpg?v=db53593c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Adolescente mata três crianças e uma professora em escola primária no Oregon, nos EUA</span><span class="pr-meta">g1 (BBC) · 07:36</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-16/ultimas-5.html"><img class="dq-thumb" src="img/2026-10-16/ultimas-5.jpg?v=cbb2b198" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">IA é a mudança mais importante para a economia que já vi, diz Kevin Warsh, presidente do Fed</span><span class="pr-meta">Folha de S.Paulo (AFP) · 08:06</span></span></a></li>
       </ol>
     </section>
     <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
@@ -101,12 +121,14 @@
         <div class="tag">Eleições</div>
         <h3>TSE manda Meta tratar Lula e Flávio com isonomia após IA barrar imagens do petista</h3>
         <p>Ministro Bellizze proíbe restrições desiguais de alcance e geração de conteúdo; multa diária de R$ 500 mil em caso de descumprimento.</p>
+        <div class="card-meta"><span class="cm-src">Agência Brasil</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/ia-2.html">
         <img class="card-photo" src="img/2026-10-16/card-ia-2.jpg?v=4204b5f5" alt="Ilustração conceitual de inteligência artificial com circuitos e luzes"/>
         <div class="tag">Regulação</div>
         <h3>FTC dos EUA intima OpenAI e Anthropic sobre segurança e possíveis danos a consumidores</h3>
         <p>Agência pede documentos sobre incidentes, privacidade e salvaguardas; investigação foi confirmada por porta-voz e repercutida pela CBN/Axios.</p>
+        <div class="card-meta"><span class="cm-src">CBN (Axios)</span></div>
       </a>
     </div>
   </section>
@@ -119,18 +141,21 @@
         <div class="tag">Ucrânia</div>
         <h3>Ordem para limitar satélites Starshield usados pela Ucrânia partiu da Casa Branca, diz Reuters</h3>
         <p>Restrição afetou comunicações e drones; um funcionário americano nega que Trump tenha pedido a medida. Receptores voltaram a funcionar até 160 km/h.</p>
+        <div class="card-meta"><span class="cm-src">g1 (Reuters)</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/mundo-2.html">
         <img class="card-photo" src="img/2026-10-16/card-mundo-2.jpg?v=6e4bc687" alt="Fumaça vista à distância após ataque ao complexo do palácio em Áden, no Iêmen"/>
         <div class="tag">Oriente Médio</div>
         <h3>Houthis bombardeiam palácio de governo em Áden; premiê iemenita não se feriu</h3>
         <p>Grupo rebelde apoiado pelo Irã atingiu o complexo Maashiq; governo fala em mortes entre a segurança. Escalada segue ataques a aeroportos sauditas.</p>
+        <div class="card-meta"><span class="cm-src">Folha de S.Paulo</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/mundo-3.html">
         <img class="card-photo" src="img/2026-10-16/card-mundo-3.jpg?v=6266521d" alt="Manifestante segura a bandeira da Albânia durante protesto estudantil em Tirana"/>
         <div class="tag">Europa</div>
         <h3>Estudantes incendeiam Ministério da Educação na Albânia em protesto por educação e emprego</h3>
         <p>Segundo dia de atos em Tirana; polícia usa gás lacrimogêneo e há detenções. Manifestantes pedem melhores condições nas universidades.</p>
+        <div class="card-meta"><span class="cm-src">g1 (Reuters)</span></div>
       </a>
     </div>
   </section>
@@ -144,18 +169,21 @@
         <div class="tag">Trabalho</div>
         <h3>Congresso promulga hoje o fim da escala 6×1 e abre contagem para jornada de 40 horas</h3>
         <p>Cerimônia às 9h; em dois meses a semana cai para 42 horas e, um ano depois, para 40, sem corte de salário. Lei complementar ainda regulamentará MEIs e pequenas empresas.</p>
+        <div class="card-meta"><span class="cm-src">O Globo</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/brasil-2.html">
         <img class="card-photo" src="img/2026-10-16/card-brasil-2.jpg?v=733f14a3" alt="Presidente do Senado, Davi Alcolumbre, em sessão no Congresso"/>
         <div class="tag">Congresso</div>
         <h3>PEC da Segurança sai da pauta do Senado após disputa sobre maioridade penal</h3>
         <p>Alcolumbre retirou o texto; Lula disse na Globo ser favorável a reduzir para 16 anos em crimes hediondos, mas fora desta PEC.</p>
+        <div class="card-meta"><span class="cm-src">CNN Brasil</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/brasil-3.html">
         <img class="card-photo" src="img/2026-10-16/card-brasil-3.jpg?v=86000b83" alt="Montagem com o senador Flávio Bolsonaro e o presidente Lula"/>
         <div class="tag">Eleições</div>
         <h3>Datafolha: Flávio tem 51% e Lula 49% dos votos válidos — empate técnico a dez dias do 2º turno</h3>
         <p>Nos totais, 47% a 45%; diferença nos válidos caiu de quatro para dois pontos em uma semana. Instituto ouviu 2.520 eleitores.</p>
+        <div class="card-meta"><span class="cm-src">Folha de S.Paulo</span></div>
       </a>
     </div>
   </section>
@@ -170,18 +198,21 @@
         <div class="tag">Elétricos</div>
         <h3>Volkswagen ID.4, primeiro elétrico da marca à venda no Brasil, estreia por R$ 299.990</h3>
         <p>SUV de 286 cv e 389 km de autonomia Inmetro chega às lojas no mesmo preço do Tiguan a combustão; antes só era oferecido por assinatura.</p>
+        <div class="card-meta"><span class="cm-src">UOL Carros / g1</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/automoveis-2.html">
         <img class="card-photo" src="img/2026-10-16/card-auto-2.jpg?v=e81f6c82" alt="GWM Haval H7, SUV híbrido, em foto de divulgação"/>
         <div class="tag">Híbridos</div>
         <h3>GWM Haval H7 chega ao Brasil: SUV híbrido flex 4×4 de 370 cv e até 92 km só elétrico</h3>
         <p>Bateria de 27,5 kWh, sete modos de condução e bloqueio de diferencial; rivaliza com Bronco, Compass e Jetour T2.</p>
+        <div class="card-meta"><span class="cm-src">Folha de S.Paulo</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/automoveis-3.html">
         <img class="card-photo" src="img/2026-10-16/card-auto-3.jpg?v=9abccc05" alt="Arcfox T1 elétrico exposto em evento da Baic no Brasil"/>
         <div class="tag">Chineses</div>
         <h3>Baic confirma Arcfox T1 elétrico para outubro e promete dez modelos no Brasil até 2028</h3>
         <p>Hatch de entrada mira Dolphin e Geely EX2; pré-estreia em outubro e entregas em novembro. Rede deve chegar a 50 lojas até dezembro.</p>
+        <div class="card-meta"><span class="cm-src">Quatro Rodas</span></div>
       </a>
     </div>
   </section>
@@ -194,18 +225,21 @@
         <div class="tag">Astronomia</div>
         <h3>Astrônomos encontram candidato a planeta “de segunda geração” orbitando uma anã branca</h3>
         <p>Estudo na Nature Astronomy, com dados do Hubble e do TESS, aponta mundo formado das cinzas da própria estrela HS 0209+0832.</p>
+        <div class="card-meta"><span class="cm-src">NASA / Nature Astronomy / Warwick</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/ciencia-2.html">
         <img class="card-photo" src="img/2026-10-16/card-ciencia-2.jpg?v=945cbed3" alt="Esquema de biochip que separa e identifica células tumorais circulantes"/>
         <div class="tag">Oncologia</div>
         <h3>Biochip com IA detecta células tumorais no sangue com cerca de 90% de acerto em testes iniciais</h3>
         <p>Plataforma chinesa combina microfluídica e aprendizado profundo sem depender de marcadores de superfície; próximo passo são amostras clínicas.</p>
+        <div class="card-meta"><span class="cm-src">Diário da Saúde (Biomedical Analysis)</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/ciencia-3.html">
         <img class="card-photo" src="img/2026-10-16/card-ciencia-3.jpg?v=0947f6cc" alt="Paineira nativa floresce cercada de leucena invasora em floresta secundária de Piracicaba"/>
         <div class="tag">Ecologia</div>
         <h3>Regeneração natural de florestas freia avanço de árvores invasoras, aponta estudo na Nature Plants</h3>
         <p>Análise de 1.561 áreas nas Américas, com participação da USP/FAPESP, mostra que espécies exóticas caem após 10–20 anos conforme a mata amadurece.</p>
+        <div class="card-meta"><span class="cm-src">Agência FAPESP (Nature Plants)</span></div>
       </a>
     </div>
   </section>
@@ -219,18 +253,21 @@
         <div class="tag">Diagnóstico</div>
         <h3>Exame de sangue para Alzheimer começa a ser oferecido no Brasil por cerca de R$ 3 mil</h3>
         <p>Hospital Moinhos de Vento (RS) dosará a proteína p-tau217; teste é para quem já tem sintomas. Ministério diz que não há pedido de incorporação ao SUS.</p>
+        <div class="card-meta"><span class="cm-src">g1</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/saude-2.html">
         <img class="card-photo" src="img/2026-10-16/card-saude-2.jpg?v=215e654a" alt="Seringa e frasco de medicamento em imagem ilustrativa"/>
         <div class="tag">HIV</div>
         <h3>Estudo no Brasil testa injeção contra HIV aplicada a cada quatro meses</h3>
         <p>Pesquisa de fase 3 (CUATRO) avalia cabotegravir e rilpivirina de ultralonga duração em quem já tem carga viral controlada; resultados principais previstos para 2027.</p>
+        <div class="card-meta"><span class="cm-src">g1</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/saude-3.html">
         <img class="card-photo" src="img/2026-10-16/card-saude-3.jpg?v=c22e1bbd" alt="Idoso usa o celular em videochamada com profissional de saúde"/>
         <div class="tag">IA e saúde</div>
         <h3>Maioria dos pacientes não seguiria orientação de saúde feita só por IA, sem médico</h3>
         <p>Em estudo da Columbia com 1.185 adultos nos EUA, 63% rejeitam respostas médicas geradas por IA sem revisão humana; aceitam mais para tarefas logísticas.</p>
+        <div class="card-meta"><span class="cm-src">O Globo (JAMA Network Open)</span></div>
       </a>
     </div>
   </section>
@@ -243,18 +280,21 @@
         <div class="tag">Apple</div>
         <h3>iPhone Duo entra em pré-venda no Brasil a partir de R$ 21.999; entregas em 23 de outubro</h3>
         <p>Primeiro dobrável da Apple tem telas de 5,4 e 7,6 polegadas, chip A20 Pro e versões de até 2 TB por R$ 30.999.</p>
+        <div class="card-meta"><span class="cm-src">g1 / TechTudo</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/tecnologia-2.html">
         <img class="card-photo" src="img/2026-10-16/card-tech-2.jpg?v=9ed326bf" alt="Tela do Android mostrando alerta de possível golpe em mensagem"/>
         <div class="tag">Segurança</div>
         <h3>Android ganha alertas contra golpes e “chamadas financeiras verificadas” com bancos no Brasil</h3>
         <p>Google Mensagens analisa conversas com IA; sistema avisa sobre links e encaminhamento de chamadas. Parceria inclui Banco do Brasil e Itaú.</p>
+        <div class="card-meta"><span class="cm-src">Estadão / TecMundo</span></div>
       </a>
       <a class="card" href="materias/2026-10-16/tecnologia-3.html">
         <img class="card-photo" src="img/2026-10-16/card-tech-3.jpg?v=d0c8f362" alt="Telas de smartphones Galaxy exibindo recursos de tradução e IA"/>
         <div class="tag">Celulares</div>
         <h3>Samsung amplia Galaxy AI para 24 idiomas e Bixby para 12, com português do Brasil</h3>
         <p>Novos idiomas em tradução, transcrição e resumo começam a chegar; polonês, tailandês e vietnamita no Bixby a partir de 14 de outubro.</p>
+        <div class="card-meta"><span class="cm-src">Samsung Newsroom</span></div>
       </a>
     </div>
   </section>
@@ -307,6 +347,87 @@
   var initial = current();
   apply(initial, false);
   if (initial !== 'tudo' && top) { requestAnimationFrame(function () { top.scrollIntoView({ block: 'start' }); }); }
+})();
+</script>
+<script id="portal-js">
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* Ao vivo */
+  var av = document.getElementById('aovivo');
+  if (av) {
+    var vp = av.querySelector('.av-viewport'), track = av.querySelector('.av-track');
+    var real = [].slice.call(track.children).filter(function (li) { return !li.hasAttribute('aria-hidden'); });
+    var paused = false, x = 0, last = 0;
+    if (reduce) av.classList.add('is-static');
+    function half() { var d = track.querySelector('.av-dup'); return d ? d.offsetLeft : track.scrollWidth / 2; }
+    function step(t) {
+      if (!last) last = t;
+      var dt = Math.min(64, t - last); last = t;
+      if (!paused && !reduce) { x += dt * 0.04; var h = half(); if (h && x >= h) x -= h; track.style.transform = 'translateX(' + (-x) + 'px)'; }
+      requestAnimationFrame(step);
+    }
+    function jump(dir) {
+      var offs = real.map(function (li) { return li.offsetLeft; }), h = half();
+      if (reduce) { var cur = Math.round(vp.scrollLeft); var i = offs.findIndex(function (o) { return o > cur + 4; });
+        var tgt = dir > 0 ? (i < 0 ? 0 : offs[i]) : (offs.filter(function (o) { return o < cur - 4; }).pop() || 0);
+        vp.scrollLeft = tgt; return; }
+      var idx = 0; for (var k = 0; k < offs.length; k++) if (offs[k] <= x + 4) idx = k;
+      if (dir > 0) x = idx + 1 < offs.length ? offs[idx + 1] : 0;
+      else x = offs[idx] < x - 4 ? offs[idx] : (idx > 0 ? offs[idx - 1] : offs[offs.length - 1]);
+      if (x >= h) x -= h;
+      track.style.transform = 'translateX(' + (-x) + 'px)';
+    }
+    av.addEventListener('mouseenter', function () { paused = true; });
+    av.addEventListener('mouseleave', function () { paused = false; });
+    av.addEventListener('focusin', function () { paused = true; });
+    av.addEventListener('focusout', function () { paused = false; });
+    av.addEventListener('touchstart', function () { paused = true; setTimeout(function () { paused = false; }, 4000); }, { passive: true });
+    [].forEach.call(av.querySelectorAll('.av-btn'), function (b) {
+      b.addEventListener('click', function () { jump(b.getAttribute('data-av') === 'next' ? 1 : -1); });
+    });
+    requestAnimationFrame(step);
+  }
+  /* Busca */
+  var input = document.getElementById('busca'), status = document.getElementById('busca-status');
+  if (input) {
+    var sel = '.card, .ult-item, .dq-item, .capa, .digest li';
+    var items = [].slice.call(document.querySelectorAll(sel));
+    function norm(s) { return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+    var texts = items.map(function (el) { return norm(el.textContent); });
+    function run() {
+      var q = norm(input.value.trim()), n = 0;
+      document.body.classList.toggle('is-searching', !!q);
+      items.forEach(function (el, i) { var ok = !q || texts[i].indexOf(q) >= 0; el.classList.toggle('search-miss', !ok); if (q && ok) n++; });
+      [].forEach.call(document.querySelectorAll('details.ult-more'), function (d) { if (q) d.open = true; });
+      [].forEach.call(document.querySelectorAll('.section, .principais, .ultimas, .digest'), function (s) {
+        var any = s.querySelector('.card:not(.search-miss), .ult-item:not(.search-miss), .dq-item:not(.search-miss), li:not(.search-miss)');
+        s.classList.toggle('search-empty', !!q && !any);
+      });
+      status.textContent = q ? (n ? n + (n === 1 ? ' resultado' : ' resultados') : 'Nada encontrado') : '';
+    }
+    input.addEventListener('input', run);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; run(); } });
+  }
+  /* Cambio & Cripto (AwesomeAPI) */
+  var fx = document.querySelector('.fx');
+  if (fx) {
+    var when = document.getElementById('fx-when');
+    function fmt(v, code) { return 'R$ ' + Number(v).toLocaleString('pt-BR', { minimumFractionDigits: code === 'BTC' ? 0 : 3, maximumFractionDigits: code === 'BTC' ? 0 : 3 }); }
+    function load() {
+      fetch('https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,GBP-BRL,BTC-BRL', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
+        [].forEach.call(fx.querySelectorAll('.fx-item'), function (li) {
+          var q = d[li.getAttribute('data-fx') + 'BRL']; if (!q) return;
+          var p = parseFloat(q.pctChange), c = li.querySelector('.fx-chg');
+          li.querySelector('.fx-val').textContent = fmt(q.bid, li.getAttribute('data-fx'));
+          c.textContent = (p > 0 ? '+' : '') + p.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%';
+          c.className = 'fx-chg ' + (p > 0 ? 'up' : p < 0 ? 'down' : '');
+        });
+        fx.classList.remove('fx-off');
+        var n = new Date(); when.textContent = 'às ' + ('0' + n.getHours()).slice(-2) + ':' + ('0' + n.getMinutes()).slice(-2);
+      }).catch(function () { fx.classList.add('fx-off'); when.textContent = 'cotações indisponíveis no momento'; });
+    }
+    load(); setInterval(load, 5 * 60 * 1000);
+  }
 })();
 </script>
 <script id="live-refresh">
