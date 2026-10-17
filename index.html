@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261017061514"/>
+<link rel="stylesheet" href="styles.css?v=20261017081435"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261017061514"/>
+<meta name="edition-version" content="20261017081435"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-17T06:15-03:00">06:15</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-17T08:14-03:00">08:14</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,12 +47,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sábado, 17 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-17T06:15-03:00">06:15</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-17T08:14-03:00">08:14</time></span>
     <span>Nº 027</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-10-17/ultimas-4.html"><time>06:49</time><span>Papa Leão XIV recebe alta neste sábado após cirurgia de câncer de pulmão e volta a aparecer em público no domingo</span></a></li><li><a href="materias/2026-10-17/ultimas-3.html"><time>04:00</time><span>Depois dos carros, o frango: China vende cortes até 20% mais baratos e disputa clientes do Brasil</span></a></li><li><a href="materias/2026-10-17/ultimas-2.html"><time>00:00</time><span>Frente fria traz temporais ao Sudeste neste sábado; domingo terá frio e risco de geada no Paraná e em SC</span></a></li><li><a href="materias/2026-10-17/ultimas-1.html"><time>00:00</time><span>Dark Horse: PF vê divergência “severa” entre os US$ 12 milhões enviados ao exterior e os US$ 2,8 milhões que voltaram para o filme</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-17/ultimas-4.html"><time>06:49</time><span>Papa Leão XIV recebe alta neste sábado após cirurgia de câncer de pulmão e volta a aparecer em público no domingo</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-17/ultimas-3.html"><time>04:00</time><span>Depois dos carros, o frango: China vende cortes até 20% mais baratos e disputa clientes do Brasil</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-17/ultimas-2.html"><time>00:00</time><span>Frente fria traz temporais ao Sudeste neste sábado; domingo terá frio e risco de geada no Paraná e em SC</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-17/ultimas-1.html"><time>00:00</time><span>Dark Horse: PF vê divergência “severa” entre os US$ 12 milhões enviados ao exterior e os US$ 2,8 milhões que voltaram para o filme</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:14</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -77,18 +83,30 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:15</span>
+        <span class="live-when">até as 08:14</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-10-17/capa-1.html"><img class="dq-thumb" src="img/2026-10-17/capa.jpg?v=612b6ca2" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA e segurança</span><span class="pr-h">OpenAI revela que modelos internos invadiram sites, baixaram dados sigilosos e usaram carteira de cripto sem permissão</span><span class="pr-meta">Fortune / SecurityWeek</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-17/brasil-1.html"><img class="dq-thumb" src="img/2026-10-17/card-brasil-1.jpg?v=25f422fb" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">Na Globo, Flávio promete manter fim da 6×1, fala em um só mandato e diz que cargo para o pai “não está no radar”</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-17/ultimas-4.html"><img class="dq-thumb" src="img/2026-10-17/ultimas-4.jpg?v=73f9b5b4" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Papa Leão XIV recebe alta neste sábado após cirurgia de câncer de pulmão e volta a aparecer em público no domingo</span><span class="pr-meta">g1 (Reuters) · 06:49</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-17/mundo-1.html"><img class="dq-thumb" src="img/2026-10-17/card-mundo-1.jpg?v=c9c9fb0b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">EUA e Rússia</span><span class="pr-h">Trump suspende sanções contra a Rússia aprovadas pelo Congresso dias antes de entrarem em vigor</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-17/brasil-2.html"><img class="dq-thumb" src="img/2026-10-17/card-brasil-2.jpg?v=7230fa4c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Congresso</span><span class="pr-h">Centrão tenta acordo para mudar o sistema eleitoral e conter o avanço do PL na Câmara</span><span class="pr-meta">g1 (GloboNews)</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-17/ia-1.html"><img class="dq-thumb" src="img/2026-10-17/card-ia-1.jpg?v=47b03c1e" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA e apps</span><span class="pr-h">ChatGPT passa a ler as abas abertas do Chrome e executar tarefas pelo usuário</span><span class="pr-meta">Canaltech</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-17/brasil-1.html"><img class="dq-thumb" src="img/2026-10-17/card-brasil-1.jpg?v=25f422fb" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">Na Globo, Flávio promete manter fim da 6×1, fala em um só mandato e diz que cargo para o pai “não está no radar”</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-17/ultimas-1.html"><img class="dq-thumb" src="img/2026-10-17/ultimas-1.jpg?v=f796bb3c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições</span><span class="pr-h">Dark Horse: PF vê divergência “severa” entre os US$ 12 milhões enviados ao exterior e os US$ 2,8 milhões que voltaram para o filme</span><span class="pr-meta">g1 · 00:00</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:14</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-17/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-17T06:49-03:00">06:49</time> · <span class="ult-src">g1 (Reuters)</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Papa Leão XIV recebe alta neste sábado após cirurgia de câncer de pulmão e volta a aparecer em público no domingo</h3><p class="ult-dek">Exames de sangue e de imagem feitos pela manhã liberaram o pontífice; o Vaticano mantém a viagem ao Peru, à Argentina e ao Uruguai em novembro.</p></div><img class="ult-thumb" src="img/2026-10-17/ultimas-4.jpg?v=73f9b5b4" alt="Mulher diante da estátua de João Paulo II em frente ao Hospital Gemelli, em Roma, neste sábado (Foto: Vincenzo Livieri/Reuters)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-17/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-17T04:00-03:00">04:00</time> · <span class="ult-src">g1 (Reuters)</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">Depois dos carros, o frango: China vende cortes até 20% mais baratos e disputa clientes do Brasil</h3><p class="ult-dek">Com produção recorde e consumo interno mais fraco, a China quase dobrou as exportações de frango desde 2020 e já ganha espaço na Europa e na África.</p></div><img class="ult-thumb" src="img/2026-10-17/ultimas-3.jpg?v=064c6cb4" alt="Galinhas em granja em Taquari (RS) (Foto: Reuters)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-17/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-17T00:00-03:00">00:00</time> · <span class="ult-src">g1 / Climatempo / Inmet</span> · <span class="ult-tag">Tempo</span></div><h3 class="ult-h">Frente fria traz temporais ao Sudeste neste sábado; domingo terá frio e risco de geada no Paraná e em SC</h3><p class="ult-dek">Um ciclone no Atlântico Sul deve trazer rajadas de até 90 km/h nas serras gaúcha e catarinense; no centro-sul do Paraná, o domingo pode amanhecer perto de 3°C.</p></div><img class="ult-thumb" src="img/2026-10-17/ultimas-2.jpg?v=1462b8ad" alt="Nuvens carregadas sobre Presidente Prudente (SP) (Foto: Beatriz Jarins/g1)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-17/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-17T00:00-03:00">00:00</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Eleições</span></div><h3 class="ult-h">Dark Horse: PF vê divergência “severa” entre os US$ 12 milhões enviados ao exterior e os US$ 2,8 milhões que voltaram para o filme</h3><p class="ult-dek">A Polícia Federal pediu ao STF mais 90 dias de investigação e uma perícia forense nas contas da produtora da cinebiografia de Jair Bolsonaro.</p></div><img class="ult-thumb" src="img/2026-10-17/ultimas-1.jpg?v=f796bb3c" alt="Jim Caviezel no pôster do filme Dark Horse (Reprodução/Instagram)" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
