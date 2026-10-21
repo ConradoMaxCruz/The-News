@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261021060255"/>
+<link rel="stylesheet" href="styles.css?v=20261021081110"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261021060255"/>
+<meta name="edition-version" content="20261021081110"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-21T06:02-03:00">06:02</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-21T08:11-03:00">08:11</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,12 +47,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quarta-feira, 21 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-21T06:02-03:00">06:02</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-21T08:11-03:00">08:11</time></span>
     <span>Nº 031</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-10-21/ultimas-4.html"><time>07:55</time><span>Prospecto do IPO revela prejuízo de US$ 80,7 bilhões da Anthropic no 1º semestre</span></a></li><li><a href="materias/2026-10-21/ultimas-3.html"><time>07:29</time><span>Metrô de São Paulo passa a vender bilhete QR Code com Pix nas máquinas das estações</span></a></li><li><a href="materias/2026-10-21/ultimas-2.html"><time>07:27</time><span>Rússia liberta professor americano Stephen Hubbard durante visita de Witkoff</span></a></li><li><a href="materias/2026-10-21/ultimas-1.html"><time>07:00</time><span>Pesquisa Meio/Ideia mostra empate técnico: Flávio tem 51,1% dos votos válidos e Lula, 48,9%</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-21/ultimas-4.html"><time>07:55</time><span>Prospecto do IPO revela prejuízo de US$ 80,7 bilhões da Anthropic no 1º semestre</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-21/ultimas-3.html"><time>07:29</time><span>Metrô de São Paulo passa a vender bilhete QR Code com Pix nas máquinas das estações</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-21/ultimas-2.html"><time>07:27</time><span>Rússia liberta professor americano Stephen Hubbard durante visita de Witkoff</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-21/ultimas-1.html"><time>07:00</time><span>Pesquisa Meio/Ideia mostra empate técnico: Flávio tem 51,1% dos votos válidos e Lula, 48,9%</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:11</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -77,18 +83,30 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:02</span>
+        <span class="live-when">até as 08:11</span>
       </div>
       <ol class="pr-list dq-grid">
+        <li class="dq-item"><a href="materias/2026-10-21/ultimas-1.html"><img class="dq-thumb" src="img/2026-10-21/ultimas-1.jpg?v=ff085721" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Política</span><span class="pr-h">Pesquisa Meio/Ideia mostra empate técnico: Flávio tem 51,1% dos votos válidos e Lula, 48,9%</span><span class="pr-meta">CNN Brasil · 07:00</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-21/capa-1.html"><img class="dq-thumb" src="img/2026-10-21/capa.jpg?v=1db8afa4" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Regulação da IA</span><span class="pr-h">Anthropic leva ao Congresso dos EUA projeto que permitiria barrar modelo de IA com risco de matar mais de 50 pessoas</span><span class="pr-meta">TechCrunch (Politico)</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-21/brasil-1.html"><img class="dq-thumb" src="img/2026-10-21/card-brasil-1.jpg?v=b7f7e5c9" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Transporte</span><span class="pr-h">Lula envia hoje ao Congresso PEC da tarifa zero nos ônibus aos fins de semana</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-21/ultimas-4.html"><img class="dq-thumb" src="img/2026-10-21/ultimas-4.jpg?v=bd876a35" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Prospecto do IPO revela prejuízo de US$ 80,7 bilhões da Anthropic no 1º semestre</span><span class="pr-meta">InfoMoney/Reuters · 07:55</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-21/brasil-3.html"><img class="dq-thumb" src="img/2026-10-21/card-brasil-3.jpg?v=1444bf89" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">PF aponta que Willer Tomaz pagou para tirar do ar notícias que o ligavam a Flávio Bolsonaro</span><span class="pr-meta">g1 (O Globo, TV Globo)</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-21/mundo-1.html"><img class="dq-thumb" src="img/2026-10-21/card-mundo-1.jpg?v=19102b2c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Oriente Médio</span><span class="pr-h">Superpetroleiro com 2 milhões de barris pega fogo após atingir mina perto do Estreito de Ormuz, diz Irã</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-21/brasil-2.html"><img class="dq-thumb" src="img/2026-10-21/card-brasil-2.jpg?v=6ca12153" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">Lula sanciona hoje o Prospera MEI, com perdão de dívidas e teto de R$ 140 mil até 2028</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-21/ia-1.html"><img class="dq-thumb" src="img/2026-10-21/card-ia-1.jpg?v=ec991fd8" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA e biotecnologia</span><span class="pr-h">OpenAI compra a Orchestra Bio e reforça sua aposta em IA para a indústria farmacêutica</span><span class="pr-meta">TechCrunch</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:11</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-21/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-21T07:55-03:00">07:55</time> · <span class="ult-src">InfoMoney/Reuters</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Prospecto do IPO revela prejuízo de US$ 80,7 bilhões da Anthropic no 1º semestre</h3><p class="ult-dek">A maior parte vem de um ajuste contábil de US$ 72 bi em títulos conversíveis; a abertura de capital está prevista para novembro.</p></div><img class="ult-thumb" src="img/2026-10-21/ultimas-4.jpg?v=bd876a35" alt="Celular com o logotipo da Anthropic (Foto: InfoMoney)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-21/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-21T07:29-03:00">07:29</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Metrô de São Paulo passa a vender bilhete QR Code com Pix nas máquinas das estações</h3><p class="ult-dek">Opção começou pela Linha 1-Azul e chega às demais linhas até 30 de outubro; bilhete magnético deixa de valer no dia 31.</p></div><img class="ult-thumb" src="img/2026-10-21/ultimas-3.jpg?v=6697dac6" alt="Estação do Metrô de São Paulo (Foto: CNN Brasil)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-21/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-21T07:27-03:00">07:27</time> · <span class="ult-src">g1/AP</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Rússia liberta professor americano Stephen Hubbard durante visita de Witkoff</h3><p class="ult-dek">Professor aposentado de Michigan cumpria quase sete anos de prisão sob acusação de lutar como mercenário pela Ucrânia.</p></div><img class="ult-thumb" src="img/2026-10-21/ultimas-2.jpg?v=30d0a0ee" alt="Stephen Hubbard em videoconferência durante sessão de tribunal em Moscou, em 2024 (Foto: AP Photo/Alexander Zemlianichenko, via g1)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-21/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-21T07:00-03:00">07:00</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Política</span></div><h3 class="ult-h">Pesquisa Meio/Ideia mostra empate técnico: Flávio tem 51,1% dos votos válidos e Lula, 48,9%</h3><p class="ult-dek">Diferença de 2,2 pontos fica dentro da margem de erro de 2,5 pontos, a quatro dias do segundo turno.</p></div><img class="ult-thumb" src="img/2026-10-21/ultimas-1.jpg?v=ff085721" alt="Flávio Bolsonaro e Lula (Montagem: CNN Brasil)" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
