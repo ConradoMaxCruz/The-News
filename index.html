@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261023060723"/>
+<link rel="stylesheet" href="styles.css?v=20261023081429"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261023060723"/>
+<meta name="edition-version" content="20261023081429"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-23T06:07-03:00">06:07</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-23T08:14-03:00">08:14</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,12 +47,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sexta-feira, 23 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-23T06:07-03:00">06:07</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-23T08:14-03:00">08:14</time></span>
     <span>Nº 033</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-10-23/ultimas-6.html"><time>21:45</time><span>Deixados sem tarefa numa ilha virtual, agentes de IA começaram a brincar, diz estudo do MIT</span></a></li><li><a href="materias/2026-10-23/ultimas-5.html"><time>08:05</time><span>Diplomatas estrangeiros avaliam reconhecer rápido o vencedor da eleição no Brasil e temem reação de Trump</span></a></li><li><a href="materias/2026-10-23/ultimas-4.html"><time>07:26</time><span>Tufão Champi paralisa Taiwan, deixa um morto e cancela quase mil voos</span></a></li><li><a href="materias/2026-10-23/ultimas-3.html"><time>07:00</time><span>Real Time Big Data: Flávio tem 52% dos votos válidos e Lula, 48%, em empate técnico</span></a></li><li><a href="materias/2026-10-23/ultimas-2.html"><time>04:40</time><span>Petróleo Brent passa de US$ 114 pela primeira vez desde maio</span></a></li><li><a href="materias/2026-10-23/ultimas-1.html"><time>03:00</time><span>EUA e Israel preparam planos para retomar ataques ao Irã depois das eleições de meio de mandato americanas</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-23/ultimas-6.html"><time>21:45</time><span>Deixados sem tarefa numa ilha virtual, agentes de IA começaram a brincar, diz estudo do MIT</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-23/ultimas-5.html"><time>08:05</time><span>Diplomatas estrangeiros avaliam reconhecer rápido o vencedor da eleição no Brasil e temem reação de Trump</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-23/ultimas-4.html"><time>07:26</time><span>Tufão Champi paralisa Taiwan, deixa um morto e cancela quase mil voos</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-23/ultimas-3.html"><time>07:00</time><span>Real Time Big Data: Flávio tem 52% dos votos válidos e Lula, 48%, em empate técnico</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-23/ultimas-2.html"><time>04:40</time><span>Petróleo Brent passa de US$ 114 pela primeira vez desde maio</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-23/ultimas-1.html"><time>03:00</time><span>EUA e Israel preparam planos para retomar ataques ao Irã depois das eleições de meio de mandato americanas</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:14</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -77,18 +83,32 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:07</span>
+        <span class="live-when">até as 08:14</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-10-23/capa-1.html"><img class="dq-thumb" src="img/2026-10-23/capa.jpg?v=0c2fb419" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Dinheiro da IA</span><span class="pr-h">OpenAI reduz meta e negocia captar US$ 30 bilhões a uma avaliação de US$ 1,25 trilhão antes do IPO</span><span class="pr-meta">Folha de S.Paulo / Financial Times (CNBC, TechCrunch)</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-23/ultimas-5.html"><img class="dq-thumb" src="img/2026-10-23/ultimas-5.jpg?v=36f0140f" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Diplomatas estrangeiros avaliam reconhecer rápido o vencedor da eleição no Brasil e temem reação de Trump</span><span class="pr-meta">g1/Reuters · 08:05</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-23/ultimas-1.html"><img class="dq-thumb" src="img/2026-10-23/ultimas-1.jpg?v=4f0e1363" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">EUA e Israel preparam planos para retomar ataques ao Irã depois das eleições de meio de mandato americanas</span><span class="pr-meta">Folha · 03:00</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-23/ultimas-2.html"><img class="dq-thumb" src="img/2026-10-23/ultimas-2.jpg?v=f440ac54" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">Petróleo Brent passa de US$ 114 pela primeira vez desde maio</span><span class="pr-meta">Folha · 04:40</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-23/brasil-1.html"><img class="dq-thumb" src="img/2026-10-23/card-brasil-1.jpg?v=344e7218" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">Último debate: Lula e Flávio Bolsonaro mudam o tom de olho nos indecisos antes do confronto da Globo nesta sexta</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-23/mundo-1.html"><img class="dq-thumb" src="img/2026-10-23/card-mundo-1.jpg?v=1b6fab74" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Oriente Médio</span><span class="pr-h">Irã ameaça ampliar retaliação e diz que cabos, data centers e instalações de IA dos EUA podem virar alvo</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-23/brasil-2.html"><img class="dq-thumb" src="img/2026-10-23/card-brasil-2.jpg?v=537d104c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">Um terço dos doadores de Flávio Bolsonaro também financiou Jair em 2022; Lula manteve só oito</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-23/ia-1.html"><img class="dq-thumb" src="img/2026-10-23/card-ia-1.jpg?v=cce7663f" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA na medicina</span><span class="pr-h">Microsoft diz que sua IA diagnostica melhor que médicos em casos complexos, em estudo publicado na Science</span><span class="pr-meta">The Verge (Tecnoblog, Science)</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:14</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-23/ultimas-6.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-23T21:45-03:00">21:45</time> · <span class="ult-src">TechCrunch</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Deixados sem tarefa numa ilha virtual, agentes de IA começaram a brincar, diz estudo do MIT</h3><p class="ult-dek">Agentes que passaram 30 horas explorando sem objetivo inventaram desafios próprios e depois se saíram melhor em tarefas do que agentes que não tinham brincado.</p></div><img class="ult-thumb" src="img/2026-10-23/ultimas-6.jpg?v=f6e94467" alt="Cena da ilha virtual usada no experimento (TechCrunch)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-23/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-23T08:05-03:00">08:05</time> · <span class="ult-src">g1/Reuters</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Diplomatas estrangeiros avaliam reconhecer rápido o vencedor da eleição no Brasil e temem reação de Trump</h3><p class="ult-dek">Quatro embaixadores disseram à Reuters que a ideia é evitar que alguém de fora declare vitória antes do TSE, sobretudo se Lula vencer por margem estreita.</p></div><img class="ult-thumb" src="img/2026-10-23/ultimas-5.jpg?v=36f0140f" alt="Flávio Bolsonaro, Donald Trump e Lula (g1)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-23/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-23T07:26-03:00">07:26</time> · <span class="ult-src">CNN Brasil/Reuters</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Tufão Champi paralisa Taiwan, deixa um morto e cancela quase mil voos</h3><p class="ult-dek">Tempestade perde força, mas ainda tem rajadas de cerca de 191 km/h; 163 pessoas ficaram feridas e mais de 2.600 foram retiradas de áreas de montanha.</p></div><img class="ult-thumb" src="img/2026-10-23/ultimas-4.jpg?v=76778650" alt="Mapa de ventos mostra o tufão Champi perto de Taiwan (CNN Brasil)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-23/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-23T07:00-03:00">07:00</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Real Time Big Data: Flávio tem 52% dos votos válidos e Lula, 48%, em empate técnico</h3><p class="ult-dek">Pesquisa telefônica com 2.000 eleitores, feita de 19 a 22 de outubro, tem margem de erro de dois pontos.</p></div><img class="ult-thumb" src="img/2026-10-23/ultimas-3.jpg?v=5ebb22ee" alt="Flávio Bolsonaro e Lula (CNN Brasil)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-23/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-23T04:40-03:00">04:40</time> · <span class="ult-src">Folha</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">Petróleo Brent passa de US$ 114 pela primeira vez desde maio</h3><p class="ult-dek">Alta vem dos ataques houthis a alvos sauditas e da falta de avanço nas conversas de paz, depois de uma forte queda das big techs em Wall Street.</p></div><img class="ult-thumb" src="img/2026-10-23/ultimas-2.jpg?v=f440ac54" alt="Oleoduto de petróleo bruto (Folha)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-23/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-23T03:00-03:00">03:00</time> · <span class="ult-src">Folha</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">EUA e Israel preparam planos para retomar ataques ao Irã depois das eleições de meio de mandato americanas</h3><p class="ult-dek">Operação seria curta e intensa, com alvos em energia, instalações nucleares e mísseis; Hegseth esteve com Netanyahu nesta semana.</p></div><img class="ult-thumb" src="img/2026-10-23/ultimas-1.jpg?v=4f0e1363" alt="Netanyahu e Trump se cumprimentam (Folha)" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
