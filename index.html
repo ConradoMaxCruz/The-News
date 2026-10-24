@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261024061143"/>
+<link rel="stylesheet" href="styles.css?v=20261024081439"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261024061143"/>
+<meta name="edition-version" content="20261024081439"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-24T06:11-03:00">06:11</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-24T08:14-03:00">08:14</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,12 +47,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sábado, 24 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-24T06:11-03:00">06:11</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-24T08:14-03:00">08:14</time></span>
     <span>Nº 034</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-10-24/ultimas-3.html"><time>07:36</time><span>Inmet emite alerta vermelho para chuva, granizo e ventos de até 100 km/h no norte do RS</span></a></li><li><a href="materias/2026-10-24/ultimas-5.html"><time>06:50</time><span>Quem paga a conta? Economistas veem pouco espaço no Orçamento para as promessas de Lula e Flávio</span></a></li><li><a href="materias/2026-10-24/ultimas-4.html"><time>05:52</time><span>No último dia de campanha, Flávio faz atos em BH e no Rio, e Lula caminha em Copacabana e na Paulista</span></a></li><li><a href="materias/2026-10-24/ultimas-2.html"><time>05:16</time><span>Tufão Champi passa raspando por Taiwan, deixa um morto e mais de 500 feridos e segue rumo à costa da China</span></a></li><li><a href="materias/2026-10-24/ultimas-1.html"><span>BC vai exigir autorização prévia de clientes vulneráveis para oferecer crédito a eles</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-24/ultimas-3.html"><time>07:36</time><span>Inmet emite alerta vermelho para chuva, granizo e ventos de até 100 km/h no norte do RS</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-24/ultimas-5.html"><time>06:50</time><span>Quem paga a conta? Economistas veem pouco espaço no Orçamento para as promessas de Lula e Flávio</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-24/ultimas-4.html"><time>05:52</time><span>No último dia de campanha, Flávio faz atos em BH e no Rio, e Lula caminha em Copacabana e na Paulista</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-24/ultimas-2.html"><time>05:16</time><span>Tufão Champi passa raspando por Taiwan, deixa um morto e mais de 500 feridos e segue rumo à costa da China</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-24/ultimas-1.html"><span>BC vai exigir autorização prévia de clientes vulneráveis para oferecer crédito a eles</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:14</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -77,18 +83,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:11</span>
+        <span class="live-when">até as 08:14</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-10-24/capa-1.html"><img class="dq-thumb" src="img/2026-10-24/capa.jpg?v=41a8028a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">No último debate antes do 2º turno, Lula e Flávio trocam ofensas e propostas na Globo</span><span class="pr-meta">g1 (TV Globo)</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-24/ultimas-4.html"><img class="dq-thumb" src="img/2026-10-24/ultimas-4.jpg?v=b661b7a9" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">No último dia de campanha, Flávio faz atos em BH e no Rio, e Lula caminha em Copacabana e na Paulista</span><span class="pr-meta">CNN Brasil · 05:52</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-24/ultimas-5.html"><img class="dq-thumb" src="img/2026-10-24/ultimas-5.jpg?v=028495af" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">Quem paga a conta? Economistas veem pouco espaço no Orçamento para as promessas de Lula e Flávio</span><span class="pr-meta">g1 · 06:50</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-24/brasil-1.html"><img class="dq-thumb" src="img/2026-10-24/card-brasil-1.jpg?v=e7c6740a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Política</span><span class="pr-h">Moraes manda bloquear até R$ 6 bilhões de Willer Tomaz, amigo de Flávio, e quebra sigilos de empresas do advogado</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-24/mundo-1.html"><img class="dq-thumb" src="img/2026-10-24/card-mundo-1.jpg?v=e0f3833a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Europa</span><span class="pr-h">França tem novos protestos neste sábado, após um mês de manifestações, e governo mobiliza 70 mil agentes</span><span class="pr-meta">g1 (AFP, Reuters)</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-24/brasil-2.html"><img class="dq-thumb" src="img/2026-10-24/card-brasil-2.jpg?v=b47ea576" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">Datafolha: 60% dos brasileiros esperam melhora da economia nos próximos seis meses, ante 36% em junho</span><span class="pr-meta">g1 (Datafolha)</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-24/ia-1.html"><img class="dq-thumb" src="img/2026-10-24/card-ia-1.jpg?v=0d424d2b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA e segurança</span><span class="pr-h">OpenAI passa a treinar seus modelos mais avançados sem acesso à internet, depois de agentes escaparem de testes</span><span class="pr-meta">The Verge (TechCrunch, Folha/Reuters)</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-24/ultimas-2.html"><img class="dq-thumb" src="img/2026-10-24/ultimas-2.jpg?v=4d17882d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Tufão Champi passa raspando por Taiwan, deixa um morto e mais de 500 feridos e segue rumo à costa da China</span><span class="pr-meta">Folha · 05:16</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:14</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-24/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-24T07:36-03:00">07:36</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Inmet emite alerta vermelho para chuva, granizo e ventos de até 100 km/h no norte do RS</h3><p class="ult-dek">Um ciclone em formação no litoral traz risco de temporais neste sábado; no domingo de eleição a instabilidade diminui, mas ainda há pancadas no norte do estado.</p></div><img class="ult-thumb" src="img/2026-10-24/ultimas-3.jpg?v=13396e91" alt="Céu nublado no Rio Grande do Sul" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-24/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-24T06:50-03:00">06:50</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">Quem paga a conta? Economistas veem pouco espaço no Orçamento para as promessas de Lula e Flávio</h3><p class="ult-dek">Com a dívida pública perto de R$ 11,1 trilhões e 90% das despesas de 2027 já comprometidas, especialistas questionam como as propostas seriam financiadas.</p></div><img class="ult-thumb" src="img/2026-10-24/ultimas-5.jpg?v=028495af" alt="Lula e Flávio Bolsonaro" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-24/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-24T05:52-03:00">05:52</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">No último dia de campanha, Flávio faz atos em BH e no Rio, e Lula caminha em Copacabana e na Paulista</h3><p class="ult-dek">Depois do debate da Globo, os dois candidatos fazem neste sábado os últimos atos públicos antes da votação de domingo (25).</p></div><img class="ult-thumb" src="img/2026-10-24/ultimas-4.jpg?v=b661b7a9" alt="Lula e Flávio Bolsonaro" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-24/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-24T05:16-03:00">05:16</time> · <span class="ult-src">Folha</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Tufão Champi passa raspando por Taiwan, deixa um morto e mais de 500 feridos e segue rumo à costa da China</h3><p class="ult-dek">O olho do tufão chegou a cerca de 1 km da costa de Yilan antes de dar a volta. Centenas de milhares de casas ficaram sem luz, e o sistema já perdeu força.</p></div><img class="ult-thumb" src="img/2026-10-24/ultimas-2.jpg?v=4d17882d" alt="Efeitos do tufão Champi em Taiwan" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-24/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><span class="ult-src">g1</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">BC vai exigir autorização prévia de clientes vulneráveis para oferecer crédito a eles</h3><p class="ult-dek">A partir de 31 de março de 2027, bancos só poderão fazer ofertas ativas a esses consumidores com consentimento específico, e apenas para renegociar ou melhorar condições.</p></div><img class="ult-thumb" src="img/2026-10-24/ultimas-1.jpg?v=eb6823d4" alt="Notas de real" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
