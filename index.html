@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261025060612"/>
+<link rel="stylesheet" href="styles.css?v=20261025081202"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261025060612"/>
+<meta name="edition-version" content="20261025081202"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-25T06:06-03:00">06:06</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-25T08:12-03:00">08:12</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,12 +47,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Domingo, 25 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-25T06:06-03:00">06:06</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-25T08:12-03:00">08:12</time></span>
     <span>Nº 035</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-10-25/ultimas-4.html"><time>08:00</time><span>Urnas abrem em todo o Brasil para o 2º turno entre Lula e Flávio</span></a></li><li><a href="materias/2026-10-25/ultimas-3.html"><time>07:41</time><span>Ataque de drones ucranianos a Belgorod, na Rússia, deixa três mortos</span></a></li><li><a href="materias/2026-10-25/ultimas-2.html"><time>07:39</time><span>Boletins do exterior: Flávio lidera com folga no Japão; Lula vence na Austrália e na Nova Zelândia</span></a></li><li><a href="materias/2026-10-25/ultimas-1.html"><time>07:00</time><span>Disputa judicial entre Lula e Flávio deve seguir no TSE depois da eleição</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-25/ultimas-4.html"><time>08:00</time><span>Urnas abrem em todo o Brasil para o 2º turno entre Lula e Flávio</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-25/ultimas-3.html"><time>07:41</time><span>Ataque de drones ucranianos a Belgorod, na Rússia, deixa três mortos</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-25/ultimas-2.html"><time>07:39</time><span>Boletins do exterior: Flávio lidera com folga no Japão; Lula vence na Austrália e na Nova Zelândia</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-25/ultimas-1.html"><time>07:00</time><span>Disputa judicial entre Lula e Flávio deve seguir no TSE depois da eleição</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:12</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -77,18 +83,30 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:06</span>
+        <span class="live-when">até as 08:12</span>
       </div>
       <ol class="pr-list dq-grid">
+        <li class="dq-item"><a href="materias/2026-10-25/ultimas-4.html"><img class="dq-thumb" src="img/2026-10-25/ultimas-4.jpg?v=5f4584d1" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Urnas abrem em todo o Brasil para o 2º turno entre Lula e Flávio</span><span class="pr-meta">CNN Brasil · 08:00</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-25/capa-1.html"><img class="dq-thumb" src="img/2026-10-25/capa.jpg?v=1ef0ba81" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">Mais de 158 milhões de brasileiros podem voltar às urnas neste domingo para decidir entre Lula e Flávio</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-25/brasil-1.html"><img class="dq-thumb" src="img/2026-10-25/card-brasil-1.jpg?v=537d104c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">Datafolha e Quaest: Flávio tem 51% e Lula, 49% dos votos válidos na véspera do 2º turno</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-25/mundo-1.html"><img class="dq-thumb" src="img/2026-10-25/card-mundo-1.jpg?v=b888dc30" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Europa</span><span class="pr-h">Europa tem novo dia de protestos contra o custo de vida, com confrontos em várias cidades</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-25/brasil-2.html"><img class="dq-thumb" src="img/2026-10-25/card-brasil-2.jpg?v=958e84a2" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Clima</span><span class="pr-h">Alerta laranja: mais de 300 cidades do Paraná podem ter temporais no domingo de eleição</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-25/ia-1.html"><img class="dq-thumb" src="img/2026-10-25/card-ia-1.jpg?v=1cf19492" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Cursor</span><span class="pr-h">Cursor lança Computer Use: agentes passam a clicar e digitar em qualquer app do computador</span><span class="pr-meta">Cursor (anúncio oficial) / TruViber</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-25/ultimas-1.html"><img class="dq-thumb" src="img/2026-10-25/ultimas-1.jpg?v=6a5b4a84" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Disputa judicial entre Lula e Flávio deve seguir no TSE depois da eleição</span><span class="pr-meta">g1 · 07:00</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-25/ultimas-2.html"><img class="dq-thumb" src="img/2026-10-25/ultimas-2.jpg?v=10c876ae" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Boletins do exterior: Flávio lidera com folga no Japão; Lula vence na Austrália e na Nova Zelândia</span><span class="pr-meta">CNN Brasil · 07:39</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:12</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-25/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-25T08:00-03:00">08:00</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Urnas abrem em todo o Brasil para o 2º turno entre Lula e Flávio</h3><p class="ult-dek">A votação começou às 8h (horário de Brasília) e vai até as 17h; mais de 158 milhões de eleitores podem escolher o próximo presidente.</p></div><img class="ult-thumb" src="img/2026-10-25/ultimas-4.jpg?v=5f4584d1" alt="Urna eletrônica em seção eleitoral" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-25/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-25T07:41-03:00">07:41</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Ataque de drones ucranianos a Belgorod, na Rússia, deixa três mortos</h3><p class="ult-dek">Segundo o governador regional, a ofensiva de madrugada danificou dezenas de prédios residenciais e comerciais na região de fronteira; 14 pessoas ficaram feridas.</p></div><img class="ult-thumb" src="img/2026-10-25/ultimas-3.jpg?v=d17a09f4" alt="Região de Belgorod após ataque" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-25/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-25T07:39-03:00">07:39</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Boletins do exterior: Flávio lidera com folga no Japão; Lula vence na Austrália e na Nova Zelândia</h3><p class="ult-dek">Até as 7h30, os boletins de urna publicados pelo TSE mostravam Flávio com 65,8% dos votos totais no exterior, contra 29,3% de Lula.</p></div><img class="ult-thumb" src="img/2026-10-25/ultimas-2.jpg?v=10c876ae" alt="Urna eletrônica" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-25/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-25T07:00-03:00">07:00</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Disputa judicial entre Lula e Flávio deve seguir no TSE depois da eleição</h3><p class="ult-dek">Com mais de 1.010 ações desde a pré-campanha, o tribunal deve priorizar agora os pedidos de cassação das duas chapas: oito contra Flávio e sete contra Lula.</p></div><img class="ult-thumb" src="img/2026-10-25/ultimas-1.jpg?v=6a5b4a84" alt="Lula e Flávio Bolsonaro em montagem de fotos" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
