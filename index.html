@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261026061430"/>
+<link rel="stylesheet" href="styles.css?v=20261026081854"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261026061430"/>
+<meta name="edition-version" content="20261026081854"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-26T06:14-03:00">06:14</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-26T08:20-03:00">08:20</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,12 +47,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Segunda-feira, 26 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-26T06:14-03:00">06:14</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-26T08:20-03:00">08:20</time></span>
     <span>Nº 036</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-10-26/ultimas-5.html"><time>08:08</time><span>JP Morgan rebaixa recomendação para o real e os títulos brasileiros após a vitória de Lula</span></a></li><li><a href="materias/2026-10-26/ultimas-4.html"><time>07:42</time><span>Blindados da Coreia do Norte aparecem perto da fronteira com o Sul, com canhões voltados para Seul</span></a></li><li><a href="materias/2026-10-26/ultimas-3.html"><time>07:32</time><span>Reeleito, Lula poderá indicar até quatro ministros do STF no próximo mandato</span></a></li><li><a href="materias/2026-10-26/ultimas-2.html"><span>Israel vota nesta terça na primeira eleição desde o 7 de Outubro, dividido sobre Netanyahu</span></a></li><li><a href="materias/2026-10-26/ultimas-1.html"><span>Republicanos, MDB e PSDB parabenizam Lula e se recusam a apoiar pedido de anulação da eleição</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-26/ultimas-5.html"><time>08:08</time><span>JP Morgan rebaixa recomendação para o real e os títulos brasileiros após a vitória de Lula</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-26/ultimas-4.html"><time>07:42</time><span>Blindados da Coreia do Norte aparecem perto da fronteira com o Sul, com canhões voltados para Seul</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-26/ultimas-3.html"><time>07:32</time><span>Reeleito, Lula poderá indicar até quatro ministros do STF no próximo mandato</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-26/ultimas-2.html"><span>Israel vota nesta terça na primeira eleição desde o 7 de Outubro, dividido sobre Netanyahu</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-26/ultimas-1.html"><span>Republicanos, MDB e PSDB parabenizam Lula e se recusam a apoiar pedido de anulação da eleição</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:20</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -77,18 +83,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:14</span>
+        <span class="live-when">até as 08:20</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-10-26/capa-1.html"><img class="dq-thumb" src="img/2026-10-26/capa.jpg?v=b4a3e650" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">Lula vira sobre Flávio, é reeleito com recorde de 64,2 milhões de votos e conquista um inédito 4º mandato</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-26/brasil-1.html"><img class="dq-thumb" src="img/2026-10-26/card-brasil-1.jpg?v=d3620a48" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Eleições 2026</span><span class="pr-h">Flávio não reconhece derrota, chama de &#x27;sacanagem&#x27; a prorrogação da votação e fala em pedir anulação da eleição</span><span class="pr-meta">Folha de S.Paulo</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-26/mundo-1.html"><img class="dq-thumb" src="img/2026-10-26/card-mundo-1.jpg?v=a6ea67cb" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Europa</span><span class="pr-h">Partido de Vucic perde eleição na Sérvia para movimento liderado por estudantes, e presidente admite derrota</span><span class="pr-meta">g1 / AFP</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-26/ultimas-5.html"><img class="dq-thumb" src="img/2026-10-26/ultimas-5.jpg?v=81b258d4" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mercado</span><span class="pr-h">JP Morgan rebaixa recomendação para o real e os títulos brasileiros após a vitória de Lula</span><span class="pr-meta">CNN Brasil · 08:08</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-26/ultimas-1.html"><img class="dq-thumb" src="img/2026-10-26/ultimas-1.jpg?v=8ed94d42" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Republicanos, MDB e PSDB parabenizam Lula e se recusam a apoiar pedido de anulação da eleição</span><span class="pr-meta">Folha</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-26/brasil-2.html"><img class="dq-thumb" src="img/2026-10-26/card-brasil-2.jpg?v=9c0f198d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mercados</span><span class="pr-h">Mercado reage à reeleição de Lula: EWZ desaba 19% fora do horário e analistas esperam queda forte da Bolsa nesta segunda</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-26/ia-1.html"><img class="dq-thumb" src="img/2026-10-26/card-ia-1.jpg?v=1d473c16" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA · Política</span><span class="pr-h">No 1º discurso após a reeleição, Lula promete IA brasileira: &#x27;não quero depender de inteligência artificial chinesa ou americana&#x27;</span><span class="pr-meta">g1</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:20</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-26/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-26T08:08-03:00">08:08</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mercado</span></div><h3 class="ult-h">JP Morgan rebaixa recomendação para o real e os títulos brasileiros após a vitória de Lula</h3><p class="ult-dek">O banco passou o real e os títulos públicos de &#x27;overweight&#x27; para &#x27;marketweight&#x27; e prevê uma reavaliação forte dos ativos na reabertura, com chance de circuit breaker na B3 nesta segunda.</p></div><img class="ult-thumb" src="img/2026-10-26/ultimas-5.jpg?v=81b258d4" alt="Notas de real (CNN Brasil)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-26/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-26T07:42-03:00">07:42</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Blindados da Coreia do Norte aparecem perto da fronteira com o Sul, com canhões voltados para Seul</h3><p class="ult-dek">Testemunha da Reuters viu três blindados e um obuseiro autopropulsado perto da Zona Desmilitarizada, em meio à disputa entre as Coreias sobre uma explosão de mina em setembro.</p></div><img class="ult-thumb" src="img/2026-10-26/ultimas-4.jpg?v=05903f0a" alt="Fronteira entre as Coreias (CNN Brasil)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-26/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-26T07:32-03:00">07:32</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Reeleito, Lula poderá indicar até quatro ministros do STF no próximo mandato</h3><p class="ult-dek">Além da vaga aberta por Luís Roberto Barroso, Luiz Fux, Cármen Lúcia e Gilmar Mendes atingem 75 anos até o fim de 2030, o que abre quase um terço das 11 cadeiras do Supremo.</p></div><img class="ult-thumb" src="img/2026-10-26/ultimas-3.jpg?v=b7897160" alt="Lula (Foto: g1)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-26/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><span class="ult-src">Folha</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Israel vota nesta terça na primeira eleição desde o 7 de Outubro, dividido sobre Netanyahu</h3><p class="ult-dek">Pouco mais de 7 milhões de eleitores escolhem o novo Parlamento na terça (27); custo de vida, alistamento de ultraortodoxos e as falhas de segurança de 2023 dominam a campanha.</p></div><img class="ult-thumb" src="img/2026-10-26/ultimas-2.jpg?v=32443be0" alt="Eleição em Israel (Folha)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-26/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><span class="ult-src">Folha</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Republicanos, MDB e PSDB parabenizam Lula e se recusam a apoiar pedido de anulação da eleição</h3><p class="ult-dek">Partidos que apoiaram Flávio reconheceram a vitória do petista e indicaram que não vão aderir à tentativa do PL de anular o pleito; o PSDB, neutro no 2º turno, diz que segue na oposição.</p></div><img class="ult-thumb" src="img/2026-10-26/ultimas-1.jpg?v=8ed94d42" alt="Foto: Folha" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
