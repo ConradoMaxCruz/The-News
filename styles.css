@@ -1117,7 +1117,7 @@ body[data-filter="ultimas"] .agora { grid-template-columns: minmax(0, 1fr); }
 .fx-src a { color:inherit; }
 .fx.fx-off .fx-list { opacity:.5; }
 .card-meta { margin-top:auto; padding-top:6px; font-family:Inter, system-ui, sans-serif; font-size:11px; color:var(--olive); letter-spacing:.02em; }
-.dq-grid { display:grid !important; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; list-style:none; padding:0; counter-reset:none; }
+.dq-grid { display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; list-style:none; padding:0; counter-reset:none; }
 .dq-item a { display:flex; flex-direction:column; height:100%; text-decoration:none; color:inherit; background:var(--bg-elevated); border:1px solid var(--line-soft); border-radius:10px; overflow:hidden; }
 .dq-item a:hover { border-color:var(--olive); }
 .dq-thumb { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:var(--sand); }
@@ -1143,3 +1143,7 @@ body[data-filter="ultimas"] .agora { grid-template-columns: minmax(0, 1fr); }
 .agora.has-ultimas { display:block; }
 .agora.has-ultimas > .principais { margin-bottom:22px; }
 @media (min-width: 900px) { .dq-grid { grid-template-columns:repeat(3,1fr); } }
+
+/* Destaques: exactly 6 cards -> 3x2 desktop, 2x3 tablet/mobile, 1x6 narrow; never an orphan hole */
+@media (max-width: 900px) { .dq-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width: 420px) { .dq-grid { grid-template-columns:minmax(0,1fr); } }
