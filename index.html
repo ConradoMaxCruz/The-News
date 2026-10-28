@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261028082502"/>
+<link rel="stylesheet" href="styles.css?v=20261028083736"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261028082502"/>
+<meta name="edition-version" content="20261028083736"/>
 </head>
 <body>
 <div class="page">
@@ -450,6 +450,16 @@
   function nd(i) { return i.key === 'btc' ? 0 : (i.unit === 'R$' ? 3 : 0); }
   function fmt(v, i) { var s = Number(v).toLocaleString('pt-BR', { minimumFractionDigits: nd(i), maximumFractionDigits: nd(i) });
     return i.unit === 'pts' ? s + ' pts' : i.unit + ' ' + s; }
+  var MES = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  function nice(x) { var e = Math.pow(10, Math.floor(Math.log(x) / Math.LN10)), f = x / e; return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * e; }
+  function yfmt(v, i, step) {
+    if (i.unit === 'R$') { var d = step < 0.01 ? 3 : 2; return 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d }); }
+    var pre = i.unit === 'US$' ? 'US$ ' : '';
+    if (Math.abs(v) >= 10000) { var m = v / 1000, dd = step < 1000 ? 1 : 0; return pre + m.toLocaleString('pt-BR', { minimumFractionDigits: dd, maximumFractionDigits: dd }) + ' mil'; }
+    return pre + v.toLocaleString('pt-BR', { maximumFractionDigits: 0 });
+  }
+  function xfmt(d) { var p = d.split('-'); if (per === '1S' || per === '1M') return p[2] + '/' + p[1];
+    return MES[+p[1] - 1] + '/' + p[0].slice(2); }
   function br(d) { var p = d.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
   function slice(i) {
     var d = i.daily, last = d[d.length - 1][0];
@@ -473,13 +483,50 @@
     chg.textContent = (pct > 0 ? '+' : '') + pct.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '% no período';
     chg.className = 'mh-chg ' + (pct > 0 ? 'up' : pct < 0 ? 'down' : '');
     rng.innerHTML = 'Mín <b>' + fmt(lo, i) + '</b><br>Máx <b>' + fmt(hi, i) + '</b><br><span>' + br(pts[0][0]) + ' → ' + br(pts[pts.length - 1][0]) + '</span>';
-    var W = 600, H = 200, P = 6, span = (hi - lo) || 1;
-    var xy = pts.map(function (p, k) { return [P + k * (W - 2 * P) / Math.max(1, pts.length - 1), P + (hi - p[1]) / span * (H - 2 * P)]; });
+    var W = Math.max(280, chart.clientWidth || 600), H = chart.clientHeight || 220;
+    var narrow = W < 480, ML = narrow ? 54 : 66, MR = 10, MT = 10, MB = 24;
+    var step = nice((hi - lo) / (narrow ? 3 : 4) || Math.abs(hi) * 0.01 || 1);
+    var y0 = Math.floor(lo / step) * step, y1 = Math.ceil(hi / step) * step; if (y1 === y0) y1 = y0 + step;
+    var PW = W - ML - MR, PH = H - MT - MB;
+    function X(k) { return ML + k * PW / Math.max(1, pts.length - 1); }
+    function Y(v) { return MT + (y1 - v) / (y1 - y0) * PH; }
+    var xy = pts.map(function (p, k) { return [X(k), Y(p[1])]; });
     var line = xy.map(function (q, k) { return (k ? 'L' : 'M') + q[0].toFixed(1) + ' ' + q[1].toFixed(1); }).join('');
-    var col = up ? 'var(--olive)' : 'var(--burgundy)';
-    chart.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true">' +
-      '<path d="' + line + 'L' + xy[xy.length - 1][0].toFixed(1) + ' ' + H + 'L' + P + ' ' + H + 'Z" fill="' + col + '" opacity=".12"/>' +
-      '<path d="' + line + '" fill="none" stroke="' + col + '" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>';
+    var col = up ? 'var(--olive)' : 'var(--burgundy)', g = '';
+    for (var v = y0; v <= y1 + step / 2; v += step) {
+      var yy = Y(v).toFixed(1);
+      g += '<line x1="' + ML + '" x2="' + (W - MR) + '" y1="' + yy + '" y2="' + yy + '" class="mh-grid"/>' +
+        '<text x="' + (ML - 6) + '" y="' + yy + '" dy="0.32em" text-anchor="end" class="mh-ax">' + yfmt(v, i, step) + '</text>';
+    }
+    var nx = narrow ? 3 : 5, used = {};
+    for (var t = 0; t < nx; t++) {
+      var k = Math.round(t * (pts.length - 1) / (nx - 1)); if (used[k]) continue; used[k] = 1;
+      var anchor = t === 0 ? 'start' : t === nx - 1 ? 'end' : 'middle';
+      g += '<line x1="' + X(k).toFixed(1) + '" x2="' + X(k).toFixed(1) + '" y1="' + (H - MB) + '" y2="' + (H - MB + 4) + '" class="mh-tick"/>' +
+        '<text x="' + X(k).toFixed(1) + '" y="' + (H - 6) + '" text-anchor="' + anchor + '" class="mh-ax">' + xfmt(pts[k][0]) + '</text>';
+    }
+    var lp = xy[xy.length - 1];
+    chart.innerHTML = '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" aria-hidden="true">' + g +
+      '<line x1="' + ML + '" x2="' + (W - MR) + '" y1="' + (H - MB) + '" y2="' + (H - MB) + '" class="mh-base"/>' +
+      '<path d="' + line + 'L' + lp[0].toFixed(1) + ' ' + (H - MB) + 'L' + ML + ' ' + (H - MB) + 'Z" fill="' + col + '" opacity=".1"/>' +
+      '<path d="' + line + '" fill="none" stroke="' + col + '" stroke-width="2" stroke-linejoin="round"/>' +
+      '<circle cx="' + lp[0].toFixed(1) + '" cy="' + lp[1].toFixed(1) + '" r="3.5" fill="' + col + '" stroke="var(--bg-elevated)" stroke-width="1.5"/>' +
+      '<g class="mh-cross" style="display:none"><line class="mh-vline" y1="' + MT + '" y2="' + (H - MB) + '"/><circle r="4" fill="' + col + '" stroke="var(--bg-elevated)" stroke-width="2"/></g>' +
+      '<rect x="' + ML + '" y="0" width="' + PW + '" height="' + H + '" fill="transparent" class="mh-hit"/></svg>' +
+      '<div class="mh-tip" hidden></div>';
+    var svg = chart.querySelector('svg'), cross = svg.querySelector('.mh-cross'), tip = chart.querySelector('.mh-tip');
+    function show(e) {
+      var r = svg.getBoundingClientRect(), cx = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+      var k = Math.max(0, Math.min(pts.length - 1, Math.round((cx - ML) / PW * (pts.length - 1)))), q = xy[k];
+      cross.style.display = ''; cross.querySelector('line').setAttribute('x1', q[0]); cross.querySelector('line').setAttribute('x2', q[0]);
+      cross.querySelector('circle').setAttribute('cx', q[0]); cross.querySelector('circle').setAttribute('cy', q[1]);
+      tip.hidden = false; tip.innerHTML = '<span>' + br(pts[k][0]) + '</span><b>' + fmt(pts[k][1], i) + '</b>';
+      var tw = tip.offsetWidth, left = Math.min(W - tw - 4, Math.max(4, q[0] - tw / 2));
+      tip.style.left = left + 'px'; tip.style.top = Math.max(0, q[1] - 46) + 'px';
+    }
+    function hide() { cross.style.display = 'none'; tip.hidden = true; }
+    svg.addEventListener('mousemove', show); svg.addEventListener('mouseleave', hide);
+    svg.addEventListener('touchstart', show, { passive: true }); svg.addEventListener('touchmove', show, { passive: true });
     src.innerHTML = 'Dados até ' + br(i.daily[i.daily.length - 1][0]) + (i.stale ? ' (última atualização disponível)' : '') +
       ' · Fonte: <a href="https://finance.yahoo.com/quote/' + encodeURIComponent(i.symbol) + '" target="_blank" rel="noopener">Yahoo Finance</a> · ' +
       (per === '5A' ? 'fechamentos semanais' : 'fechamentos diários');
@@ -492,6 +539,7 @@
       });
     });
   }
+  var rz; window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(function () { if (data) draw(); }, 150); });
   bind('.mh-tab', 'data-k', function (v) { key = v; });
   bind('.mh-per', 'data-p', function (v) { per = v; });
   fetch('market-history.json', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); })
