@@ -1147,3 +1147,31 @@ body[data-filter="ultimas"] .agora { grid-template-columns: minmax(0, 1fr); }
 /* Destaques: exactly 6 cards -> 3x2 desktop, 2x3 tablet/mobile, 1x6 narrow; never an orphan hole */
 @media (max-width: 900px) { .dq-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width: 420px) { .dq-grid { grid-template-columns:minmax(0,1fr); } }
+
+/* Mercado · Histórico */
+.mercado { max-width:var(--max); margin:14px auto 6px; padding:14px 16px; background:var(--bg-elevated); border:1px solid var(--line); border-radius:12px; box-sizing:border-box; }
+.mh-head { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+.mh-head h2 { font-family:'Playfair Display', Georgia, serif; font-size:20px; margin:0; color:var(--burgundy); }
+.mh-head h2 span { color:var(--olive); font-weight:400; }
+.mh-pers, .mh-tabs { display:flex; gap:6px; flex-wrap:wrap; }
+.mh-tabs { margin:10px 0 6px; overflow-x:auto; flex-wrap:nowrap; scrollbar-width:none; }
+.mh-per, .mh-tab { font:500 12px Inter, system-ui, sans-serif; border:1px solid var(--line); background:transparent; color:var(--slate); border-radius:999px; padding:5px 11px; cursor:pointer; white-space:nowrap; }
+.mh-per.is-on, .mh-tab.is-on { background:var(--burgundy); border-color:var(--burgundy); color:var(--bg); }
+.mh-per:focus-visible, .mh-tab:focus-visible { outline:2px solid var(--olive); outline-offset:2px; }
+.mh-body { display:grid; grid-template-columns:200px 1fr; gap:16px; align-items:center; }
+.mh-val { font:700 24px 'Playfair Display', Georgia, serif; color:var(--ink); font-variant-numeric:tabular-nums; }
+.mh-chg { font-size:14px; font-weight:600; margin:2px 0 8px; font-variant-numeric:tabular-nums; }
+.mh-chg.up { color:#5f6b1f; } .mh-chg.down { color:#9b2c22; }
+.mh-range { font-size:12px; color:var(--slate); line-height:1.6; font-variant-numeric:tabular-nums; }
+.mh-range b { color:var(--ink); font-weight:600; } .mh-range span { opacity:.8; }
+.mh-chart { height:200px; border-bottom:1px solid var(--line-soft); }
+.mh-chart svg { width:100%; height:100%; display:block; }
+.mh-off { font-size:13px; color:var(--slate); padding:20px 0; }
+.mh-src { font-size:11px; color:var(--slate); opacity:.85; margin-top:8px; }
+.mh-src a { color:var(--link); }
+@media (max-width:640px) {
+  .mercado { margin:12px 12px 4px; padding:12px; }
+  .mh-body { grid-template-columns:1fr; gap:8px; }
+  .mh-range br { display:none; } .mh-range b { margin-right:10px; }
+  .mh-chart { height:160px; }
+}

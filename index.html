@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261028081919"/>
+<link rel="stylesheet" href="styles.css?v=20261028082502"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261028081919"/>
+<meta name="edition-version" content="20261028082502"/>
 </head>
 <body>
 <div class="page">
@@ -35,6 +35,7 @@
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
     <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
@@ -70,6 +71,15 @@
         <div class="fx-src">Fonte: <a href="https://docs.awesomeapi.com.br/api-de-moedas" target="_blank" rel="noopener">AwesomeAPI</a></div>
       </aside>
     </div>
+    <section class="mercado" id="mercado" data-topic="mercado" aria-label="Mercado · Histórico">
+      <div class="mh-head"><h2>Mercado <span>· Histórico</span></h2><div class="mh-pers" role="group" aria-label="Período"><button type="button" class="mh-per" data-p="1S" aria-pressed="false">1S</button><button type="button" class="mh-per is-on" data-p="1M" aria-pressed="true">1M</button><button type="button" class="mh-per" data-p="6M" aria-pressed="false">6M</button><button type="button" class="mh-per" data-p="YTD" aria-pressed="false">No ano</button><button type="button" class="mh-per" data-p="1A" aria-pressed="false">1A</button><button type="button" class="mh-per" data-p="5A" aria-pressed="false">5A</button></div></div>
+      <div class="mh-tabs" role="group" aria-label="Ativo"><button type="button" class="mh-tab is-on" data-k="ibov" aria-pressed="true">Ibovespa</button><button type="button" class="mh-tab" data-k="usd" aria-pressed="false">Dólar</button><button type="button" class="mh-tab" data-k="eur" aria-pressed="false">Euro</button><button type="button" class="mh-tab" data-k="btc" aria-pressed="false">Bitcoin</button><button type="button" class="mh-tab" data-k="spx" aria-pressed="false">S&amp;P 500</button></div>
+      <div class="mh-body">
+        <div class="mh-stats"><div class="mh-val" id="mh-val">—</div><div class="mh-chg" id="mh-chg"></div><div class="mh-range" id="mh-range"></div></div>
+        <div class="mh-chart" id="mh-chart" role="img" aria-label="Gráfico do histórico"></div>
+      </div>
+      <div class="mh-src" id="mh-src">Fonte: <a href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance</a> · fechamentos diários (5A semanal)</div>
+    </section>
   <!-- portal:end -->
 
   <div class="capa-label" id="conteudo" data-topic="brasil">Capa · Pós-eleição</div>
@@ -429,6 +439,64 @@
     }
     load(); setInterval(load, 5 * 60 * 1000);
   }
+})();
+</script>
+<script id="mercado-js">
+(function () {
+  var box = document.getElementById('mercado'); if (!box) return;
+  var data = null, key = 'ibov', per = '1M';
+  var chart = document.getElementById('mh-chart'), val = document.getElementById('mh-val'),
+      chg = document.getElementById('mh-chg'), rng = document.getElementById('mh-range'), src = document.getElementById('mh-src');
+  function nd(i) { return i.key === 'btc' ? 0 : (i.unit === 'R$' ? 3 : 0); }
+  function fmt(v, i) { var s = Number(v).toLocaleString('pt-BR', { minimumFractionDigits: nd(i), maximumFractionDigits: nd(i) });
+    return i.unit === 'pts' ? s + ' pts' : i.unit + ' ' + s; }
+  function br(d) { var p = d.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function slice(i) {
+    var d = i.daily, last = d[d.length - 1][0];
+    if (per === '1S') return d.slice(-6);
+    if (per === '5A') return i.weekly.concat(i.weekly[i.weekly.length - 1][0] < last ? [d[d.length - 1]] : []);
+    var t = new Date(last + 'T12:00:00');
+    if (per === 'YTD') { var y = last.slice(0, 4); var prev = d.filter(function (p) { return p[0] < y; }).slice(-1);
+      return prev.concat(d.filter(function (p) { return p[0] >= y; })); }
+    var m = { '1M': 1, '6M': 6, '1A': 12 }[per]; t.setMonth(t.getMonth() - m);
+    var c = t.toISOString().slice(0, 10), out = d.filter(function (p) { return p[0] >= c; });
+    var before = d.filter(function (p) { return p[0] < c; }).slice(-1);
+    return before.concat(out);
+  }
+  function draw() {
+    var i = data.instruments.filter(function (x) { return x.key === key; })[0];
+    if (!i) { chart.innerHTML = '<p class="mh-off">Sem dados para este ativo agora.</p>'; return; }
+    var pts = slice(i), vs = pts.map(function (p) { return p[1]; });
+    var lo = Math.min.apply(null, vs), hi = Math.max.apply(null, vs), first = vs[0], lastv = vs[vs.length - 1];
+    var pct = (lastv / first - 1) * 100, up = pct >= 0;
+    val.textContent = fmt(lastv, i);
+    chg.textContent = (pct > 0 ? '+' : '') + pct.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '% no período';
+    chg.className = 'mh-chg ' + (pct > 0 ? 'up' : pct < 0 ? 'down' : '');
+    rng.innerHTML = 'Mín <b>' + fmt(lo, i) + '</b><br>Máx <b>' + fmt(hi, i) + '</b><br><span>' + br(pts[0][0]) + ' → ' + br(pts[pts.length - 1][0]) + '</span>';
+    var W = 600, H = 200, P = 6, span = (hi - lo) || 1;
+    var xy = pts.map(function (p, k) { return [P + k * (W - 2 * P) / Math.max(1, pts.length - 1), P + (hi - p[1]) / span * (H - 2 * P)]; });
+    var line = xy.map(function (q, k) { return (k ? 'L' : 'M') + q[0].toFixed(1) + ' ' + q[1].toFixed(1); }).join('');
+    var col = up ? 'var(--olive)' : 'var(--burgundy)';
+    chart.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true">' +
+      '<path d="' + line + 'L' + xy[xy.length - 1][0].toFixed(1) + ' ' + H + 'L' + P + ' ' + H + 'Z" fill="' + col + '" opacity=".12"/>' +
+      '<path d="' + line + '" fill="none" stroke="' + col + '" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>';
+    src.innerHTML = 'Dados até ' + br(i.daily[i.daily.length - 1][0]) + (i.stale ? ' (última atualização disponível)' : '') +
+      ' · Fonte: <a href="https://finance.yahoo.com/quote/' + encodeURIComponent(i.symbol) + '" target="_blank" rel="noopener">Yahoo Finance</a> · ' +
+      (per === '5A' ? 'fechamentos semanais' : 'fechamentos diários');
+  }
+  function bind(sel, attr, set) {
+    [].forEach.call(box.querySelectorAll(sel), function (b) {
+      b.addEventListener('click', function () {
+        [].forEach.call(box.querySelectorAll(sel), function (o) { o.classList.toggle('is-on', o === b); o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+        set(b.getAttribute(attr)); if (data) draw();
+      });
+    });
+  }
+  bind('.mh-tab', 'data-k', function (v) { key = v; });
+  bind('.mh-per', 'data-p', function (v) { per = v; });
+  fetch('market-history.json', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (d) { data = d; draw(); })
+    .catch(function () { chart.innerHTML = '<p class="mh-off">O histórico do mercado não carregou agora. Tente de novo em instantes.</p>'; });
 })();
 </script>
 <script id="live-refresh">
