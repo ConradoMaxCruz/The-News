@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261028060941"/>
+<link rel="stylesheet" href="styles.css?v=20261028081919"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261028060941"/>
+<meta name="edition-version" content="20261028081919"/>
 </head>
 <body>
 <div class="page">
@@ -31,10 +31,11 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-28T06:09-03:00">06:09</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-10-28T08:19-03:00">08:19</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -46,12 +47,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quarta-feira, 28 de outubro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-10-28T06:09-03:00">06:09</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-10-28T08:19-03:00">08:19</time></span>
     <span>Nº 038</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-10-28/ultimas-5.html"><time>08:02</time><span>Governo Trump propõe afrouxar regras que obrigavam petroleiras a conter vazamentos de metano</span></a></li><li><a href="materias/2026-10-28/ultimas-4.html"><time>07:28</time><span>Correios conseguem garantia do Tesouro para novo empréstimo de R$ 7 bilhões</span></a></li><li><a href="materias/2026-10-28/ultimas-3.html"><time>07:16</time><span>Fuga de Flávio foi cercada de informações falsas: aliados e fontes de Trump diziam que ele já estava nos EUA quando ainda estava no Brasil</span></a></li><li><a href="materias/2026-10-28/ultimas-2.html"><time>06:39</time><span>Colisão entre dois trens de alta velocidade mata ao menos 30 pessoas na Espanha</span></a></li><li><a href="materias/2026-10-28/ultimas-1.html"><time>06:20</time><span>TCU decide hoje o cálculo da alíquota de referência da CBS, imposto que substitui PIS e Cofins em 2027</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-28/ultimas-5.html"><time>08:02</time><span>Governo Trump propõe afrouxar regras que obrigavam petroleiras a conter vazamentos de metano</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-28/ultimas-4.html"><time>07:28</time><span>Correios conseguem garantia do Tesouro para novo empréstimo de R$ 7 bilhões</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-28/ultimas-3.html"><time>07:16</time><span>Fuga de Flávio foi cercada de informações falsas: aliados e fontes de Trump diziam que ele já estava nos EUA quando ainda estava no Brasil</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-28/ultimas-2.html"><time>06:39</time><span>Colisão entre dois trens de alta velocidade mata ao menos 30 pessoas na Espanha</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-10-28/ultimas-1.html"><time>06:20</time><span>TCU decide hoje o cálculo da alíquota de referência da CBS, imposto que substitui PIS e Cofins em 2027</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:19</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -77,19 +83,32 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:09</span>
+        <span class="live-when">até as 08:19</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-10-28/capa-1.html"><img class="dq-thumb" src="img/2026-10-28/capa.jpg?v=a9f3eb4a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Pós-eleição</span><span class="pr-h">Flávio Bolsonaro e a família cruzam para a Argentina e seguem em voo privado ao Equador, em escala rumo a Miami</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-28/ultimas-2.html"><img class="dq-thumb" src="img/2026-10-28/ultimas-2.jpg?v=1d60f875" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Colisão entre dois trens de alta velocidade mata ao menos 30 pessoas na Espanha</span><span class="pr-meta">Folha / CNN Brasil · 06:39</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-28/ultimas-3.html"><img class="dq-thumb" src="img/2026-10-28/ultimas-3.jpg?v=0b198fa4" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Política</span><span class="pr-h">Fuga de Flávio foi cercada de informações falsas: aliados e fontes de Trump diziam que ele já estava nos EUA quando ainda estava no Brasil</span><span class="pr-meta">CNN Brasil · 07:16</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-28/brasil-1.html"><img class="dq-thumb" src="img/2026-10-28/card-brasil-1.jpg?v=a323528b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Congresso</span><span class="pr-h">Alcolumbre planeja articular indulto ou anistia a Bolsonaro em troca do apoio da direita à reeleição no Senado</span><span class="pr-meta">Folha de S.Paulo</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-28/mundo-1.html"><img class="dq-thumb" src="img/2026-10-28/card-mundo-1.jpg?v=d67fe42a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Israel</span><span class="pr-h">Likud de Netanyahu lidera a apuração em Israel com metade das urnas, mas nenhum bloco chega à maioria</span><span class="pr-meta">Folha de S.Paulo</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-28/brasil-2.html"><img class="dq-thumb" src="img/2026-10-28/card-brasil-2.jpg?v=cb5b2477" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Trabalho</span><span class="pr-h">Políticos e influenciadores pregam demissão e boicote a eleitores de Lula; MPT já recebeu mais de 427 denúncias desde o 2º turno</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-10-28/ia-1.html"><img class="dq-thumb" src="img/2026-10-28/card-ia-1.jpg?v=350e2c97" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mercado de IA</span><span class="pr-h">Anthropic se prepara para um dos maiores IPOs da história e pode buscar até US$ 100 bilhões em novembro</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-10-28/mundo-2.html"><img class="dq-thumb" src="img/2026-10-28/card-mundo-2.jpg?v=405de348" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Guerra na Ucrânia</span><span class="pr-h">Trégua humanitária em Oleshky é ampliada para a região de Kherson para permitir comboios e evacuação</span><span class="pr-meta">BBC News</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-10-28/ultimas-4.html"><img class="dq-thumb" src="img/2026-10-28/ultimas-4.jpg?v=341fc9b6" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">Correios conseguem garantia do Tesouro para novo empréstimo de R$ 7 bilhões</span><span class="pr-meta">CNN Brasil · 07:28</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:19</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-10-28/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-28T08:02-03:00">08:02</time> · <span class="ult-src">Folha / The New York Times</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Governo Trump propõe afrouxar regras que obrigavam petroleiras a conter vazamentos de metano</h3><p class="ult-dek">A EPA quer aliviar as exigências para centenas de milhares de poços marginais, que produzem cerca de 7% do petróleo e gás dos EUA mas respondem por metade das emissões de metano do setor.</p></div><img class="ult-thumb" src="img/2026-10-28/ultimas-5.jpg?v=c3541b44" alt="Chaminés de uma usina soltam fumaça nos Estados Unidos (Reuters)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-28/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-28T07:28-03:00">07:28</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">Correios conseguem garantia do Tesouro para novo empréstimo de R$ 7 bilhões</h3><p class="ult-dek">A Fazenda autorizou a garantia da União para o crédito, que completa o plano de reestruturação da estatal. A empresa teve prejuízo de R$ 5,55 bilhões só no primeiro semestre.</p></div><img class="ult-thumb" src="img/2026-10-28/ultimas-4.jpg?v=341fc9b6" alt="Fachada de uma agência dos Correios (CNN Brasil)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-28/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-28T07:16-03:00">07:16</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Política</span></div><h3 class="ult-h">Fuga de Flávio foi cercada de informações falsas: aliados e fontes de Trump diziam que ele já estava nos EUA quando ainda estava no Brasil</h3><p class="ult-dek">Segundo a imigração argentina, o senador só cruzou a fronteira em Foz do Iguaçu às 22h50 de terça, horas depois de aliados afirmarem que ele já tinha desembarcado na Flórida.</p></div><img class="ult-thumb" src="img/2026-10-28/ultimas-3.jpg?v=0b198fa4" alt="O senador Flávio Bolsonaro discursa em evento (CNN Brasil)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-28/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-28T06:39-03:00">06:39</time> · <span class="ult-src">Folha / CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Colisão entre dois trens de alta velocidade mata ao menos 30 pessoas na Espanha</h3><p class="ult-dek">Um trem da Renfe bateu na traseira de outro, da Iryo, na província de Toledo, a cerca de 150 km de Madri. A linha entre Madri e a Andaluzia foi suspensa, e o balanço de mortos pode subir.</p></div><img class="ult-thumb" src="img/2026-10-28/ultimas-2.jpg?v=1d60f875" alt="Vista aérea do local da colisão entre dois trens perto de Urda, na província de Toledo (Guardia Civil)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-10-28/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-10-28T06:20-03:00">06:20</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">TCU decide hoje o cálculo da alíquota de referência da CBS, imposto que substitui PIS e Cofins em 2027</h3><p class="ult-dek">O tribunal tem até sexta para mandar a proposta ao Senado, que terá até 15 de dezembro para fixar a alíquota por resolução.</p></div><img class="ult-thumb" src="img/2026-10-28/ultimas-1.jpg?v=70e37303" alt="Sede do Tribunal de Contas da União, em Brasília (Agência Brasil)" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
