@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261102061224"/>
+<link rel="stylesheet" href="styles.css?v=20261102080930"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261102061224"/>
+<meta name="edition-version" content="20261102080930"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-02T06:12-03:00">06:12</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-02T08:09-03:00">08:09</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Segunda-feira, 2 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-02T06:12-03:00">06:12</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-02T08:09-03:00">08:09</time></span>
     <span>Nº 043</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-02/ultimas-5.html"><time>08:01</time><span>Indústria da China cresce em ritmo mais lento em outubro, com PMI de 52</span></a></li><li><a href="materias/2026-11-02/ultimas-4.html"><time>07:54</time><span>Mais de 53 milhões de americanos já votaram nas midterms, acima de todo o voto antecipado de 2022</span></a></li><li><a href="materias/2026-11-02/ultimas-3.html"><time>07:40</time><span>Irã diz que pode reabrir o Estreito de Ormuz em dois dias se os EUA aceitarem suas condições</span></a></li><li><a href="materias/2026-11-02/ultimas-2.html"><time>06:53</time><span>Granizo e vendaval atingem 70% da população de Marquinho, no Paraná; estado tem alerta de novas tempestades</span></a></li><li><a href="materias/2026-11-02/ultimas-1.html"><time>06:02</time><span>Surto de Ebola no Congo passa de 5,3 mil mortes, e Nigéria investiga dois casos suspeitos</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-02/ultimas-5.html"><time>08:01</time><span>Indústria da China cresce em ritmo mais lento em outubro, com PMI de 52</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-02/ultimas-4.html"><time>07:54</time><span>Mais de 53 milhões de americanos já votaram nas midterms, acima de todo o voto antecipado de 2022</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-02/ultimas-3.html"><time>07:40</time><span>Irã diz que pode reabrir o Estreito de Ormuz em dois dias se os EUA aceitarem suas condições</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-02/ultimas-2.html"><time>06:53</time><span>Granizo e vendaval atingem 70% da população de Marquinho, no Paraná; estado tem alerta de novas tempestades</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-02/ultimas-1.html"><time>06:02</time><span>Surto de Ebola no Congo passa de 5,3 mil mortes, e Nigéria investiga dois casos suspeitos</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:09</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,32 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:12</span>
+        <span class="live-when">até as 08:09</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-02/capa-1.html"><img class="dq-thumb" src="img/2026-11-02/capa.jpg?v=c9266b31" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo &amp; Economia</span><span class="pr-h">Midterms nos EUA podem mudar os planos de Trump e mexer com dólar e juros no Brasil</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-02/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-02/ultimas-3.jpg?v=b895de0d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Irã diz que pode reabrir o Estreito de Ormuz em dois dias se os EUA aceitarem suas condições</span><span class="pr-meta">g1 · 07:40</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-02/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-02/ultimas-4.jpg?v=4cfbfdc6" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Mais de 53 milhões de americanos já votaram nas midterms, acima de todo o voto antecipado de 2022</span><span class="pr-meta">g1 · 07:54</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-02/brasil-1.html"><img class="dq-thumb" src="img/2026-11-02/card-brasil-1.jpg?v=bfb4554a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">Mercado chega à semana do Copom apostando no fim do ciclo de cortes da Selic</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-02/mundo-1.html"><img class="dq-thumb" src="img/2026-11-02/card-mundo-1.jpg?v=6b005b88" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Europa</span><span class="pr-h">Presidente interina da Bulgária, Iliana Iotova vence o 2º turno e será a primeira mulher eleita chefe de Estado do país</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-02/brasil-2.html"><img class="dq-thumb" src="img/2026-11-02/card-brasil-2.jpg?v=d09a0cf3" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Consumidor</span><span class="pr-h">Começa a valer hoje decreto que obriga SACs a oferecer atendimento humano das 8h às 20h, todos os dias</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-02/ia-1.html"><img class="dq-thumb" src="img/2026-11-02/card-ia-1.jpg?v=041a8b96" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA &amp; Segurança</span><span class="pr-h">OpenAI amplia restrições do ChatGPT sobre armas e violência, com regras mais duras para adolescentes</span><span class="pr-meta">Olhar Digital</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-02/mundo-2.html"><img class="dq-thumb" src="img/2026-11-02/card-mundo-2.jpg?v=54697986" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Diplomacia</span><span class="pr-h">Xi diz que Oriente Médio não deve ser palco de disputa entre potências e pede reabertura segura de Ormuz</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-02/ultimas-2.html"><img class="dq-thumb" src="img/2026-11-02/ultimas-2.jpg?v=b1549c95" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Granizo e vendaval atingem 70% da população de Marquinho, no Paraná; estado tem alerta de novas tempestades</span><span class="pr-meta">CNN Brasil · 06:53</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-02/ultimas-1.html"><img class="dq-thumb" src="img/2026-11-02/ultimas-1.jpg?v=bbadbda1" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Saúde</span><span class="pr-h">Surto de Ebola no Congo passa de 5,3 mil mortes, e Nigéria investiga dois casos suspeitos</span><span class="pr-meta">CNN Brasil · 06:02</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:09</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-02/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-02T08:01-03:00">08:01</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">Indústria da China cresce em ritmo mais lento em outubro, com PMI de 52</h3><p class="ult-dek">O índice de gerentes de compras da S&amp;P Global e RatingDog caiu de 52,1 para 52, ainda em território de expansão, com as exportações crescendo pelo quarto mês seguido.</p></div><img class="ult-thumb" src="img/2026-11-02/ultimas-5.jpg?v=c927cee1" alt="Linha de produção em fábrica na China" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-02/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-02T07:54-03:00">07:54</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Mais de 53 milhões de americanos já votaram nas midterms, acima de todo o voto antecipado de 2022</h3><p class="ult-dek">Na véspera da eleição de terça (3), o voto antecipado bate recordes em estados decisivos, e Trump intensifica a campanha para manter a maioria republicana no Congresso.</p></div><img class="ult-thumb" src="img/2026-11-02/ultimas-4.jpg?v=4cfbfdc6" alt="Donald Trump em evento de campanha" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-02/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-02T07:40-03:00">07:40</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Irã diz que pode reabrir o Estreito de Ormuz em dois dias se os EUA aceitarem suas condições</h3><p class="ult-dek">O prazo, antes de sete dias, foi encurtado pelo porta-voz da chancelaria iraniana em meio às negociações com Washington por meio de mediadores.</p></div><img class="ult-thumb" src="img/2026-11-02/ultimas-3.jpg?v=b895de0d" alt="Petroleiros atravessam o Estreito de Ormuz" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-02/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-02T06:53-03:00">06:53</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Granizo e vendaval atingem 70% da população de Marquinho, no Paraná; estado tem alerta de novas tempestades</h3><p class="ult-dek">O temporal de domingo danificou casas, escolas e a rede elétrica no centro-sul paranaense, e o Inmet mantém aviso de perigo para tempestades nesta segunda de Finados.</p></div><img class="ult-thumb" src="img/2026-11-02/ultimas-2.jpg?v=b1549c95" alt="Mapa de alerta do Inmet e moradores consertando o telhado de uma casa em Marquinho (PR)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-02/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-02T06:02-03:00">06:02</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Saúde</span></div><h3 class="ult-h">Surto de Ebola no Congo passa de 5,3 mil mortes, e Nigéria investiga dois casos suspeitos</h3><p class="ult-dek">Com 10.414 casos confirmados e letalidade de 51,6%, o surto do vírus Bundibugyo já é o segundo maior de Ebola da história, atrás só do de 2014 a 2016 na África Ocidental.</p></div><img class="ult-thumb" src="img/2026-11-02/ultimas-1.jpg?v=bbadbda1" alt="Ambulância diante da sede do Centro de Controle de Doenças da Nigéria, em Abuja" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
