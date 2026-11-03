@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261103060811"/>
+<link rel="stylesheet" href="styles.css?v=20261103081047"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261103060811"/>
+<meta name="edition-version" content="20261103081047"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-03T06:08-03:00">06:08</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-03T08:10-03:00">08:10</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Terça-feira, 3 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-03T06:08-03:00">06:08</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-03T08:10-03:00">08:10</time></span>
     <span>Nº 044</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-03/ultimas-4.html"><time>07:43</time><span>XP rebaixa a Bolsa brasileira para neutra e vê Ibovespa a 200 mil pontos no fim de 2027</span></a></li><li><a href="materias/2026-11-03/ultimas-3.html"><time>07:39</time><span>Kremlin confirma negociações de paz com EUA e Ucrânia em Abu Dhabi nos dias 10 e 11</span></a></li><li><a href="materias/2026-11-03/ultimas-2.html"><time>07:17</time><span>Lufthansa corta previsão de lucro para 2026 com gasto de 9,3 bilhões de euros em combustível</span></a></li><li><a href="materias/2026-11-03/ultimas-1.html"><time>06:11</time><span>Bolsas da Ásia caem com pressão sobre ações de chips; Coreia e Taiwan recuam 3,6%</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-03/ultimas-4.html"><time>07:43</time><span>XP rebaixa a Bolsa brasileira para neutra e vê Ibovespa a 200 mil pontos no fim de 2027</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-03/ultimas-3.html"><time>07:39</time><span>Kremlin confirma negociações de paz com EUA e Ucrânia em Abu Dhabi nos dias 10 e 11</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-03/ultimas-2.html"><time>07:17</time><span>Lufthansa corta previsão de lucro para 2026 com gasto de 9,3 bilhões de euros em combustível</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-03/ultimas-1.html"><time>06:11</time><span>Bolsas da Ásia caem com pressão sobre ações de chips; Coreia e Taiwan recuam 3,6%</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:10</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:08</span>
+        <span class="live-when">até as 08:10</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-03/capa-1.html"><img class="dq-thumb" src="img/2026-11-03/capa.jpg?v=768a227d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Eleições nos EUA: americanos vão às urnas em votação que pode redefinir o poder de Trump no Congresso</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-03/brasil-1.html"><img class="dq-thumb" src="img/2026-11-03/card-brasil-1.jpg?v=85edacc9" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">BC abre decisão sobre juros em meio à mudança das expectativas do mercado</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-03/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-03/ultimas-3.jpg?v=04311c92" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Kremlin confirma negociações de paz com EUA e Ucrânia em Abu Dhabi nos dias 10 e 11</span><span class="pr-meta">CNN Brasil (Reuters) · 07:39</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-03/mundo-1.html"><img class="dq-thumb" src="img/2026-11-03/card-mundo-1.jpg?v=043ab48b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">EUA realizam ataques contra ilha de Qeshm, no Irã</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-03/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-03/ultimas-4.jpg?v=c0f59445" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mercado</span><span class="pr-h">XP rebaixa a Bolsa brasileira para neutra e vê Ibovespa a 200 mil pontos no fim de 2027</span><span class="pr-meta">InfoMoney · 07:43</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-03/brasil-2.html"><img class="dq-thumb" src="img/2026-11-03/card-brasil-2.jpg?v=3039f217" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Política</span><span class="pr-h">Senado deve votar nesta terça PEC da Segurança Pública</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-03/ia-1.html"><img class="dq-thumb" src="img/2026-11-03/card-ia-1.jpg?v=f111131f" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Robôs chineses já dominam movimentos; agora a corrida é pelo cérebro</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-03/mundo-2.html"><img class="dq-thumb" src="img/2026-11-03/card-mundo-2.jpg?v=9c207c3c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Tribunal Penal Internacional acusa governo Trump de tentar obstruir a Justiça internacional</span><span class="pr-meta">g1</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:10</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-03/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-03T07:43-03:00">07:43</time> · <span class="ult-src">InfoMoney</span> · <span class="ult-tag">Mercado</span></div><h3 class="ult-h">XP rebaixa a Bolsa brasileira para neutra e vê Ibovespa a 200 mil pontos no fim de 2027</h3><p class="ult-dek">Depois do tombo de outubro, a corretora trocou a recomendação de compra por neutra, citando preocupação fiscal, juros e inflação em alta e risco de desaceleração em 2027.</p></div><img class="ult-thumb" src="img/2026-11-03/ultimas-4.jpg?v=c0f59445" alt="Painel com cotações de ações" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-03/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-03T07:39-03:00">07:39</time> · <span class="ult-src">CNN Brasil (Reuters)</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Kremlin confirma negociações de paz com EUA e Ucrânia em Abu Dhabi nos dias 10 e 11</h3><p class="ult-dek">A Rússia confirmou que vai participar de conversas trilaterais sobre a guerra na Ucrânia na próxima semana, com o assessor Vladimir Medinsky à frente da delegação.</p></div><img class="ult-thumb" src="img/2026-11-03/ultimas-3.jpg?v=04311c92" alt="Dmitry Peskov, porta-voz do Kremlin" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-03/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-03T07:17-03:00">07:17</time> · <span class="ult-src">InfoMoney (Reuters)</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Lufthansa corta previsão de lucro para 2026 com gasto de 9,3 bilhões de euros em combustível</h3><p class="ult-dek">A alta do querosene de aviação provocada pela guerra no Irã levou a companhia alemã a reduzir o teto da projeção, embora o terceiro trimestre tenha vindo em linha com o esperado.</p></div><img class="ult-thumb" src="img/2026-11-03/ultimas-2.jpg?v=095b1663" alt="Aviões da Lufthansa estacionados" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-03/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-03T06:11-03:00">06:11</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mercado</span></div><h3 class="ult-h">Bolsas da Ásia caem com pressão sobre ações de chips; Coreia e Taiwan recuam 3,6%</h3><p class="ult-dek">O Kospi e o Taiex foram aos menores níveis em três meses, com quedas de SK Hynix, Samsung e Mediatek, em meio às dúvidas sobre o retorno dos investimentos em IA.</p></div><img class="ult-thumb" src="img/2026-11-03/ultimas-1.jpg?v=fab359f2" alt="Painel de cotações em Hong Kong" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
