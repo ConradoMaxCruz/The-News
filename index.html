@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261104060559"/>
+<link rel="stylesheet" href="styles.css?v=20261104081320"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261104060559"/>
+<meta name="edition-version" content="20261104081320"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-04T06:06-03:00">06:06</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-04T08:12-03:00">08:12</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quarta-feira, 4 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-04T06:06-03:00">06:06</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-04T08:12-03:00">08:12</time></span>
     <span>Nº 045</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-04/ultimas-5.html"><time>08:02</time><span>Três brasileiros são eleitos para assembleias estaduais nos EUA pelo Partido Democrata</span></a></li><li><a href="materias/2026-11-04/ultimas-4.html"><time>07:44</time><span>Bolsa da China tem o maior salto em sete meses após vitória democrata nos EUA</span></a></li><li><a href="materias/2026-11-04/ultimas-3.html"><time>07:40</time><span>Fabricante de pás eólicas Aeris pede recuperação extrajudicial para dívida de R$ 1,52 bilhão</span></a></li><li><a href="materias/2026-11-04/ultimas-2.html"><time>06:54</time><span>Ações de Tesla e SpaceX caem cerca de 4% após vitória democrata no Congresso</span></a></li><li><a href="materias/2026-11-04/ultimas-1.html"><time>02:35</time><span>Trump admite que a guerra no Irã pesou na derrota republicana e promete vetar projetos democratas</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-04/ultimas-5.html"><time>08:02</time><span>Três brasileiros são eleitos para assembleias estaduais nos EUA pelo Partido Democrata</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-04/ultimas-4.html"><time>07:44</time><span>Bolsa da China tem o maior salto em sete meses após vitória democrata nos EUA</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-04/ultimas-3.html"><time>07:40</time><span>Fabricante de pás eólicas Aeris pede recuperação extrajudicial para dívida de R$ 1,52 bilhão</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-04/ultimas-2.html"><time>06:54</time><span>Ações de Tesla e SpaceX caem cerca de 4% após vitória democrata no Congresso</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-04/ultimas-1.html"><time>02:35</time><span>Trump admite que a guerra no Irã pesou na derrota republicana e promete vetar projetos democratas</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:12</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,32 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:06</span>
+        <span class="live-when">até as 08:12</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-04/capa-1.html"><img class="dq-thumb" src="img/2026-11-04/capa.jpg?v=66c76f27" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Eleições nos EUA: democratas conquistam maioria na Câmara e no Senado e impõem derrota a Trump</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-04/brasil-1.html"><img class="dq-thumb" src="img/2026-11-04/card-brasil-1.jpg?v=fb7bdb91" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Juros</span><span class="pr-h">Com mercado dividido após reeleição de Lula, Copom decide hoje entre novo corte ou pausa nos juros</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-04/mundo-1.html"><img class="dq-thumb" src="img/2026-11-04/card-mundo-1.jpg?v=231f0b0b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">EUA</span><span class="pr-h">Democrata Abdul El-Sayed será o primeiro senador muçulmano dos EUA</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-04/ultimas-1.html"><img class="dq-thumb" src="img/2026-11-04/ultimas-1.jpg?v=66093ee5" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Trump admite que a guerra no Irã pesou na derrota republicana e promete vetar projetos democratas</span><span class="pr-meta">CNN Brasil · 02:35</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-04/brasil-2.html"><img class="dq-thumb" src="img/2026-11-04/card-brasil-2.jpg?v=ff059b46" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Clima</span><span class="pr-h">Região Sul tem alerta vermelho, de grande perigo, para tempestades nesta quarta (4)</span><span class="pr-meta">Folha</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-04/ia-1.html"><img class="dq-thumb" src="img/2026-11-04/card-ia-1.jpg?v=514e10f5" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">ChatGPT já alcança 20% do volume de buscas do Google, diz OpenAI</span><span class="pr-meta">Olhar Digital</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-04/mundo-2.html"><img class="dq-thumb" src="img/2026-11-04/card-mundo-2.jpg?v=80bd1036" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Paraguai</span><span class="pr-h">Paraguai: crise em banco digital leva à renúncia do presidente do Banco Central</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-04/ultimas-2.html"><img class="dq-thumb" src="img/2026-11-04/ultimas-2.jpg?v=ad3a8ed6" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mercado</span><span class="pr-h">Ações de Tesla e SpaceX caem cerca de 4% após vitória democrata no Congresso</span><span class="pr-meta">Times Brasil (CNBC) · 06:54</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-04/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-04/ultimas-4.jpg?v=5288a980" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mercado</span><span class="pr-h">Bolsa da China tem o maior salto em sete meses após vitória democrata nos EUA</span><span class="pr-meta">InfoMoney (Reuters) · 07:44</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:12</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-04/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-04T08:02-03:00">08:02</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Três brasileiros são eleitos para assembleias estaduais nos EUA pelo Partido Democrata</h3><p class="ult-dek">Felipe Sousa-Lazaballet, nascido em Duque de Caxias, chega à Câmara Estadual da Flórida; em Massachusetts, Rita Mendes foi reeleita e Priscila Sousa conquistou uma vaga.</p></div><img class="ult-thumb" src="img/2026-11-04/ultimas-5.jpg?v=dec67b39" alt="Os brasileiros eleitos nos EUA" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-04/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-04T07:44-03:00">07:44</time> · <span class="ult-src">InfoMoney (Reuters)</span> · <span class="ult-tag">Mercado</span></div><h3 class="ult-h">Bolsa da China tem o maior salto em sete meses após vitória democrata nos EUA</h3><p class="ult-dek">O índice de Xangai subiu 2,16% depois que os democratas conquistaram as duas Casas do Congresso americano, com ajuda de novas medidas de apoio do governo chinês.</p></div><img class="ult-thumb" src="img/2026-11-04/ultimas-4.jpg?v=5288a980" alt="Painel de cotações na China" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-04/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-04T07:40-03:00">07:40</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mercado</span></div><h3 class="ult-h">Fabricante de pás eólicas Aeris pede recuperação extrajudicial para dívida de R$ 1,52 bilhão</h3><p class="ult-dek">O plano já tem apoio de credores com 42,18% dos créditos, e a empresa tem 90 dias para passar da metade e conseguir a homologação na Justiça.</p></div><img class="ult-thumb" src="img/2026-11-04/ultimas-3.jpg?v=262642fc" alt="Pás eólicas saindo da fábrica da Aeris em Caucaia (CE)" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-04/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-04T06:54-03:00">06:54</time> · <span class="ult-src">Times Brasil (CNBC)</span> · <span class="ult-tag">Mercado</span></div><h3 class="ult-h">Ações de Tesla e SpaceX caem cerca de 4% após vitória democrata no Congresso</h3><p class="ult-dek">Empresas de Elon Musk e papéis ligados a data centers de IA recuaram no pré-mercado; a vitória democrata para o governo do Texas foi vista como o maior golpe para o setor.</p></div><img class="ult-thumb" src="img/2026-11-04/ultimas-2.jpg?v=ad3a8ed6" alt="Elon Musk" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-04/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-04T02:35-03:00">02:35</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Trump admite que a guerra no Irã pesou na derrota republicana e promete vetar projetos democratas</h3><p class="ult-dek">Em entrevista à Fox News, o presidente disse que os eleitores não aceitaram o custo da gasolina mais cara, mas afirmou que aceita o resultado e não pretende mudar o gabinete.</p></div><img class="ult-thumb" src="img/2026-11-04/ultimas-1.jpg?v=66093ee5" alt="Presidente Donald Trump" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
