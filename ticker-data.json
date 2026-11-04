@@ -1,15 +1,15 @@
 [
   {
     "label": "Ibovespa",
-    "price": "165.529",
-    "chg": "-1,43%",
-    "text": "165.529pts"
+    "price": "167.025",
+    "chg": "+0,90%",
+    "text": "167.025pts"
   },
   {
     "label": "DÓLAR",
-    "price": "5,488",
-    "chg": "+0,98%",
-    "text": "R$5,488"
+    "price": "5,486",
+    "chg": "-0,02%",
+    "text": "R$5,486"
   },
   {
     "label": "PETR4",
