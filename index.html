@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261105061400"/>
+<link rel="stylesheet" href="styles.css?v=20261105081854"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261105061400"/>
+<meta name="edition-version" content="20261105081854"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-05T06:14-03:00">06:14</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-05T08:18-03:00">08:18</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quinta-feira, 5 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-05T06:14-03:00">06:14</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-05T08:18-03:00">08:18</time></span>
     <span>Nº 046</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-05/ultimas-5.html"><time>07:53</time><span>França tem novo dia de greves e protestos contra o custo de vida</span></a></li><li><a href="materias/2026-11-05/ultimas-4.html"><time>07:25</time><span>Operação no DF e em 5 estados mira bets ilegais que movimentaram mais de R$ 700 milhões</span></a></li><li><a href="materias/2026-11-05/ultimas-3.html"><time>06:51</time><span>Madrugada no Rio tem 3,4 mil raios e alagamentos; previsão é de mais chuva</span></a></li><li><a href="materias/2026-11-05/ultimas-2.html"><time>05:52</time><span>Voo de Dublin a Roma faz pouso de emergência na França após ameaça de bomba</span></a></li><li><a href="materias/2026-11-05/ultimas-1.html"><time>05:00</time><span>Lula reforçará responsabilidade fiscal em pronunciamento na TV no domingo</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-05/ultimas-5.html"><time>07:53</time><span>França tem novo dia de greves e protestos contra o custo de vida</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-05/ultimas-4.html"><time>07:25</time><span>Operação no DF e em 5 estados mira bets ilegais que movimentaram mais de R$ 700 milhões</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-05/ultimas-3.html"><time>06:51</time><span>Madrugada no Rio tem 3,4 mil raios e alagamentos; previsão é de mais chuva</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-05/ultimas-2.html"><time>05:52</time><span>Voo de Dublin a Roma faz pouso de emergência na França após ameaça de bomba</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-05/ultimas-1.html"><time>05:00</time><span>Lula reforçará responsabilidade fiscal em pronunciamento na TV no domingo</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:18</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,32 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:14</span>
+        <span class="live-when">até as 08:18</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-05/capa-1.html"><img class="dq-thumb" src="img/2026-11-05/capa.jpg?v=f650c0e2" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Presidente da Câmara dos EUA, Mike Johnson, decide renunciar após derrota republicana</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-05/brasil-1.html"><img class="dq-thumb" src="img/2026-11-05/card-brasil-1.jpg?v=8775b806" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Governo edita MP que define alíquotas do &#x27;imposto do pecado&#x27;</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-05/mundo-1.html"><img class="dq-thumb" src="img/2026-11-05/card-mundo-1.jpg?v=855658d0" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Ativista Joshua Wong é condenado a 10 anos de prisão em Hong Kong</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-05/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-05/ultimas-4.jpg?v=d51abe40" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Operação no DF e em 5 estados mira bets ilegais que movimentaram mais de R$ 700 milhões</span><span class="pr-meta">g1 · 07:25</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-05/brasil-2.html"><img class="dq-thumb" src="img/2026-11-05/card-brasil-2.jpg?v=c9a18d45" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">Mercado avalia que a Selic pode ficar em 13,75% até o fim de 2027</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-05/ia-1.html"><img class="dq-thumb" src="img/2026-11-05/card-ia-1.jpg?v=ef454d98" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Golpe de um clique: falha no ChatGPT expunha conversas privadas em 4 segundos</span><span class="pr-meta">Canaltech</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-05/mundo-2.html"><img class="dq-thumb" src="img/2026-11-05/card-mundo-2.jpg?v=e74c8442" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Crise bancária leva deputados a pedir impeachment do presidente do Paraguai</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-05/ultimas-1.html"><img class="dq-thumb" src="img/2026-11-05/ultimas-1.jpg?v=12f4957d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Lula reforçará responsabilidade fiscal em pronunciamento na TV no domingo</span><span class="pr-meta">Valor · 05:00</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-05/ultimas-5.html"><img class="dq-thumb" src="img/2026-11-05/ultimas-5.jpg?v=d0284940" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">França tem novo dia de greves e protestos contra o custo de vida</span><span class="pr-meta">g1 · 07:53</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-05/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-05/ultimas-3.jpg?v=90ab7ee7" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Madrugada no Rio tem 3,4 mil raios e alagamentos; previsão é de mais chuva</span><span class="pr-meta">g1 · 06:51</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:18</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-05/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-05T07:53-03:00">07:53</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">França tem novo dia de greves e protestos contra o custo de vida</h3><p class="ult-dek">Sindicatos convocaram cerca de 260 atos; centenas de escolas fecharam e o transporte público foi severamente afetado. O governo mobilizou 70 mil policiais.</p></div><img class="ult-thumb" src="img/2026-11-05/ultimas-5.jpg?v=d0284940" alt="Manifestantes em protesto na França" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-05/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-05T07:25-03:00">07:25</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Operação no DF e em 5 estados mira bets ilegais que movimentaram mais de R$ 700 milhões</h3><p class="ult-dek">Polícia Civil do DF cumpre mandados de busca e bloqueio patrimonial. A investigação partiu de alerta do Ministério da Fazenda sobre plataformas sem autorização federal.</p></div><img class="ult-thumb" src="img/2026-11-05/ultimas-4.jpg?v=d51abe40" alt="Operação da Polícia Civil contra bets ilegais" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-05/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-05T06:51-03:00">06:51</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Madrugada no Rio tem 3,4 mil raios e alagamentos; previsão é de mais chuva</h3><p class="ult-dek">Temporal atingiu várias regiões da capital; um carro foi arrastado na Rocinha. A Climatempo diz que o fenômeno teve baixa previsibilidade.</p></div><img class="ult-thumb" src="img/2026-11-05/ultimas-3.jpg?v=90ab7ee7" alt="Rua alagada no Rio após temporal da madrugada" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-05/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-05T05:52-03:00">05:52</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Voo de Dublin a Roma faz pouso de emergência na França após ameaça de bomba</h3><p class="ult-dek">Airbus A320 da Aer Lingus pousou na base aérea de Évreux; 151 passageiros e 6 tripulantes foram evacuados com segurança. O episódio integra uma série de alertas na aviação europeia nesta semana.</p></div><img class="ult-thumb" src="img/2026-11-05/ultimas-2.jpg?v=76be3689" alt="Avião da Aer Lingus após pouso de emergência na França" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-05/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-05T05:00-03:00">05:00</time> · <span class="ult-src">Valor</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Lula reforçará responsabilidade fiscal em pronunciamento na TV no domingo</h3><p class="ult-dek">Presidente deve agradecer os votos, manter o compromisso com políticas sociais e sinalizar equilíbrio das contas, sem detalhar medidas de ajuste. A gravação foi marcada para esta quinta.</p></div><img class="ult-thumb" src="img/2026-11-05/ultimas-1.jpg?v=12f4957d" alt="Presidente Luiz Inácio Lula da Silva" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
