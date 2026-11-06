@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261106062001"/>
+<link rel="stylesheet" href="styles.css?v=20261106081440"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261106062001"/>
+<meta name="edition-version" content="20261106081440"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-06T06:20-03:00">06:20</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-06T08:15-03:00">08:15</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sexta-feira, 6 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-06T06:20-03:00">06:20</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-06T08:15-03:00">08:15</time></span>
     <span>Nº 047</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-06/ultimas-5.html"><time>07:30</time><span>Após temporal, BH amanhece com desabamento de moradias e 1,7 mil imóveis sem energia</span></a></li><li><a href="materias/2026-11-06/ultimas-4.html"><time>06:56</time><span>INSS cria reanálise em até 10 dias no Atestmed para quem teve auxílio-doença negado</span></a></li><li><a href="materias/2026-11-06/ultimas-3.html"><time>06:50</time><span>China aprova lei contra corrupção transfronteiriça e amplia campanha de Xi</span></a></li><li><a href="materias/2026-11-06/ultimas-2.html"><time>06:23</time><span>Justiça dos EUA bloqueia por 14 dias obras do Arco do Triunfo de Trump</span></a></li><li><a href="materias/2026-11-06/ultimas-1.html"><time>04:15</time><span>PRF quer bases flutuantes em rios e vê necessidade de dobrar efetivo após PEC</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-06/ultimas-5.html"><time>07:30</time><span>Após temporal, BH amanhece com desabamento de moradias e 1,7 mil imóveis sem energia</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-06/ultimas-4.html"><time>06:56</time><span>INSS cria reanálise em até 10 dias no Atestmed para quem teve auxílio-doença negado</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-06/ultimas-3.html"><time>06:50</time><span>China aprova lei contra corrupção transfronteiriça e amplia campanha de Xi</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-06/ultimas-2.html"><time>06:23</time><span>Justiça dos EUA bloqueia por 14 dias obras do Arco do Triunfo de Trump</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-06/ultimas-1.html"><time>04:15</time><span>PRF quer bases flutuantes em rios e vê necessidade de dobrar efetivo após PEC</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:15</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,32 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:20</span>
+        <span class="live-when">até as 08:15</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-06/capa-1.html"><img class="dq-thumb" src="img/2026-11-06/capa.jpg?v=c26218a1" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Lula reúne ministros nesta sexta para discutir recriação do Ministério da Segurança Pública</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-06/ultimas-5.html"><img class="dq-thumb" src="img/2026-11-06/ultimas-5.jpg?v=dda18100" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Após temporal, BH amanhece com desabamento de moradias e 1,7 mil imóveis sem energia</span><span class="pr-meta">g1 · 07:30</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-06/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-06/ultimas-4.jpg?v=60afc67d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Economia</span><span class="pr-h">INSS cria reanálise em até 10 dias no Atestmed para quem teve auxílio-doença negado</span><span class="pr-meta">Folha · 06:56</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-06/ultimas-2.html"><img class="dq-thumb" src="img/2026-11-06/ultimas-2.jpg?v=4b11b384" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Justiça dos EUA bloqueia por 14 dias obras do Arco do Triunfo de Trump</span><span class="pr-meta">g1 · 06:23</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-06/brasil-1.html"><img class="dq-thumb" src="img/2026-11-06/card-brasil-1.jpg?v=bce14afc" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Após reunião com Lula, Durigan diz que não há &#x27;fórmula mágica&#x27; e mantém compromisso fiscal</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-06/mundo-1.html"><img class="dq-thumb" src="img/2026-11-06/card-mundo-1.jpg?v=40b40e06" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Papa Leão XIV inicia visita de 11 dias à América Latina, onde o catolicismo perde fiéis</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-06/brasil-2.html"><img class="dq-thumb" src="img/2026-11-06/card-brasil-2.jpg?v=7afa781b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Governo estuda mudar arcabouço para reduzir teto de gastos de forma permanente</span><span class="pr-meta">Folha</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-06/ia-1.html"><img class="dq-thumb" src="img/2026-11-06/card-ia-1.jpg?v=ba1a45ce" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">OpenAI lança GPT-6 Cyber, IA especializada em achar falhas de segurança</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-06/mundo-2.html"><img class="dq-thumb" src="img/2026-11-06/card-mundo-2.jpg?v=f29659e1" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Santiago Peña renuncia no Paraguai; Câmara rejeita saída e segue com impeachment</span><span class="pr-meta">g1</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:15</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-06/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-06T07:30-03:00">07:30</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Após temporal, BH amanhece com desabamento de moradias e 1,7 mil imóveis sem energia</h3><p class="ult-dek">Parte de um complexo no bairro Nazaré desabou na madrugada; não houve vítimas, e 32 dos 40 moradores precisam de abrigo. A Cemig ainda conta cerca de 1,7 mil unidades sem luz na capital.</p></div><img class="ult-thumb" src="img/2026-11-06/ultimas-5.jpg?v=dda18100" alt="Fachada de complexo de moradias no bairro Nazaré, em Belo Horizonte, após desabamento parcial" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-06/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-06T06:56-03:00">06:56</time> · <span class="ult-src">Folha</span> · <span class="ult-tag">Economia</span></div><h3 class="ult-h">INSS cria reanálise em até 10 dias no Atestmed para quem teve auxílio-doença negado</h3><p class="ult-dek">Portaria 54, no Diário Oficial desta sexta, permite segunda avaliação por outro perito quando a negativa for médica. Negativas administrativas, como falta de carência, ficam de fora.</p></div><img class="ult-thumb" src="img/2026-11-06/ultimas-4.jpg?v=60afc67d" alt="Pessoa usa o aplicativo Meu INSS no celular para solicitar benefício" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-06/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-06T06:50-03:00">06:50</time> · <span class="ult-src">Folha</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">China aprova lei contra corrupção transfronteiriça e amplia campanha de Xi</h3><p class="ult-dek">Norma busca localizar suspeitos, impedir fugas e recuperar recursos no exterior. Aprovação ocorre uma semana após o Partido Comunista confirmar a expulsão de 33 membros.</p></div><img class="ult-thumb" src="img/2026-11-06/ultimas-3.jpg?v=d648880b" alt="Li Xi, autoridade anticorrupção do Partido Comunista Chinês" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-06/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-06T06:23-03:00">06:23</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Justiça dos EUA bloqueia por 14 dias obras do Arco do Triunfo de Trump</h3><p class="ult-dek">Juíza Tanya Chutkan suspendeu o início da construção do monumento de 76 metros perto do Cemitério de Arlington, horas após comissão federal aprovar o projeto por 8 a 4.</p></div><img class="ult-thumb" src="img/2026-11-06/ultimas-2.jpg?v=4b11b384" alt="Projeto do arco monumental proposto por Trump em Washington" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-06/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-06T04:15-03:00">04:15</time> · <span class="ult-src">Folha</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">PRF quer bases flutuantes em rios e vê necessidade de dobrar efetivo após PEC</h3><p class="ult-dek">Com novas atribuições em hidrovias e ferrovias, a corporação estuda postos flutuantes e estima precisar de cerca de 26 mil agentes. Atuação depende de regulamentação federal.</p></div><img class="ult-thumb" src="img/2026-11-06/ultimas-1.jpg?v=8488af4b" alt="Diretor-geral da PRF Antônio Fernando Oliveira em entrevista" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
