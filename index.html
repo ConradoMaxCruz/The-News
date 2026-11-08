@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261108060454"/>
+<link rel="stylesheet" href="styles.css?v=20261108081723"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261108060454"/>
+<meta name="edition-version" content="20261108081723"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-08T06:04-03:00">06:04</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-08T08:17-03:00">08:17</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Domingo, 8 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-08T06:04-03:00">06:04</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-08T08:17-03:00">08:17</time></span>
     <span>Nº 049</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-08/ultimas-4.html"><time>07:33</time><span>Fim da escala 6x1 vira disputa no STF, sob pressão do comércio e da indústria</span></a></li><li><a href="materias/2026-11-08/ultimas-3.html"><time>06:00</time><span>Mosquito com Wolbachia se consolida contra a dengue no Brasil, mas expansão ainda esbarra em gargalos</span></a></li><li><a href="materias/2026-11-08/ultimas-2.html"><time>05:30</time><span>Lula prega união e responsabilidade fiscal em pronunciamento neste domingo, sem anunciar ajuste</span></a></li><li><a href="materias/2026-11-08/ultimas-1.html"><time>02:48</time><span>Zelensky acusa a Rússia de ampliar ataques para pressionar a Ucrânia antes de negociação</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-08/ultimas-4.html"><time>07:33</time><span>Fim da escala 6x1 vira disputa no STF, sob pressão do comércio e da indústria</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-08/ultimas-3.html"><time>06:00</time><span>Mosquito com Wolbachia se consolida contra a dengue no Brasil, mas expansão ainda esbarra em gargalos</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-08/ultimas-2.html"><time>05:30</time><span>Lula prega união e responsabilidade fiscal em pronunciamento neste domingo, sem anunciar ajuste</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-08/ultimas-1.html"><time>02:48</time><span>Zelensky acusa a Rússia de ampliar ataques para pressionar a Ucrânia antes de negociação</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:17</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:04</span>
+        <span class="live-when">até as 08:17</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-08/capa-1.html"><img class="dq-thumb" src="img/2026-11-08/capa.jpg?v=8e540a37" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Enem 2026 começa hoje com mais de 5 milhões de inscritos; Lula acompanha 1º dia no Inep</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-08/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-08/ultimas-4.jpg?v=703b22e8" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Fim da escala 6x1 vira disputa no STF, sob pressão do comércio e da indústria</span><span class="pr-meta">CNN Brasil · 07:33</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-08/ultimas-2.html"><img class="dq-thumb" src="img/2026-11-08/ultimas-2.jpg?v=93442abd" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Lula prega união e responsabilidade fiscal em pronunciamento neste domingo, sem anunciar ajuste</span><span class="pr-meta">Estadão · 05:30</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-08/brasil-1.html"><img class="dq-thumb" src="img/2026-11-08/card-brasil-1.jpg?v=17e249a2" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Temporal com ventos de mais de 80 km/h derruba torres e causa alagamentos no Rio</span><span class="pr-meta">CNN Brasil</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-08/mundo-1.html"><img class="dq-thumb" src="img/2026-11-08/card-mundo-1.jpg?v=cf132b1d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Presidente de Israel escolhe Eisenkot, rival de Netanyahu, para tentar formar governo</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-08/brasil-2.html"><img class="dq-thumb" src="img/2026-11-08/card-brasil-2.jpg?v=ab24021e" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Ajuste nas contas: o que está na mesa de Lula para o quarto mandato</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-08/ia-1.html"><img class="dq-thumb" src="img/2026-11-08/card-ia-1.jpg?v=9316ef64" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">&#x27;Outubro sombrio&#x27;: IA acelera onda de ataques hackers e dispara corrida por proteção</span><span class="pr-meta">O Globo</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-08/mundo-2.html"><img class="dq-thumb" src="img/2026-11-08/card-mundo-2.jpg?v=9c24e44e" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Terremoto de magnitude 5,7 deixa cerca de 20 feridos no centro do Japão</span><span class="pr-meta">g1</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:17</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-08/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-08T07:33-03:00">07:33</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Fim da escala 6x1 vira disputa no STF, sob pressão do comércio e da indústria</h3><p class="ult-dek">CNC e CNI pedem mais prazo e regras mais flexíveis; Flávio Dino marca conciliação para terça (10), às 14h, e até agora não suspendeu o calendário que começa em 16 de dezembro.</p></div><img class="ult-thumb" src="img/2026-11-08/ultimas-4.jpg?v=703b22e8" alt="Fachada de loja de roupas com araras na calçada e um funcionário à porta" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-08/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-08T06:00-03:00">06:00</time> · <span class="ult-src">Folha de S.Paulo</span> · <span class="ult-tag">Ciência</span></div><h3 class="ult-h">Mosquito com Wolbachia se consolida contra a dengue no Brasil, mas expansão ainda esbarra em gargalos</h3><p class="ult-dek">Método já é usado em 16 municípios e deve chegar a outras 54 cidades a partir de 2027; biofábricas dizem ter capacidade para 340 milhões de ovos por semana.</p></div><img class="ult-thumb" src="img/2026-11-08/ultimas-3.jpg?v=0b16ffd8" alt="Agente de saúde libera mosquitos com a bactéria Wolbachia a partir de um recipiente, de dentro de uma caminhonete" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-08/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-08T05:30-03:00">05:30</time> · <span class="ult-src">Estadão</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Lula prega união e responsabilidade fiscal em pronunciamento neste domingo, sem anunciar ajuste</h3><p class="ult-dek">Discurso de 7min44s vai ao ar às 20h30 na TV; medidas para as contas públicas só devem ser apresentadas a ele na segunda quinzena, depois da COP31 e da viagem às Filipinas.</p></div><img class="ult-thumb" src="img/2026-11-08/ultimas-2.jpg?v=93442abd" alt="Lula em reunião oficial, com as bandeiras do Brasil ao fundo" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-08/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-08T02:48-03:00">02:48</time> · <span class="ult-src">UOL</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Zelensky acusa a Rússia de ampliar ataques para pressionar a Ucrânia antes de negociação</h3><p class="ult-dek">Ofensiva noturna lançou 172 drones e 36 mísseis, parte deles norte-coreanos, segundo Kiev; EUA, Rússia e Ucrânia retomam conversas terça e quarta em Abu Dhabi.</p></div><img class="ult-thumb" src="img/2026-11-08/ultimas-1.jpg?v=74dbc922" alt="Volodimir Zelensky em coletiva de imprensa em Oslo, em outubro de 2026" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
