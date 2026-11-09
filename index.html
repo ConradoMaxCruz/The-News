@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261109060941"/>
+<link rel="stylesheet" href="styles.css?v=20261109081602"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261109060941"/>
+<meta name="edition-version" content="20261109081602"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-09T06:09-03:00">06:09</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-09T08:15-03:00">08:15</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Segunda-feira, 9 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-09T06:09-03:00">06:09</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-09T08:15-03:00">08:15</time></span>
     <span>Nº 050</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-09/ultimas-4.html"><time>07:52</time><span>Ações da Nvidia caem mais de 4% no pré-mercado após investigação sobre suposta espionagem envolvendo Jensen Huang</span></a></li><li><a href="materias/2026-11-09/ultimas-3.html"><time>07:49</time><span>Fux suspende em todo o país os processos sobre a proibição das bets até o STF decidir</span></a></li><li><a href="materias/2026-11-09/ultimas-2.html"><time>07:47</time><span>Anvisa proíbe o emagrecedor &quot;Ultra Shape&quot; e cinco cápsulas fitoterápicas vendidas sem registro na internet</span></a></li><li><a href="materias/2026-11-09/ultimas-1.html"><time>07:33</time><span>Na abertura da COP31, líderes cobram mais rapidez no combate ao aquecimento global</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-09/ultimas-4.html"><time>07:52</time><span>Ações da Nvidia caem mais de 4% no pré-mercado após investigação sobre suposta espionagem envolvendo Jensen Huang</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-09/ultimas-3.html"><time>07:49</time><span>Fux suspende em todo o país os processos sobre a proibição das bets até o STF decidir</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-09/ultimas-2.html"><time>07:47</time><span>Anvisa proíbe o emagrecedor &quot;Ultra Shape&quot; e cinco cápsulas fitoterápicas vendidas sem registro na internet</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-09/ultimas-1.html"><time>07:33</time><span>Na abertura da COP31, líderes cobram mais rapidez no combate ao aquecimento global</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:15</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:09</span>
+        <span class="live-when">até as 08:15</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-09/capa-1.html"><img class="dq-thumb" src="img/2026-11-09/capa.jpg?v=b9818402" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Lula embarca para a Turquia e abre a agenda internacional pós-reeleição, com COP31 e cúpula da Asean</span><span class="pr-meta">CNN Brasil</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-09/brasil-1.html"><img class="dq-thumb" src="img/2026-11-09/card-brasil-1.jpg?v=0406324d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Enem 2026: abstenção chega a 32% no primeiro dia, acima dos 27% de 2025, diz ministro da Educação</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-09/mundo-1.html"><img class="dq-thumb" src="img/2026-11-09/card-mundo-1.jpg?v=06080994" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Trump diz que política de deportações pode ter sido “rigorosa demais”, mas nomeia Stephen Miller chefe de gabinete</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-09/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-09/ultimas-3.jpg?v=7ce3148f" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Fux suspende em todo o país os processos sobre a proibição das bets até o STF decidir</span><span class="pr-meta">g1 · 07:49</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-09/ultimas-1.html"><img class="dq-thumb" src="img/2026-11-09/ultimas-1.jpg?v=98fb62d5" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Na abertura da COP31, líderes cobram mais rapidez no combate ao aquecimento global</span><span class="pr-meta">CNN Brasil · 07:33</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-09/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-09/ultimas-4.jpg?v=b9b3fd5e" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Ações da Nvidia caem mais de 4% no pré-mercado após investigação sobre suposta espionagem envolvendo Jensen Huang</span><span class="pr-meta">g1 · 07:52</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-09/brasil-2.html"><img class="dq-thumb" src="img/2026-11-09/card-brasil-2.jpg?v=b51e6d0f" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Empresas e sindicatos correm para renegociar acordos coletivos após o fim da escala 6x1</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-09/ia-1.html"><img class="dq-thumb" src="img/2026-11-09/card-ia-1.jpg?v=6b0d60bf" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Corretor de redação com IA do GLOBO estima sua nota no tema do SUS no Enem 2026</span><span class="pr-meta">O Globo</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-09/ciencia-1.html"><img class="dq-thumb" src="img/2026-11-09/card-ciencia-1.jpg?v=d467a5e2" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Ciência</span><span class="pr-h">2026 deve ficar entre os 4 anos mais quentes já registrados, diz ONU</span><span class="pr-meta">g1</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:15</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-09/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-09T07:52-03:00">07:52</time> · <span class="ult-src">g1</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Ações da Nvidia caem mais de 4% no pré-mercado após investigação sobre suposta espionagem envolvendo Jensen Huang</h3><p class="ult-dek">Os papéis recuavam 4,35%, a US$ 178,53, antes da abertura em Nova York; nas bolsas da Ásia, parte dos mercados se recuperou do tombo das ações de IA da semana passada.</p></div><img class="ult-thumb" src="img/2026-11-09/ultimas-4.jpg?v=b9b3fd5e" alt="Jensen Huang em apresentação da Nvidia" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-09/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-09T07:49-03:00">07:49</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Fux suspende em todo o país os processos sobre a proibição das bets até o STF decidir</h3><p class="ult-dek">A pedido da PGR, o ministro paralisou as ações em instâncias inferiores que discutem a medida provisória que proibiu as apostas online, para evitar decisões divergentes.</p></div><img class="ult-thumb" src="img/2026-11-09/ultimas-3.jpg?v=7ce3148f" alt="Ministro Luiz Fux, do STF" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-09/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-09T07:47-03:00">07:47</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Saúde</span></div><h3 class="ult-h">Anvisa proíbe o emagrecedor &quot;Ultra Shape&quot; e cinco cápsulas fitoterápicas vendidas sem registro na internet</h3><p class="ult-dek">A decisão, publicada no Diário Oficial, manda recolher os produtos e proíbe venda, propaganda e uso; a recomendação para quem comprou é não consumir.</p></div><img class="ult-thumb" src="img/2026-11-09/ultimas-2.jpg?v=00c07685" alt="Cápsulas e comprimidos" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-09/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-09T07:33-03:00">07:33</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Na abertura da COP31, líderes cobram mais rapidez no combate ao aquecimento global</h3><p class="ult-dek">Na Turquia, o chefe do clima da ONU, Simon Stiell, disse que o progresso &quot;está longe de ser rápido o suficiente&quot;; relatório da ONU põe 2026 entre os quatro anos mais quentes.</p></div><img class="ult-thumb" src="img/2026-11-09/ultimas-1.jpg?v=98fb62d5" alt="Abertura da COP31 na Turquia" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
