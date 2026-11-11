@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261111060537"/>
+<link rel="stylesheet" href="styles.css?v=20261111081338"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261111060537"/>
+<meta name="edition-version" content="20261111081338"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-11T06:05-03:00">06:05</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-11T08:13-03:00">08:13</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quarta-feira, 11 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-11T06:05-03:00">06:05</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-11T08:13-03:00">08:13</time></span>
     <span>Nº 052</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-11/ultimas-4.html"><time>07:25</time><span>Na COP31, Lula cobra países ricos e diz que falta de consenso não pode travar a agenda do clima</span></a></li><li><a href="materias/2026-11-11/ultimas-3.html"><time>06:09</time><span>Dois terços das empresas brasileiras investem em IA sem calcular o retorno financeiro, diz pesquisa</span></a></li><li><a href="materias/2026-11-11/ultimas-2.html"><time>04:40</time><span>Espanha tem a primeira greve geral em 14 anos, por moradia e salários, a três semanas das eleições</span></a></li><li><a href="materias/2026-11-11/ultimas-1.html"><time>02:40</time><span>Bancos avaliam elevar o preço do IPO da Anthropic, o que levaria o valor da empresa a US$ 1,5 trilhão ou mais</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-11/ultimas-4.html"><time>07:25</time><span>Na COP31, Lula cobra países ricos e diz que falta de consenso não pode travar a agenda do clima</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-11/ultimas-3.html"><time>06:09</time><span>Dois terços das empresas brasileiras investem em IA sem calcular o retorno financeiro, diz pesquisa</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-11/ultimas-2.html"><time>04:40</time><span>Espanha tem a primeira greve geral em 14 anos, por moradia e salários, a três semanas das eleições</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-11/ultimas-1.html"><time>02:40</time><span>Bancos avaliam elevar o preço do IPO da Anthropic, o que levaria o valor da empresa a US$ 1,5 trilhão ou mais</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:13</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:05</span>
+        <span class="live-when">até as 08:13</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-11/capa-1.html"><img class="dq-thumb" src="img/2026-11-11/capa.jpg?v=a3eaaae5" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Governo negocia com o Senado ajuste fiscal de até R$ 80 bi em 2027 que muda o cálculo dos pisos da saúde e da educação</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-11/brasil-1.html"><img class="dq-thumb" src="img/2026-11-11/card-brasil-1.jpg?v=274a683c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">TSE multa Meta em R$ 7,5 milhões por descumprir ordens da Corte durante as eleições</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-11/mundo-1.html"><img class="dq-thumb" src="img/2026-11-11/card-mundo-1.jpg?v=93d20497" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Uma semana após as eleições, EUA ainda têm 17 disputas sem resultado; democratas já garantiram o Congresso</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-11/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-11/ultimas-4.jpg?v=7cb87ed1" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Na COP31, Lula cobra países ricos e diz que falta de consenso não pode travar a agenda do clima</span><span class="pr-meta">g1 · 07:25</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-11/brasil-2.html"><img class="dq-thumb" src="img/2026-11-11/card-brasil-2.jpg?v=90be5aa4" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Lucro da Petrobras sobe 21,5% no 3º trimestre, para R$ 39,75 bilhões, com produção recorde e petróleo mais caro</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-11/ia-1.html"><img class="dq-thumb" src="img/2026-11-11/card-ia-1.jpg?v=a5376c2c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">OpenAI fatura US$ 10 bilhões no trimestre, alta de 50%, mas segue com prejuízo bilionário</span><span class="pr-meta">Olhar Digital</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-11/ultimas-2.html"><img class="dq-thumb" src="img/2026-11-11/ultimas-2.jpg?v=ec39de28" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Espanha tem a primeira greve geral em 14 anos, por moradia e salários, a três semanas das eleições</span><span class="pr-meta">Euronews · 04:40</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-11/ultimas-1.html"><img class="dq-thumb" src="img/2026-11-11/ultimas-1.jpg?v=322edc89" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Bancos avaliam elevar o preço do IPO da Anthropic, o que levaria o valor da empresa a US$ 1,5 trilhão ou mais</span><span class="pr-meta">Business Standard · 02:40</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-11/saude-1.html"><img class="dq-thumb" src="img/2026-11-11/card-saude-1.jpg?v=1a63c395" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Saúde</span><span class="pr-h">Surto de ebola no Congo passa de 11 mil casos e 5,3 mil mortes, o mais letal já registrado no país</span><span class="pr-meta">g1</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:13</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-11/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-11T07:25-03:00">07:25</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Na COP31, Lula cobra países ricos e diz que falta de consenso não pode travar a agenda do clima</h3><p class="ult-dek">No primeiro discurso internacional após a reeleição, na abertura da cúpula de líderes em Antália, na Turquia, Lula defendeu financiamento climático de US$ 1,3 trilhão por ano e prometeu planos nacionais para reduzir a dependência de combustíveis fósseis.</p></div><img class="ult-thumb" src="img/2026-11-11/ultimas-4.jpg?v=7cb87ed1" alt="Lula discursa em púlpito com o logotipo da COP31 Türkiye ao fundo" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-11/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-11T06:09-03:00">06:09</time> · <span class="ult-src">Tecnoblog</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Dois terços das empresas brasileiras investem em IA sem calcular o retorno financeiro, diz pesquisa</h3><p class="ult-dek">Levantamento da consultoria Avanade mostra que 64% das grandes empresas investem sem medir o ganho; 67% veem vantagem, mas só 51% dizem que o gasto já se paga.</p></div><img class="ult-thumb" src="img/2026-11-11/ultimas-3.jpg?v=e4e792fd" alt="Mão humana aperta a mão de um robô em escritório" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-11/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-11T04:40-03:00">04:40</time> · <span class="ult-src">Euronews</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Espanha tem a primeira greve geral em 14 anos, por moradia e salários, a três semanas das eleições</h3><p class="ult-dek">A paralisação de 24 horas, convocada pelas centrais UGT e CCOO, cobra controle dos aluguéis, que quase dobraram em dez anos, e aumento de salários; transportes funcionam com serviços mínimos.</p></div><img class="ult-thumb" src="img/2026-11-11/ultimas-2.jpg?v=ec39de28" alt="Manifestantes com bandeiras vermelhas e policiais em rua de Madri durante a greve geral" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-11/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-11T02:40-03:00">02:40</time> · <span class="ult-src">Business Standard</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">Bancos avaliam elevar o preço do IPO da Anthropic, o que levaria o valor da empresa a US$ 1,5 trilhão ou mais</h3><p class="ult-dek">Segundo o Financial Times, a forte procura de investidores pode fazer o preço por ação passar da faixa de US$ 70 a US$ 78 informada na terça; a estreia na Nasdaq está prevista para 19 de novembro.</p></div><img class="ult-thumb" src="img/2026-11-11/ultimas-1.jpg?v=322edc89" alt="Logotipo da Anthropic exibido em telas" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
