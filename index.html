@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261112061239"/>
+<link rel="stylesheet" href="styles.css?v=20261112081349"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261112061239"/>
+<meta name="edition-version" content="20261112081349"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-12T06:12-03:00">06:12</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-12T08:13-03:00">08:13</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quinta-feira, 12 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-12T06:12-03:00">06:12</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-12T08:13-03:00">08:13</time></span>
     <span>Nº 053</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-12/ultimas-4.html"><time>07:42</time><span>Enviados de Trump se reúnem com Putin em Moscou para discutir acordo de paz na Ucrânia</span></a></li><li><a href="materias/2026-11-12/ultimas-3.html"><time>07:15</time><span>Cacique Raoni, de 94 anos, está internado em Mato Grosso com infecção pulmonar; quadro é estável</span></a></li><li><a href="materias/2026-11-12/ultimas-2.html"><time>02:22</time><span>Vice-presidente da Indonésia, filho de Jokowi, renuncia após Justiça questionar sua formação acadêmica</span></a></li><li><a href="materias/2026-11-12/ultimas-1.html"><time>00:00</time><span>Governo busca apoio de empresas para aprovar regulação econômica das big techs; Câmara deve votar na terça (17)</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-12/ultimas-4.html"><time>07:42</time><span>Enviados de Trump se reúnem com Putin em Moscou para discutir acordo de paz na Ucrânia</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-12/ultimas-3.html"><time>07:15</time><span>Cacique Raoni, de 94 anos, está internado em Mato Grosso com infecção pulmonar; quadro é estável</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-12/ultimas-2.html"><time>02:22</time><span>Vice-presidente da Indonésia, filho de Jokowi, renuncia após Justiça questionar sua formação acadêmica</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-12/ultimas-1.html"><time>00:00</time><span>Governo busca apoio de empresas para aprovar regulação econômica das big techs; Câmara deve votar na terça (17)</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:13</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:12</span>
+        <span class="live-when">até as 08:13</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-12/capa-1.html"><img class="dq-thumb" src="img/2026-11-12/capa.jpg?v=bae1990d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Senado deve votar nesta quinta o pacote de ajuste fiscal do governo, com impacto de até R$ 60 bilhões em 2027</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-12/brasil-1.html"><img class="dq-thumb" src="img/2026-11-12/card-brasil-1.jpg?v=c25525e8" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Lucro do Banco do Brasil despenca 66,5% no 3º trimestre, para R$ 1,27 bilhão, com calote no agronegócio</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-12/mundo-1.html"><img class="dq-thumb" src="img/2026-11-12/card-mundo-1.jpg?v=2dd975bd" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Em reviravolta, democrata Scott Colom vence no Mississippi e será o primeiro senador negro do estado desde 1874</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-12/tecnologia-1.html"><img class="dq-thumb" src="img/2026-11-12/card-tecnologia-1.jpg?v=6c35276c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Tecnologia</span><span class="pr-h">Conselho da Nvidia contrata empresa para buscar substituto de Jensen Huang, diz Bloomberg</span><span class="pr-meta">Olhar Digital</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-12/ultimas-4.html"><img class="dq-thumb" src="img/2026-11-12/ultimas-4.jpg?v=583a0b35" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Enviados de Trump se reúnem com Putin em Moscou para discutir acordo de paz na Ucrânia</span><span class="pr-meta">g1 (France Presse) · 07:42</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-12/mundo-2.html"><img class="dq-thumb" src="img/2026-11-12/card-mundo-2.jpg?v=24343ef6" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Xi Jinping diz que a &#x27;reunificação&#x27; de Taiwan com a China é inevitável e promete caminho pacífico</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-12/ultimas-1.html"><img class="dq-thumb" src="img/2026-11-12/ultimas-1.jpg?v=ff5c0d2f" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Tecnologia</span><span class="pr-h">Governo busca apoio de empresas para aprovar regulação econômica das big techs; Câmara deve votar na terça (17)</span><span class="pr-meta">g1 · 00:00</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-12/ia-1.html"><img class="dq-thumb" src="img/2026-11-12/card-ia-1.jpg?v=5f6cbea5" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Anthropic lança suíte de produtividade do Claude, com planilhas, quadros e um assistente que participa de reuniões</span><span class="pr-meta">Canaltech</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:13</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-12/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-12T07:42-03:00">07:42</time> · <span class="ult-src">g1 (France Presse)</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Enviados de Trump se reúnem com Putin em Moscou para discutir acordo de paz na Ucrânia</h3><p class="ult-dek">Steve Witkoff e Jared Kushner estão em Moscou nesta quinta (12) para conversar com Putin sobre a guerra, dois dias depois da rodada direta entre Kiev e Moscou em Abu Dhabi.</p></div><img class="ult-thumb" src="img/2026-11-12/ultimas-4.jpg?v=583a0b35" alt="Witkoff e Kushner em encontro com membros do Kremlin na Rússia" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-12/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-12T07:15-03:00">07:15</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Cacique Raoni, de 94 anos, está internado em Mato Grosso com infecção pulmonar; quadro é estável</h3><p class="ult-dek">Segundo boletim do Instituto Raoni, o líder indígena recebe antibióticos e remédios para a pressão, respira sem aparelhos e segue em cuidados paliativos.</p></div><img class="ult-thumb" src="img/2026-11-12/ultimas-3.jpg?v=ca3d3040" alt="Cacique Raoni Metuktire" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-12/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-12T02:22-03:00">02:22</time> · <span class="ult-src">g1 (Associated Press)</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Vice-presidente da Indonésia, filho de Jokowi, renuncia após Justiça questionar sua formação acadêmica</h3><p class="ult-dek">Gibran Rakabuming Raka, de 39 anos, deixou o cargo depois que tribunais concluíram que seus documentos de estudos no exterior não cumpriam os requisitos eleitorais.</p></div><img class="ult-thumb" src="img/2026-11-12/ultimas-2.jpg?v=7bb317e6" alt="Gibran Rakabuming Raka no Parlamento em Jacarta" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-12/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-12T00:00-03:00">00:00</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Tecnologia</span></div><h3 class="ult-h">Governo busca apoio de empresas para aprovar regulação econômica das big techs; Câmara deve votar na terça (17)</h3><p class="ult-dek">O projeto cria uma superintendência no Cade para fiscalizar as grandes plataformas digitais e ampliar a concorrência; o governo quer aprová-lo até o fim do ano.</p></div><img class="ult-thumb" src="img/2026-11-12/ultimas-1.jpg?v=ff5c0d2f" alt="Reportagem do g1 sobre a regulação das big techs" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
