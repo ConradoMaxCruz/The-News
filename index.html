@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261117060154"/>
+<link rel="stylesheet" href="styles.css?v=20261117081355"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261117060154"/>
+<meta name="edition-version" content="20261117081355"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-17T06:01-03:00">06:01</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-17T08:13-03:00">08:13</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Terça-feira, 17 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-17T06:01-03:00">06:01</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-17T08:13-03:00">08:13</time></span>
     <span>Nº 058</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-17/ultimas-3.html"><time>07:59</time><span>Trump diz que vai pressionar Putin e Xi pelo fim da guerra na Ucrânia no encontro de quinta em Shenzhen</span></a></li><li><a href="materias/2026-11-17/ultimas-2.html"><time>07:34</time><span>Lula critica convite dos EUA à Polônia e diz ser “absurda” a exclusão da África do Sul do G20</span></a></li><li><a href="materias/2026-11-17/ultimas-1.html"><time>05:00</time><span>IA pode elevar o PIB do Brasil em 5,1% em dez anos, mas só com reformas, diz relatório do BID</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-17/ultimas-3.html"><time>07:59</time><span>Trump diz que vai pressionar Putin e Xi pelo fim da guerra na Ucrânia no encontro de quinta em Shenzhen</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-17/ultimas-2.html"><time>07:34</time><span>Lula critica convite dos EUA à Polônia e diz ser “absurda” a exclusão da África do Sul do G20</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-17/ultimas-1.html"><time>05:00</time><span>IA pode elevar o PIB do Brasil em 5,1% em dez anos, mas só com reformas, diz relatório do BID</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:13</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,30 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:01</span>
+        <span class="live-when">até as 08:13</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-17/capa-1.html"><img class="dq-thumb" src="img/2026-11-17/capa.jpg?v=80c79b77" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Senado vota hoje os destaques do ajuste fiscal, no dia seguinte à disparada do dólar para R$ 5,78</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-17/brasil-1.html"><img class="dq-thumb" src="img/2026-11-17/card-brasil-1.jpg?v=58ac6f5c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Câmara pode votar hoje o PL que dá ao Cade poder de regular a concorrência das big techs</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-17/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-17/ultimas-3.jpg?v=e9b66dc1" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Trump diz que vai pressionar Putin e Xi pelo fim da guerra na Ucrânia no encontro de quinta em Shenzhen</span><span class="pr-meta">g1/Reuters · 07:59</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-17/ia-1.html"><img class="dq-thumb" src="img/2026-11-17/card-ia-1.jpg?v=a6fdb5b0" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">EUA detalham investigação de dois anos sobre a Megaspeed, parceira da Nvidia ligada à suposta espiã do caso Jensen Huang</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-17/mundo-1.html"><img class="dq-thumb" src="img/2026-11-17/card-mundo-1.jpg?v=bdd9bb96" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Trump chega às Filipinas e retoma o Quad antes do encontro inédito com Xi e Putin na quinta</span><span class="pr-meta">CNN Brasil</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-17/brasil-2.html"><img class="dq-thumb" src="img/2026-11-17/card-brasil-2.jpg?v=f7e6fc70" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Aneel pode recomendar hoje o fim antecipado da concessão da Enel em São Paulo</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-17/saude-1.html"><img class="dq-thumb" src="img/2026-11-17/card-saude-1.jpg?v=f9b1300f" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Saúde</span><span class="pr-h">Nova diretriz brasileira para câncer de próstata recomenda rastreamento a partir dos 50 anos, ou antes em grupos de risco</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-17/ultimas-1.html"><img class="dq-thumb" src="img/2026-11-17/ultimas-1.jpg?v=3df4ce6a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">IA pode elevar o PIB do Brasil em 5,1% em dez anos, mas só com reformas, diz relatório do BID</span><span class="pr-meta">Valor Econômico · 05:00</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:13</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-17/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-17T07:59-03:00">07:59</time> · <span class="ult-src">g1/Reuters</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Trump diz que vai pressionar Putin e Xi pelo fim da guerra na Ucrânia no encontro de quinta em Shenzhen</h3><p class="ult-dek">O presidente americano mudou de posição e agora diz que a Ucrânia estará na pauta da primeira reunião trilateral entre EUA, Rússia e China, marcada para quinta (19) durante a cúpula da Apec.</p></div><img class="ult-thumb" src="img/2026-11-17/ultimas-3.jpg?v=e9b66dc1" alt="Montagem com os presidentes Vladimir Putin, Xi Jinping e Donald Trump" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-17/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-17T07:34-03:00">07:34</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Lula critica convite dos EUA à Polônia e diz ser “absurda” a exclusão da África do Sul do G20</h3><p class="ult-dek">Em conversa com o premiê espanhol Pedro Sánchez, publicada nesta terça, Lula disse que o Brasil não concorda com a troca da África do Sul pela Polônia no G20 que os EUA vão sediar em Miami.</p></div><img class="ult-thumb" src="img/2026-11-17/ultimas-2.jpg?v=17adac4d" alt="Lula conversa com o primeiro-ministro espanhol Pedro Sánchez" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-17/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-17T05:00-03:00">05:00</time> · <span class="ult-src">Valor Econômico</span> · <span class="ult-tag">IA</span></div><h3 class="ult-h">IA pode elevar o PIB do Brasil em 5,1% em dez anos, mas só com reformas, diz relatório do BID</h3><p class="ult-dek">O relatório anual do Banco Interamericano de Desenvolvimento estima o mesmo ganho para a América Latina e o Caribe com adoção ampla da IA; com adoção baixa, o efeito cairia para 0,3%.</p></div><img class="ult-thumb" src="img/2026-11-17/ultimas-1.jpg?v=3df4ce6a" alt="Ilustração futurista sobre inteligência artificial" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
