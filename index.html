@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261123060337"/>
+<link rel="stylesheet" href="styles.css?v=20261123081711"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261123060337"/>
+<meta name="edition-version" content="20261123081711"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-23T06:03-03:00">06:03</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-23T08:16-03:00">08:16</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Segunda-feira, 23 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-23T06:03-03:00">06:03</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-23T08:16-03:00">08:16</time></span>
     <span>Nº 064</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-23/ultimas-3.html"><time>06:49</time><span>Depois do temporal de domingo, São Paulo tem trens com atraso, imóveis interditados na Penha e buscas por pessoa arrastada pelo Rio Tamanduateí</span></a></li><li><a href="materias/2026-11-23/ultimas-2.html"><time>06:31</time><span>Zelensky diz que drones navais ucranianos afundaram a corveta russa Merkury numa base em Benghazi, na costa da Líbia</span></a></li><li><a href="materias/2026-11-23/ultimas-1.html"><time>06:25</time><span>Temporal no fim da madrugada alaga ruas na Rocinha, em Botafogo e na Cidade Nova, e Rio tem previsão de semana chuvosa</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-23/ultimas-3.html"><time>06:49</time><span>Depois do temporal de domingo, São Paulo tem trens com atraso, imóveis interditados na Penha e buscas por pessoa arrastada pelo Rio Tamanduateí</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-23/ultimas-2.html"><time>06:31</time><span>Zelensky diz que drones navais ucranianos afundaram a corveta russa Merkury numa base em Benghazi, na costa da Líbia</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-23/ultimas-1.html"><time>06:25</time><span>Temporal no fim da madrugada alaga ruas na Rocinha, em Botafogo e na Cidade Nova, e Rio tem previsão de semana chuvosa</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:16</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,30 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:03</span>
+        <span class="live-when">até as 08:16</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-23/capa-1.html"><img class="dq-thumb" src="img/2026-11-23/capa.jpg?v=49bf9f24" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mercados</span><span class="pr-h">Depois da pior semana desde 2020, venda de ações de IA se intensifica na Ásia; futuros de Nova York sobem e B3 reabre com o ajuste fiscal no radar</span><span class="pr-meta">Folha de S.Paulo (Financial Times)</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-23/brasil-1.html"><img class="dq-thumb" src="img/2026-11-23/card-brasil-1.jpg?v=b4578d5d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Câmara inicia nesta segunda a análise do ajuste fiscal do governo; relator manteve texto do Senado, mas votação depende de quórum de 257 deputados</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-23/ia-2.html"><img class="dq-thumb" src="img/2026-11-23/card-ia-2.jpg?v=42812f07" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Pivô do escândalo da Nvidia, Alice Huang manteve contato com agente da espionagem chinesa durante relação com Jensen Huang, diz NYT</span><span class="pr-meta">g1 (Reuters)</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-23/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-23/ultimas-3.jpg?v=75cd421b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Depois do temporal de domingo, São Paulo tem trens com atraso, imóveis interditados na Penha e buscas por pessoa arrastada pelo Rio Tamanduateí</span><span class="pr-meta">g1 · 06:49</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-23/mundo-1.html"><img class="dq-thumb" src="img/2026-11-23/card-mundo-1.jpg?v=d7d60298" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Democratas chegam a 258 cadeiras e terão a maior bancada na Câmara dos EUA desde 1992; Trump enfrentará Congresso dividido</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-23/ia-2.html"><img class="dq-thumb" src="img/2026-11-23/card-ia-2.jpg?v=42812f07" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Pivô do escândalo da Nvidia, Alice Huang manteve contato com agente da espionagem chinesa durante relação com Jensen Huang, diz NYT</span><span class="pr-meta">g1 (Reuters)</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-23/brasil-3.html"><img class="dq-thumb" src="img/2026-11-23/card-brasil-3.jpg?v=2f013676" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Depois de dois tornados no feriado, Paraná volta a ter alerta de tempestade nesta segunda, com risco de granizo, raios e rajadas de até 60 km/h</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-23/brasil-2.html"><img class="dq-thumb" src="img/2026-11-23/card-brasil-2.jpg?v=9c68814b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Bolsonaro segue na UTI, estável e sem previsão de alta; Michelle diz que resultado da endoscopia foi &#x27;muito positivo&#x27;</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:16</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-23/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-23T06:49-03:00">06:49</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Depois do temporal de domingo, São Paulo tem trens com atraso, imóveis interditados na Penha e buscas por pessoa arrastada pelo Rio Tamanduateí</h3><p class="ult-dek">Bombeiros retomam nesta manhã a procura por uma pessoa que caiu no rio na Vila Monumento; na Penha, 14 moradores ficaram desalojados após desabamento de muro.</p></div><img class="ult-thumb" src="img/2026-11-23/ultimas-3.jpg?v=75cd421b" alt="Estragos da chuva em São Paulo" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-23/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-23T06:31-03:00">06:31</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Zelensky diz que drones navais ucranianos afundaram a corveta russa Merkury numa base em Benghazi, na costa da Líbia</h3><p class="ult-dek">Segundo o presidente ucraniano, sete drones marítimos atingiram um dos navios mais novos da frota russa; Moscou ainda não comentou.</p></div><img class="ult-thumb" src="img/2026-11-23/ultimas-2.jpg?v=c508d482" alt="Imagem de satélite do porto de Benghazi, na Líbia" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-23/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-23T06:25-03:00">06:25</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Temporal no fim da madrugada alaga ruas na Rocinha, em Botafogo e na Cidade Nova, e Rio tem previsão de semana chuvosa</h3><p class="ult-dek">A estação Grota Funda registrou mais de 50 mm entre 4h e 5h; novos temporais são esperados para terça e quarta, com queda de temperatura a partir de quinta.</p></div><img class="ult-thumb" src="img/2026-11-23/ultimas-1.jpg?v=7ecdf5b8" alt="Rua alagada no Rio de Janeiro" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
