@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261125055715"/>
+<link rel="stylesheet" href="styles.css?v=20261125080847"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261125055715"/>
+<meta name="edition-version" content="20261125080847"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-25T05:57-03:00">05:57</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-25T08:08-03:00">08:08</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Quarta-feira, 25 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-25T05:57-03:00">05:57</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-25T08:08-03:00">08:08</time></span>
     <span>Nº 066</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-25/ultimas-4.html"><time>07:58</time><span>Bolsa de Xangai tem a maior queda diária em três meses e Kospi despenca 6,16%, com ações de chips em baixa e temor de novas tarifas</span></a></li><li><a href="materias/2026-11-25/ultimas-3.html"><time>07:40</time><span>China rebate ameaça de novas tarifas dos EUA, chama o argumento do excesso de capacidade de &#x27;premissa falsa&#x27; e diz que guerra comercial não interessa a ninguém</span></a></li><li><a href="materias/2026-11-25/ultimas-2.html"><time>07:18</time><span>Inmet põe a maior parte do Brasil em alerta para tempestades nesta quarta; alerta laranja inclui São Paulo, Rio e Curitiba</span></a></li><li><a href="materias/2026-11-25/ultimas-1.html"><time>06:00</time><span>Astrônomos encontram o quasar mais antigo já conhecido, com 13,1 bilhões de anos e um buraco negro de 360 milhões de massas solares</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-25/ultimas-4.html"><time>07:58</time><span>Bolsa de Xangai tem a maior queda diária em três meses e Kospi despenca 6,16%, com ações de chips em baixa e temor de novas tarifas</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-25/ultimas-3.html"><time>07:40</time><span>China rebate ameaça de novas tarifas dos EUA, chama o argumento do excesso de capacidade de &#x27;premissa falsa&#x27; e diz que guerra comercial não interessa a ninguém</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-25/ultimas-2.html"><time>07:18</time><span>Inmet põe a maior parte do Brasil em alerta para tempestades nesta quarta; alerta laranja inclui São Paulo, Rio e Curitiba</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-25/ultimas-1.html"><time>06:00</time><span>Astrônomos encontram o quasar mais antigo já conhecido, com 13,1 bilhões de anos e um buraco negro de 360 milhões de massas solares</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:08</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,31 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 05:57</span>
+        <span class="live-when">até as 08:08</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-25/capa-1.html"><img class="dq-thumb" src="img/2026-11-25/capa.jpg?v=746ba892" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Governo libera R$ 3,4 bilhões do Orçamento depois de tirar mais R$ 10,5 bi da meta, e déficit de 2026 deve chegar a R$ 77 bilhões</span><span class="pr-meta">Folha de S.Paulo</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-25/brasil-1.html"><img class="dq-thumb" src="img/2026-11-25/card-brasil-1.jpg?v=5d8962c8" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Haddad diz a Lula que prefere não voltar ao ministério no quarto mandato e se dedicar à carreira acadêmica</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-25/ultimas-2.html"><img class="dq-thumb" src="img/2026-11-25/ultimas-2.jpg?v=375d34f7" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Inmet põe a maior parte do Brasil em alerta para tempestades nesta quarta; alerta laranja inclui São Paulo, Rio e Curitiba</span><span class="pr-meta">CNN Brasil · 07:18</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-25/mundo-1.html"><img class="dq-thumb" src="img/2026-11-25/card-mundo-1.jpg?v=69ed1781" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">EUA desistem de usar acordos de negócios para convencer a Rússia a encerrar a guerra na Ucrânia, diz Financial Times</span><span class="pr-meta">CNN Brasil (Reuters/Financial Times)</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-25/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-25/ultimas-3.jpg?v=aaa5f1c7" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">China rebate ameaça de novas tarifas dos EUA, chama o argumento do excesso de capacidade de &#x27;premissa falsa&#x27; e diz que guerra comercial não interessa a ninguém</span><span class="pr-meta">Folha de S.Paulo · 07:40</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-25/tecnologia-2.html"><img class="dq-thumb" src="img/2026-11-25/card-tecnologia-2.jpg?v=2b0539cf" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Tecnologia</span><span class="pr-h">Corrida da IA esgota a produção de memória da Samsung até 2029, e grandes compradores já fecham contratos até 2031</span><span class="pr-meta">Canaltech</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-25/mundo-2.html"><img class="dq-thumb" src="img/2026-11-25/card-mundo-2.jpg?v=3ac34e1b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Houthis ameaçam atacar Jeddah e todos os portos sauditas no Mar Vermelho se a Arábia Saudita bombardear Hodeidah</span><span class="pr-meta">CNN Brasil</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-25/ciencia-2.html"><img class="dq-thumb" src="img/2026-11-25/card-ciencia-2.jpg?v=08d59d4c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Ciência</span><span class="pr-h">Voyager 1 volta a enviar só um &#x27;sinal vazio&#x27; logo depois de se tornar o primeiro objeto humano a um dia-luz da Terra</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:08</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-25/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-25T07:58-03:00">07:58</time> · <span class="ult-src">InfoMoney (Reuters)</span> · <span class="ult-tag">Mercados</span></div><h3 class="ult-h">Bolsa de Xangai tem a maior queda diária em três meses e Kospi despenca 6,16%, com ações de chips em baixa e temor de novas tarifas</h3><p class="ult-dek">O índice de Xangai caiu 2,03%, ao menor nível desde julho de 2025; Taiwan recuou 4,80% e Tóquio, 2,78%, depois que o alívio trazido pela volta de Jensen Huang à Nvidia durou pouco.</p></div><img class="ult-thumb" src="img/2026-11-25/ultimas-4.jpg?v=498d7e64" alt="Painel eletrônico com cotações de ações na China" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-25/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-25T07:40-03:00">07:40</time> · <span class="ult-src">Folha de S.Paulo</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">China rebate ameaça de novas tarifas dos EUA, chama o argumento do excesso de capacidade de &#x27;premissa falsa&#x27; e diz que guerra comercial não interessa a ninguém</h3><p class="ult-dek">O governo Trump deve anunciar ainda nesta semana sobretaxas contra a China, a União Europeia e mais 14 países; Pequim pede que as diferenças sejam resolvidas por consultas.</p></div><img class="ult-thumb" src="img/2026-11-25/ultimas-3.jpg?v=aaa5f1c7" alt="Operário observa máquina em fábrica de aço em Hangzhou, na China" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-25/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-25T07:18-03:00">07:18</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Inmet põe a maior parte do Brasil em alerta para tempestades nesta quarta; alerta laranja inclui São Paulo, Rio e Curitiba</h3><p class="ult-dek">A previsão é de 50 a 100 mm de chuva no dia, ventos de 60 a 100 km/h e granizo em áreas de SP, PR, MG, SC, MS e em todo o RJ.</p></div><img class="ult-thumb" src="img/2026-11-25/ultimas-2.jpg?v=375d34f7" alt="Mapa do Inmet com as áreas do Brasil sob alerta de tempestades nesta quarta-feira" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-25/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-25T06:00-03:00">06:00</time> · <span class="ult-src">Folha de S.Paulo (Reuters)</span> · <span class="ult-tag">Ciência</span></div><h3 class="ult-h">Astrônomos encontram o quasar mais antigo já conhecido, com 13,1 bilhões de anos e um buraco negro de 360 milhões de massas solares</h3><p class="ult-dek">Apelidado de Dún Aonghasa e detectado pelo telescópio Euclid, ele surgiu cerca de 630 milhões de anos após o Big Bang, 40 milhões de anos antes do recordista anterior.</p></div><img class="ult-thumb" src="img/2026-11-25/ultimas-1.jpg?v=a1ef4ccb" alt="Ilustração de um quasar, o núcleo brilhante de uma galáxia alimentado por um buraco negro" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
