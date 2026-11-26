@@ -1,15 +1,15 @@
 [
   {
     "label": "Ibovespa",
-    "price": "166.839",
-    "chg": "+1,68%",
-    "text": "166.839pts"
+    "price": "171.127",
+    "chg": "+2,67%",
+    "text": "171.127pts"
   },
   {
     "label": "DÓLAR",
-    "price": "5,82",
-    "chg": "-1,58%",
-    "text": "R$5,82"
+    "price": "5,77",
+    "chg": "-0,77%",
+    "text": "R$5,77"
   },
   {
     "label": "PETR4",
@@ -19,9 +19,9 @@
   },
   {
     "label": "VALE3",
-    "price": "56,90",
-    "chg": "+3,10%",
-    "text": "R$56,90"
+    "price": "57,84",
+    "chg": "+1,65%",
+    "text": "R$57,84"
   },
   {
     "label": "ITUB4",
