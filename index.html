@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261127060309"/>
+<link rel="stylesheet" href="styles.css?v=20261127081832"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261127060309"/>
+<meta name="edition-version" content="20261127081832"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-27T06:02-03:00">06:02</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-27T08:18-03:00">08:18</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sexta-feira, 27 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-27T06:02-03:00">06:02</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-27T08:18-03:00">08:18</time></span>
     <span>Nº 068</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-27/ultimas-5.html"><time>07:47</time><span>Reino Unido tira serviços do ar após &#x27;incidente cibernético&#x27; no órgão que paga aposentadorias e benefícios</span></a></li><li><a href="materias/2026-11-27/ultimas-4.html"><time>07:31</time><span>Anvisa manda recolher sete suplementos da marca Muwiz por ingredientes não autorizados</span></a></li><li><a href="materias/2026-11-27/ultimas-3.html"><time>07:15</time><span>EWZ, fundo de ações brasileiras em Nova York, sobe mais de 10% com a escolha de Trabuco para a Fazenda</span></a></li><li><a href="materias/2026-11-27/ultimas-2.html"><time>07:13</time><span>Zelensky diz que Trump chamar Putin de amigo é &#x27;como ser amigo de Hitler na Segunda Guerra&#x27;</span></a></li><li><a href="materias/2026-11-27/ultimas-1.html"><time>07:03</time><span>Ex-presidente das Filipinas Rodrigo Duterte começa a ser julgado no Tribunal Penal Internacional na segunda-feira</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-27/ultimas-5.html"><time>07:47</time><span>Reino Unido tira serviços do ar após &#x27;incidente cibernético&#x27; no órgão que paga aposentadorias e benefícios</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-27/ultimas-4.html"><time>07:31</time><span>Anvisa manda recolher sete suplementos da marca Muwiz por ingredientes não autorizados</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-27/ultimas-3.html"><time>07:15</time><span>EWZ, fundo de ações brasileiras em Nova York, sobe mais de 10% com a escolha de Trabuco para a Fazenda</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-27/ultimas-2.html"><time>07:13</time><span>Zelensky diz que Trump chamar Putin de amigo é &#x27;como ser amigo de Hitler na Segunda Guerra&#x27;</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-27/ultimas-1.html"><time>07:03</time><span>Ex-presidente das Filipinas Rodrigo Duterte começa a ser julgado no Tribunal Penal Internacional na segunda-feira</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:18</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,32 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 06:02</span>
+        <span class="live-when">até as 08:18</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-27/capa-1.html"><img class="dq-thumb" src="img/2026-11-27/capa.jpg?v=6ff7701b" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Lula confirma Luiz Trabuco, presidente do conselho do Bradesco, como ministro da Fazenda a partir de 2027</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-27/saude-1.html"><img class="dq-thumb" src="img/2026-11-27/card-saude-1.jpg?v=9b40759c" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Saúde</span><span class="pr-h">Covid-19 avança em 23 estados e no DF, e Brasil aplicou só um terço das 25,7 milhões de vacinas distribuídas neste ano</span><span class="pr-meta">g1</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-27/mundo-1.html"><img class="dq-thumb" src="img/2026-11-27/card-mundo-1.jpg?v=d0fd876d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Trump diz que Putin pode participar da cúpula do G20 na Flórida, em dezembro, se quiser: &#x27;Gostaria que ele estivesse presente&#x27;</span><span class="pr-meta">CNN Brasil (Reuters)</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-27/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-27/ultimas-3.jpg?v=dc90697f" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">EWZ, fundo de ações brasileiras em Nova York, sobe mais de 10% com a escolha de Trabuco para a Fazenda</span><span class="pr-meta">CNN Brasil · 07:15</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-27/ultimas-2.html"><img class="dq-thumb" src="img/2026-11-27/ultimas-2.jpg?v=4c3e304d" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Zelensky diz que Trump chamar Putin de amigo é &#x27;como ser amigo de Hitler na Segunda Guerra&#x27;</span><span class="pr-meta">CNN Brasil · 07:13</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-27/brasil-1.html"><img class="dq-thumb" src="img/2026-11-27/card-brasil-1.jpg?v=fdd14216" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Itamaraty oferece apoio à Embraer para buscar novos mercados depois de os EUA proporem tarifa de 10% sobre aviões brasileiros</span><span class="pr-meta">g1</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-27/ultimas-5.html"><img class="dq-thumb" src="img/2026-11-27/ultimas-5.jpg?v=09e1de16" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Tecnologia</span><span class="pr-h">Reino Unido tira serviços do ar após &#x27;incidente cibernético&#x27; no órgão que paga aposentadorias e benefícios</span><span class="pr-meta">g1 · 07:47</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-27/ia-1.html"><img class="dq-thumb" src="img/2026-11-27/card-ia-1.jpg?v=5d7c2d44" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Google começa a exibir anúncios dentro das respostas de IA da Busca no Brasil, no Modo IA e nas Visões gerais</span><span class="pr-meta">Canaltech</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-27/automoveis-1.html"><img class="dq-thumb" src="img/2026-11-27/card-automoveis-1.jpg?v=d924136a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Automóveis</span><span class="pr-h">BYD Atto 2 DM-i, SUV compacto híbrido plug-in flex feito na Bahia, é eleito o Carro do Ano 2027</span><span class="pr-meta">Autoesporte</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:18</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-27/ultimas-5.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-27T07:47-03:00">07:47</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Tecnologia</span></div><h3 class="ult-h">Reino Unido tira serviços do ar após &#x27;incidente cibernético&#x27; no órgão que paga aposentadorias e benefícios</h3><p class="ult-dek">O Departamento de Trabalho e Pensões desligou alguns sistemas por precaução, mas garante que os pagamentos seguem normalmente.</p></div><img class="ult-thumb" src="img/2026-11-27/ultimas-5.jpg?v=09e1de16" alt="Bandeiras do Reino Unido tremulam em frente ao Big Ben, em Londres" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-27/ultimas-4.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-27T07:31-03:00">07:31</time> · <span class="ult-src">g1</span> · <span class="ult-tag">Saúde</span></div><h3 class="ult-h">Anvisa manda recolher sete suplementos da marca Muwiz por ingredientes não autorizados</h3><p class="ult-dek">A medida vale para todos os lotes e proíbe fabricação, venda e propaganda; as fórmulas usam versões de feno-grego e silício sem aval.</p></div><img class="ult-thumb" src="img/2026-11-27/ultimas-4.jpg?v=94b1cfef" alt="Frascos de suplementos da marca Muwiz, um de feno-grego e um de colágeno" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-27/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-27T07:15-03:00">07:15</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">EWZ, fundo de ações brasileiras em Nova York, sobe mais de 10% com a escolha de Trabuco para a Fazenda</h3><p class="ult-dek">Por volta das 7h, no pré-mercado americano, o ETF era cotado a US$ 33,72, alta de 11,80%, na volta do feriado de Ação de Graças.</p></div><img class="ult-thumb" src="img/2026-11-27/ultimas-3.jpg?v=dc90697f" alt="Luiz Carlos Trabuco, de terno e gravata, fala ao microfone" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-27/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-27T07:13-03:00">07:13</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Zelensky diz que Trump chamar Putin de amigo é &#x27;como ser amigo de Hitler na Segunda Guerra&#x27;</h3><p class="ult-dek">Em entrevista à BBC, o presidente ucraniano classificou como &#x27;estranho&#x27; o tratamento dado por Trump a Putin uma semana após a cúpula na China.</p></div><img class="ult-thumb" src="img/2026-11-27/ultimas-2.jpg?v=4c3e304d" alt="Donald Trump e Vladimir Putin posam lado a lado diante das bandeiras dos EUA e da Rússia" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-27/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-27T07:03-03:00">07:03</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Ex-presidente das Filipinas Rodrigo Duterte começa a ser julgado no Tribunal Penal Internacional na segunda-feira</h3><p class="ult-dek">Aos 81 anos, ele responde por crimes contra a humanidade ligados à campanha antidrogas, num dos julgamentos de maior repercussão da história do TPI.</p></div><img class="ult-thumb" src="img/2026-11-27/ultimas-1.jpg?v=2d99435f" alt="Rodrigo Duterte, de camisa clara, ergue a mão direita ao falar ao microfone" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
