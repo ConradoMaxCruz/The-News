@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=20261128055646"/>
+<link rel="stylesheet" href="styles.css?v=20261128081408"/>
 <link rel="icon" href="favicon.svg?v=a7300f0278" type="image/svg+xml"/>
 <link rel="icon" href="favicon.ico?v=a7300f0278" sizes="48x48"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=a7300f0278"/>
 <link rel="manifest" href="site.webmanifest?v=a7300f0278"/>
 <meta name="theme-color" content="#472421"/>
-<meta name="edition-version" content="20261128055646"/>
+<meta name="edition-version" content="20261128081408"/>
 </head>
 <body>
 <div class="page">
@@ -31,11 +31,12 @@
   <div class="kicker">Edição matinal personalizada</div>
   <h1 class="brand">The Morning Newspaper</h1>
   <div class="sub">do Conrado</div>
-  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-28T05:56-03:00">05:56</time></p>
+  <p class="live-status" id="live-status"><span class="live-dot" aria-hidden="true"></span>Atualizado às <time datetime="2026-11-28T08:13-03:00">08:13</time></p>
   <nav class="topics" aria-label="Filtrar por editoria">
     <a class="pill is-active" href="#conteudo" data-filter="tudo" role="button" aria-pressed="true">Tudo</a>
     <a class="pill" href="#principais" data-filter="principais" role="button" aria-pressed="false">Principais</a>
     <a class="pill" href="#mercado" data-filter="mercado" role="button" aria-pressed="false">Mercado</a>
+    <a class="pill" href="#ultimas" data-filter="ultimas" role="button" aria-pressed="false">Últimas</a>
     <a class="pill" href="#ia" data-filter="ia" role="button" aria-pressed="false">IA</a>
     <a class="pill" href="#mundo" data-filter="mundo" role="button" aria-pressed="false">Mundo</a>
     <a class="pill" href="#brasil" data-filter="brasil" role="button" aria-pressed="false">Brasil</a>
@@ -47,12 +48,17 @@
   <div class="dateline">
     <span>São Paulo</span>
     <span>Sábado, 28 de novembro de 2026</span>
-    <span class="dateline-updated">Atualizado às <time datetime="2026-11-28T05:56-03:00">05:56</time></span>
+    <span class="dateline-updated">Atualizado às <time datetime="2026-11-28T08:13-03:00">08:13</time></span>
     <span>Nº 069</span>
   </div>
   </header>
 
   <!-- portal:start -->
+    <div class="aovivo" id="aovivo" aria-label="Ao vivo: últimas manchetes">
+      <div class="av-label"><span class="live-dot" aria-hidden="true"></span>Ao vivo</div>
+      <div class="av-viewport"><ul class="av-track"><li><a href="materias/2026-11-28/ultimas-3.html"><time>08:00</time><span>Governo Lula considera insuficientes as negociações com os EUA e revê a estratégia diante do novo tarifaço</span></a></li><li><a href="materias/2026-11-28/ultimas-2.html"><time>07:43</time><span>Forças dos EUA repeliram cerca de seis drones sobre a base aérea de Lakenheath, no Reino Unido, e há suspeita de ligação com o Irã, diz FT</span></a></li><li><a href="materias/2026-11-28/ultimas-1.html"><time>04:49</time><span>Explosão perto de escola no leste do Afeganistão deixa sete estudantes mortos e ao menos 99 feridos</span></a></li><li aria-hidden="true" class="av-dup"></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-28/ultimas-3.html"><time>08:00</time><span>Governo Lula considera insuficientes as negociações com os EUA e revê a estratégia diante do novo tarifaço</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-28/ultimas-2.html"><time>07:43</time><span>Forças dos EUA repeliram cerca de seis drones sobre a base aérea de Lakenheath, no Reino Unido, e há suspeita de ligação com o Irã, diz FT</span></a></li><li aria-hidden="true"><a tabindex="-1" href="materias/2026-11-28/ultimas-1.html"><time>04:49</time><span>Explosão perto de escola no leste do Afeganistão deixa sete estudantes mortos e ao menos 99 feridos</span></a></li></ul></div>
+      <div class="av-ctrl"><span class="av-when">atualizado às 08:13</span><button type="button" class="av-btn" data-av="prev" aria-label="Manchete anterior">‹</button><button type="button" class="av-btn" data-av="next" aria-label="Próxima manchete">›</button></div>
+    </div>
     <div class="portal-bar">
       <form class="search" role="search" onsubmit="return false">
         <label class="sr-only" for="busca">Buscar notícias</label>
@@ -87,19 +93,30 @@
   </article>
 
   <!-- agora:start -->
-  <div class="agora" id="agora">
+  <div class="agora has-ultimas" id="agora">
     <section class="principais" id="principais" data-topic="principais" aria-labelledby="principais-title">
       <div class="live-head">
         <h2 class="live-title" id="principais-title">Destaques do dia</h2>
-        <span class="live-when">até as 05:56</span>
+        <span class="live-when">até as 08:13</span>
       </div>
       <ol class="pr-list dq-grid">
         <li class="dq-item"><a href="materias/2026-11-28/capa-1.html"><img class="dq-thumb" src="img/2026-11-28/capa.jpg?v=986eda65" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Esporte</span><span class="pr-h">Palmeiras enfrenta o Estudiantes hoje, às 17h, em Montevidéu, na final da Libertadores em busca do tetra</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+        <li class="dq-item"><a href="materias/2026-11-28/ultimas-3.html"><img class="dq-thumb" src="img/2026-11-28/ultimas-3.jpg?v=e387716e" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Governo Lula considera insuficientes as negociações com os EUA e revê a estratégia diante do novo tarifaço</span><span class="pr-meta">CNN Brasil · 08:00</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-28/brasil-1.html"><img class="dq-thumb" src="img/2026-11-28/card-brasil-1.jpg?v=3457f068" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Brasil</span><span class="pr-h">Lula escolhe o senador Camilo Santana para comandar a Casa Civil no novo mandato, dizem aliados</span><span class="pr-meta">Folha de S.Paulo</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-28/mundo-1.html"><img class="dq-thumb" src="img/2026-11-28/card-mundo-1.jpg?v=b9b87624" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Mundo</span><span class="pr-h">Taiwan vai às urnas em eleições locais sob pressão militar da China, que mandou aviões e navios para perto da ilha</span><span class="pr-meta">g1 (Reuters)</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-28/ia-1.html"><img class="dq-thumb" src="img/2026-11-28/card-ia-1.jpg?v=0d80e387" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">IA</span><span class="pr-h">Um em cada oito meninos adolescentes admite ter criado nudes falsos com IA, aponta estudo da SaferNet</span><span class="pr-meta">g1</span></span></a></li>
         <li class="dq-item"><a href="materias/2026-11-28/saude-1.html"><img class="dq-thumb" src="img/2026-11-28/card-saude-1.jpg?v=ea3457f0" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Saúde</span><span class="pr-h">Jovem do Paraná é o segundo paciente no Brasil a viver com dois corações por técnica criada por cirurgião brasileiro</span><span class="pr-meta">Folha de S.Paulo</span></span></a></li>
-        <li class="dq-item"><a href="materias/2026-11-28/ciencia-1.html"><img class="dq-thumb" src="img/2026-11-28/card-ciencia-1.jpg?v=3606299a" alt="" loading="lazy"/><span class="dq-body"><span class="dq-tag">Ciência</span><span class="pr-h">Falha de software encurta manobra e põe a sonda BepiColombo numa órbita de Mercúrio diferente da planejada</span><span class="pr-meta">CNN Brasil</span></span></a></li>
+      </ol>
+    </section>
+    <section class="ultimas" id="ultimas" data-topic="ultimas" aria-labelledby="ultimas-title">
+      <div class="live-head">
+        <h2 class="live-title" id="ultimas-title"><span class="live-dot" aria-hidden="true"></span>Últimas</h2>
+        <span class="live-when">Atualizado às 08:13</span>
+      </div>
+      <ol class="ult-list">
+        <li class="ult-item has-thumb"><a href="materias/2026-11-28/ultimas-3.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-28T08:00-03:00">08:00</time> · <span class="ult-src">CNN Brasil</span> · <span class="ult-tag">Brasil</span></div><h3 class="ult-h">Governo Lula considera insuficientes as negociações com os EUA e revê a estratégia diante do novo tarifaço</h3><p class="ult-dek">A proposta americana de novas tarifas sobre aeronaves e açúcar foi vista como a gota d&#x27;água; a ideia agora é apostar no Congresso dos EUA, de maioria democrata, e estudar a reciprocidade com cautela.</p></div><img class="ult-thumb" src="img/2026-11-28/ultimas-3.jpg?v=e387716e" alt="Lula e Donald Trump durante encontro na Casa Branca" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-28/ultimas-2.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-28T07:43-03:00">07:43</time> · <span class="ult-src">CNN Brasil/Reuters</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Forças dos EUA repeliram cerca de seis drones sobre a base aérea de Lakenheath, no Reino Unido, e há suspeita de ligação com o Irã, diz FT</h3><p class="ult-dek">O episódio foi em 13 de novembro; o Ministério da Defesa britânico diz que a situação foi resolvida rapidamente e os aparelhos não foram recuperados.</p></div><img class="ult-thumb" src="img/2026-11-28/ultimas-2.jpg?v=10f7ff90" alt="Caças militares na pista de uma base aérea" loading="lazy"/></a></li>
+        <li class="ult-item has-thumb"><a href="materias/2026-11-28/ultimas-1.html"><div class="ult-text"><div class="ult-meta"><time datetime="2026-11-28T04:49-03:00">04:49</time> · <span class="ult-src">g1/AP</span> · <span class="ult-tag">Mundo</span></div><h3 class="ult-h">Explosão perto de escola no leste do Afeganistão deixa sete estudantes mortos e ao menos 99 feridos</h3><p class="ult-dek">A polícia da província de Kunar diz que a explosão pode ter começado num depósito de explosivos de mineradoras perto da escola; a causa ainda é investigada.</p></div><img class="ult-thumb" src="img/2026-11-28/ultimas-1.jpg?v=6113135f" alt="Mapa do Afeganistão" loading="lazy"/></a></li>
       </ol>
     </section>
   </div>
